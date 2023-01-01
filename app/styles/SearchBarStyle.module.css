@@ -20,9 +20,9 @@
 }
 
 .Button{
-    @apply w-36 bg-stone-300 h-8 mt-6 rounded flex justify-center font-semibold text-xs p-1.5 text-stone-600 hover:bg-stone-400 
+    @apply w-36 bg-stone-300 rounded-lg flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 
 }
 
 .PassportImg{
-    @apply mr-2.5 mt-3
+    @apply mr-2.5 my-3
 }
