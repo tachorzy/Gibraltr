@@ -1,10 +1,10 @@
 .SearchBarContainer{
-    @apply grid rounded-2xl bg-stone-100 shadow-lg shadow-stone-200 p-2 justify-start h-36;
+    @apply grid rounded-2xl bg-stone-700 shadow-lg p-2 justify-start;
     width: 40rem
 }     
 
 .CustomSearchBar{
-    @apply mr-6
+    @apply mr-6 rounded-xl bg-stone-100 inline-flex justify-end
 }
 
 .InputAndResults{
@@ -16,7 +16,7 @@
 }
 
 .Input{
-    @apply w-full h-8 border-spacing-4 text-stone-600 border-transparent rounded
+    @apply w-3/4 h-full p-1.5 text-stone-600 border-transparent rounded-r-2xl
 }
 
 .Button{
@@ -24,5 +24,5 @@
 }
 
 .PassportImg{
-    @apply mr-2.5 pt-7
+    @apply mr-2.5 mt-3
 }
