@@ -1,10 +1,12 @@
 .SearchBarContainer{
     @apply grid rounded-2xl bg-stone-700 shadow-lg p-2 justify-start gap-x-16;
-    width: 38.5rem
+    width: 46rem
 }     
 
 .CustomSearchBar{
     @apply mr-6 rounded-xl bg-stone-100 inline-flex justify-end;
+    width: 15rem
+
 }
 
 .InputAndResults{
@@ -16,7 +18,7 @@
 }
 
 .Input{
-    @apply w-32 h-full p-0.5 font-light text-stone-600 border-transparent rounded-r-xl
+    @apply w-11/12 h-full p-1.5 font-light text-stone-600 border-transparent rounded-r-xl
 }
 
 .Button{
@@ -40,7 +42,7 @@
 }
 
 .CountryName{
-    @apply break-words
+    @apply break-words 
 }
 
 .CountryFlag{

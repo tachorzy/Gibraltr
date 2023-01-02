@@ -3,12 +3,45 @@ import Image from 'next/image'
 import Passport from '../public/passport.svg'
 import Pin from '../public/pin.svg'
 import { useEffect, useState } from 'react';
-const countryList = require('country-list');
+import { getCodeList, overwrite } from 'country-list'
 
 const SearchBar = () => {
-    console.log(countryList.getNames())
-    const countryCodeList = countryList.getCodeList();
-    
+    const nonCountries = ['aq', 'as', 'ai', 'aw', 'ax', 'bm', 'bl', 'bq', 'bv', 'io', 'ky', 'cx', 'cc', 'ck', 'fk', 'fo', 'gf', 
+    'pf', 'tf', 'gi', 'gl', 'gp', 'gu', 'hm', 'mq', 'yt', 'ms', 'an', 'nc', 'nu', 'nf', 'mp', 'pn', 'pr', 're',
+     'sh', 'pm', 'sj', 'tk', 'tc', 'um', 'vg', 'wf', 'eh'];
+        
+    overwrite([
+        {
+            code: 'GB',
+            name: 'United Kingdom'
+        },
+        {
+            code: 'PS',
+            name: "Palestine"
+        },
+        {
+            code: 'FM',
+            name: 'Micronesia'
+        },
+        {
+            code: 'BN',
+            name: 'Brunei'
+        },
+        {
+            code: 'BO',
+            name: 'Bolivia'
+        },
+        {
+            code: 'CD',
+            name: 'Democratic Rep. of the Congo'
+        }
+    ])
+    const countries = getCodeList()
+    const countryCodeObject = Object.keys(countries)
+    const countryCodeList = Object.keys(countries).filter(code => 
+        !nonCountries.includes(code)
+        )
+    // console.log(countries)
     return(
         <div className={SBStyle.SearchBarContainer}>
             <div>
@@ -19,8 +52,8 @@ const SearchBar = () => {
                         </div>
                         {/* <input className={SBStyle.Input} placeholder= "United States" type={'text'}/> */}
                         <select className={SBStyle.Input} name= "passport" type={'text'}>
-                            {Object.keys(countryCodeList).map((code) => (
-                                <option  className={SBStyle.CountryName} value={code}>{countryCodeList[code]}</option>
+                            {countryCodeList.map((code) => (
+                                <option  className={SBStyle.CountryName} value={code}>{countries[code]}</option>
                             ))}
                         </select>
 
