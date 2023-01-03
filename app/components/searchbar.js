@@ -4,7 +4,7 @@ import Passport from '../public/passport.svg'
 import Pin from '../public/pin.svg'
 import { useEffect, useState } from 'react';
 import { getCodeList, overwrite } from 'country-list'
-import { Dropdown } from "@nextui-org/react";
+import { Menu } from '@headlessui/react'
 
 const SearchBar = () => {
     //removing all non-countries from the listing, e.g. Antarctica and British/French/Dutch overseas territories 
@@ -115,7 +115,6 @@ const SearchBar = () => {
                                 <option className={SBStyle.CountryOption} value={code} style={{ width: '100px' }}>{countries[code]}</option>
                             ))}
                         </select>
-
                     </div>
                     
                     <div className={SBStyle.CustomSearchBar}>
@@ -124,7 +123,9 @@ const SearchBar = () => {
                         </div>
                         {/* <input className={SBStyle.Input} placeholder="Morocco" type={'text'}/> */}
                         <select className={SBStyle.Input} name= "country" type={'text'}>
-                            <option>Morocco </option>
+                            {countryCodeList.map((code) => (
+                                <option className={SBStyle.CountryOption} value={code} style={{ width: '100px' }}>{countries[code]}</option>    
+                            ))}                        
                         </select>
                     </div>
                     <div className={SBStyle.Button}>
