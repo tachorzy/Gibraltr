@@ -4,7 +4,7 @@
 }     
 
 .CustomSearchBar{
-    @apply mr-6 rounded-xl bg-stone-100 inline-flex justify-end;
+    @apply mr-6 rounded-xl bg-stone-200 inline-flex justify-end;
     width: 15rem
 
 }
@@ -33,12 +33,8 @@
 
 }
 
-.CountryListing{
-
-}
-
 .CountryOption{
-
+    @apply h-24
 }
 
 .CountryName{

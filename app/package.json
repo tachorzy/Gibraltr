@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
+    "@nextui-org/react": "^1.0.0-beta.11",
     "countries-info": "^1.0.7",
     "countries-list": "^2.6.1",
     "country-list": "^2.3.0",
