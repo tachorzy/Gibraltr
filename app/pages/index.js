@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
           <div className={roboto.className}>
-            <SearchBar></SearchBar>
+              <SearchBar></SearchBar>
           </div>
           {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_%28blue_dots%29.svg' width={875} height={546.9}></Image> */}
       </main>

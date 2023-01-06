@@ -4,7 +4,7 @@ import Passport from '../public/passport.svg'
 import Pin from '../public/pin.svg'
 import { useEffect, useState } from 'react';
 import { getCodeList, overwrite } from 'country-list'
-import { Menu } from '@headlessui/react'
+import { Combobox } from '@headlessui/react'
 
 const SearchBar = () => {
     //removing all non-countries from the listing, e.g. Antarctica and British/French/Dutch overseas territories 
@@ -101,28 +101,44 @@ const SearchBar = () => {
         !nonCountries.includes(code)
         )
     // console.log(countries)
-    return(
-        <div className={SBStyle.SearchBarContainer}>
-            <div>
-                <div className={SBStyle.InputAndResults}>
+    //states
+    const [selectNationality, setSelectedNationality] = useState("United States");
+    const [selectDestination, setSelectedDestination] = useState("Morocco");
+
+    return(        
+        <div>
+            <div className={SBStyle.SearchBarContainer}>
+                <div className={SBStyle.iconTag}>
                     <div className={SBStyle.CustomSearchBar}>
-                        <div className={SBStyle.PassportImg}>
-                            <Image src="passport.svg" width={28} height={28}></Image>
-                        </div>
-                        {/* <input className={SBStyle.Input} placeholder= "United States" type={'text'}/> */}
-                        <select className={SBStyle.Input} name= "passport" type={'text'}>
+                        <Image src="passport.svg" width={28} height={28} className={SBStyle.PassportImg}></Image>
+                        <Combobox value={selectNationality} onChange={setSelectedNationality}>
+                            <Combobox.Input className={SBStyle.Input}/>
+                            <div>
+                                <span className="inline-block w-full">
+                                <Combobox.Options className={SBStyle.ScrollContentContainer}>
+                                    {countryCodeList.map((code) => (
+                                    <Combobox.Option key={code} value={countries[code]} className={SBStyle.CountryOption}>
+                                        {countries[code]}
+                                    </Combobox.Option>
+                                    ))}
+                                </Combobox.Options>
+                                </span>
+                            </div>
+                        </Combobox>
+                        
+                        {/* <select className={SBStyle.Input} name= "passport" type={'text'}>
                             {countryCodeList.map((code) => (
                                 <option className={SBStyle.CountryOption} value={code} style={{ width: '100px' }}>{countries[code]}</option>
                             ))}
-                        </select>
+                        </select> */}
                     </div>
                     
-                    <div className={SBStyle.CustomSearchBar}>
+                    {/* <div className={SBStyle.CustomSearchBar}>
                         <div className={SBStyle.PassportImg}>
                             <Image src="pin.svg" width={28} height={28}></Image>
-                        </div>
+                        </div> */}
                         {/* <input className={SBStyle.Input} placeholder="Morocco" type={'text'}/> */}
-                        <select className={SBStyle.Input} name= "country" type={'text'}>
+                        {/* <select className={SBStyle.Input} name= "country" type={'text'}>
                             {countryCodeList.map((code) => (
                                 <option className={SBStyle.CountryOption} value={code} style={{ width: '100px' }}>{countries[code]}</option>    
                             ))}                        
@@ -130,7 +146,7 @@ const SearchBar = () => {
                     </div>
                     <div className={SBStyle.Button}>
                         Do you need a visa?
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
