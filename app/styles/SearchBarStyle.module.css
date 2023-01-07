@@ -1,12 +1,11 @@
 .SearchBarContainer{
-    @apply rounded-2xl bg-stone-700 shadow-lg p-2 justify-start gap-x-16 inline-block;
-    width: 46rem
+    @apply rounded-2xl bg-stone-700 pb-3 pt-2 pl-3 gap-x-8 grid grid-rows-1 grid-cols-3;
+    width: 50rem
 }     
 
 .CustomSearchBar{
-    @apply inline-block justify-start relative;
-    width: 20rem
-
+    @apply inline-block justify-start content-center;
+    width: 15rem
 }
 
 .InputAndResults{
@@ -18,24 +17,24 @@
 }
 
 .Input{
-    @apply float-right w-10/12 p-2 py-4 font-light text-stone-600 border-transparent rounded-r-xl
+    @apply float-right h-full w-9/12 p-2 py-4 font-light text-stone-600 border-transparent rounded-r-xl
 }
 
 .Button{
-    @apply w-36 bg-stone-300 rounded-lg flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 
+    @apply w-9/12 mb-0.5 mt-1 ml-10 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700;
+    height: 93%
 }
 
 .iconTag{
-    @apply bg-stone-300 w-4/12 rounded-lg
+    @apply bg-stone-300 rounded-lg mt-1 w-4/12 ml-2
 }
 
 .PassportImg{
-    @apply mt-3 ml-3.5
+    @apply mt-3 ml-3
 }
 
 .ScrollContentContainer{
-    @apply mt-2 bg-stone-100 rounded-b-lg text-sm text-stone-600 justify-start list-none absolute;
-    width: 97%
+    @apply mt-2 w-2/12 bg-stone-100 rounded-b-lg text-sm text-stone-600 justify-start list-none absolute;
 }
 
 .CountryOption{

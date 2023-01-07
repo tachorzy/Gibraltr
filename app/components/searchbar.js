@@ -125,29 +125,38 @@ const SearchBar = () => {
                                 </span>
                             </div>
                         </Combobox>
-                        
+
                         {/* <select className={SBStyle.Input} name= "passport" type={'text'}>
                             {countryCodeList.map((code) => (
                                 <option className={SBStyle.CountryOption} value={code} style={{ width: '100px' }}>{countries[code]}</option>
                             ))}
                         </select> */}
                     </div>
-                    
-                    {/* <div className={SBStyle.CustomSearchBar}>
-                        <div className={SBStyle.PassportImg}>
-                            <Image src="pin.svg" width={28} height={28}></Image>
-                        </div> */}
-                        {/* <input className={SBStyle.Input} placeholder="Morocco" type={'text'}/> */}
-                        {/* <select className={SBStyle.Input} name= "country" type={'text'}>
-                            {countryCodeList.map((code) => (
-                                <option className={SBStyle.CountryOption} value={code} style={{ width: '100px' }}>{countries[code]}</option>    
-                            ))}                        
-                        </select>
-                    </div>
-                    <div className={SBStyle.Button}>
-                        Do you need a visa?
-                    </div> */}
                 </div>
+            
+                <div className={SBStyle.iconTag}>
+                    <div className={SBStyle.CustomSearchBar}>            
+                            <Image src="pin.svg" width={28} height={28} className={SBStyle.PassportImg}></Image>   
+                            <Combobox value={selectDestination} onChange={setSelectedDestination}>
+                                <Combobox.Input className={SBStyle.Input}/>
+                                <div>
+                                    <span className="inline-block w-full">
+                                    <Combobox.Options className={SBStyle.ScrollContentContainer}>
+                                        {countryCodeList.map((code) => (
+                                        <Combobox.Option key={code} value={countries[code]} className={SBStyle.CountryOption}>
+                                            {countries[code]}
+                                        </Combobox.Option>
+                                        ))}
+                                    </Combobox.Options>
+                                    </span>
+                                </div>
+                            </Combobox>        
+                        </div>
+                </div>
+                                            
+                <div className={SBStyle.Button}>
+                    Do you need a visa?
+                </div> 
             </div>
         </div>
     );
