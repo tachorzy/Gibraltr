@@ -1,7 +1,5 @@
 import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
-import Passport from '../public/passport.svg'
-import Pin from '../public/pin.svg'
 import { useEffect, useState } from 'react';
 import { getCodeList, overwrite } from 'country-list'
 import { Combobox } from '@headlessui/react'
@@ -100,7 +98,7 @@ const SearchBar = () => {
     const countryCodeList = Object.keys(countries).filter(code => 
         !nonCountries.includes(code)
         )
-    // console.log(countries)
+        
     //states
     const [selectNationality, setSelectedNationality] = useState("United States");
     const [selectDestination, setSelectedDestination] = useState("Morocco");
