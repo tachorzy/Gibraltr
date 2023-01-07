@@ -30,15 +30,16 @@
 }
 
 .PassportImg{
-    @apply mt-3 ml-3
+    @apply mt-3 ml-4
 }
 
 .ScrollContentContainer{
-    @apply mt-2 w-2/12 bg-stone-100 rounded-b-lg text-sm text-stone-600 justify-start list-none absolute;
+    @apply mt-2 h-96 overflow-y-scroll bg-stone-100 rounded-b-lg text-sm text-stone-600 justify-start list-none absolute;
+    width: 15.25%
 }
 
 .CountryOption{
-    @apply hover:bg-stone-200 py-1 pl-2.5
+    @apply hover:bg-stone-200 py-3 pl-4
 }
 
 .CountryName{
