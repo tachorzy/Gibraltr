@@ -112,7 +112,7 @@ const SearchBar = () => {
                         <Combobox value={selectNationality} onChange={setSelectedNationality}>
                             <Combobox.Input className={SBStyle.Input}/>
                             <div>
-                                <span className="inline-block w-full">
+                                {/* <span className="inline-block w-full"> */}
                                 <Combobox.Options className={SBStyle.ScrollContentContainer}>
                                     {countryCodeList.map((code) => (
                                     <Combobox.Option key={code} value={countries[code]} className={SBStyle.CountryOption}>
@@ -120,7 +120,7 @@ const SearchBar = () => {
                                     </Combobox.Option>
                                     ))}
                                 </Combobox.Options>
-                                </span>
+                                {/* </span> */}
                             </div>
                         </Combobox>
 
