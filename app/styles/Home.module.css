@@ -1,9 +1,5 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  @apply bg-zinc-300 flex flex-col justify-between content-center pl-24;
   min-height: 100vh;
 }
 
@@ -12,11 +8,12 @@
 }
 
 .title{
-  @apply text-stone-700 mb-4 text-4xl
+  @apply text-stone-700 mt-14 mb-6 text-4xl
 }
 
+/*HomePageInfo: Home Page information title, paragraph and infographics*/
 .infoTitle{
-  @apply text-stone-700 mt-20 mb-4 text-2xl
+  @apply text-stone-700 mt-16 mb-4 text-2xl
 }
 
 .info{
