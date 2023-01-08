@@ -12,5 +12,13 @@
 }
 
 .title{
-  @apply text-stone-700 mb-4
+  @apply text-stone-700 mb-4 text-4xl
+}
+
+.infoTitle{
+  @apply text-stone-700 mt-20 mb-4 text-2xl
+}
+
+.info{
+  @apply text-stone-700 text-lg mr-96
 }

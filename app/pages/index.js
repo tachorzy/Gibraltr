@@ -26,8 +26,12 @@ export default function Home() {
       <main className={styles.main}>
           <div className={rubik.className}>
               <div className="grid grid-rows-5 grid-cols-3">
-                <h1 className={styles.title}>Keep track of visas<br/>for your next destination.</h1>
+                <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
                 <SearchBar className="absolute left-0"></SearchBar>
+              </div>
+              <div>
+                  <h2 className={styles.infoTitle}>It's always best to know, before you go.</h2>
+                  <p className={styles.info}>That's why we're to keep you aware of visa requirements for wherever you're headed.<br/>Stay informed of the different tourist visas in your destination and how to get them!</p>
               </div>
           </div>
           {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_%28blue_dots%29.svg' width={875} height={546.9}></Image> */}
