@@ -23,6 +23,10 @@
 }
 
 .PassportImg{
+    @apply mt-2.5 ml-3.5
+}
+
+.DestinationImg{
     @apply mt-3 ml-4
 }
 

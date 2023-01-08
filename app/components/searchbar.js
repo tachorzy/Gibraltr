@@ -108,7 +108,7 @@ const SearchBar = () => {
             <div className={SBStyle.SearchBarContainer}>
                 <div className={SBStyle.iconTag}>
                     <div className={SBStyle.CustomSearchBar}>
-                        <Image src="passport.svg" width={28} height={28} className={SBStyle.PassportImg}></Image>
+                        <Image src="passport-solid.svg" width={32} height={32} className={SBStyle.PassportImg}></Image>
                         <Combobox value={selectNationality} onChange={setSelectedNationality}>
                             <Combobox.Input className={SBStyle.Input}/>
                             <div>
@@ -126,7 +126,7 @@ const SearchBar = () => {
             
                 <div className={SBStyle.iconTag}>
                     <div className={SBStyle.CustomSearchBar}>            
-                            <Image src="pin.svg" width={28} height={28} className={SBStyle.PassportImg}></Image>   
+                            <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
                             <Combobox value={selectDestination} onChange={setSelectedDestination}>
                                 <Combobox.Input className={SBStyle.Input}/>
                                 <div>
