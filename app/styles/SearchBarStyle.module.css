@@ -8,18 +8,9 @@
     width: 15rem
 }
 
-.InputAndResults{
-    /* @apply table  */
-}
-
-.Label{
-    @apply mb-1.5 text-sm text-stone-600
-}
-
 .Input{
     @apply float-right h-full w-9/12 p-2 py-4 text-stone-600 border-transparent rounded-r-xl font-medium;
     font-size: 1.025rem
-
 }
 
 .Button{
@@ -36,19 +27,10 @@
 }
 
 .ScrollContentContainer{
-    @apply mt-2 ml-2 h-80 overflow-y-scroll shadow-2xl bg-stone-100 rounded-b-xl text-sm text-stone-600 justify-start list-none absolute;
-    width: 14.45%
+    @apply mt-2.5 ml-2 h-80 overflow-y-scroll shadow-2xl bg-stone-100 rounded-b-xl text-sm text-stone-600 justify-start list-none absolute;
+    width: 14.45%;
 }
 
 .CountryOption{
     @apply hover:bg-stone-200 py-3 pl-4
 }
-
-.CountryName{
-    @apply break-words 
-}
-
-.CountryFlag{
-
-}
-
