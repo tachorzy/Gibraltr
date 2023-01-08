@@ -98,10 +98,10 @@ const SearchBar = () => {
     const countryCodeList = Object.keys(countries).filter(code => 
         !nonCountries.includes(code)
         )
-        
+
     //states
-    const [selectNationality, setSelectedNationality] = useState("United States");
-    const [selectDestination, setSelectedDestination] = useState("Morocco");
+    const [selectNationality, setSelectedNationality] = useState("Select passport...");
+    const [selectDestination, setSelectedDestination] = useState("Choose destination...");
 
     return(        
         <div>

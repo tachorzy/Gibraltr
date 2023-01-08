@@ -17,7 +17,9 @@
 }
 
 .Input{
-    @apply float-right h-full w-9/12 p-2 py-4 font-light text-stone-600 border-transparent rounded-r-xl
+    @apply float-right h-full w-9/12 p-2 py-4 text-stone-600 border-transparent rounded-r-xl font-medium;
+    font-size: 1.025rem
+
 }
 
 .Button{
