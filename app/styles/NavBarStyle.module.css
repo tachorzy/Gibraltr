@@ -1,6 +1,5 @@
 .navContainer{
-    @apply top-0 bg-stone-200 h-20 w-screen flex flex-row;
-    position: sticky;
+    @apply sticky top-0 bg-stone-200 h-20 w-screen flex flex-row shadow-lg;
 }
 
 .logo{
@@ -12,7 +11,7 @@
 }
 
 .navItems{
-    @apply ml-48 list-none mt-10 flex flex-row
+    @apply ml-64 list-none mt-10 flex flex-row
 }
 
 .navItem{
