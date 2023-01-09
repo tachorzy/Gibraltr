@@ -3,7 +3,7 @@ import Image from 'next/image'
 import NavBar from '../components/navbar'
 import SearchBar from '../components/searchbar'
 import HomePageInfo from '../components/homepageInfo'
-import { Roboto, Montserrat, Rubik } from '@next/font/google'
+import { Roboto, Rubik } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
 const roboto = Roboto({ 
