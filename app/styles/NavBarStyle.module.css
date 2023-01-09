@@ -1,11 +1,20 @@
 .navContainer{
-    @apply bg-stone-100 h-20 w-screen border-b-4 shadow-xl border-stone-800 flex flex-row;
+    @apply top-0 bg-stone-200 h-20 w-screen flex flex-row;
+    position: sticky;
 }
 
 .logo{
-    @apply hover:h-24 hover:w-24 ml-24
+    @apply hover:h-24 hover:w-24 ml-24 cursor-pointer
 }
 
 .brandName{
-    @apply text-stone-700 font-thin pt-7 ml-1.5 text-4xl;
+    @apply text-stone-700 font-thin pt-7 ml-1.5 text-4xl mr-96;
+}
+
+.navItems{
+    @apply ml-48 list-none mt-10 flex flex-row
+}
+
+.navItem{
+    @apply mx-4 hover:border-b-8 border-b-stone-800 cursor-pointer	text-stone-700
 }

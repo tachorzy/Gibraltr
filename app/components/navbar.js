@@ -20,6 +20,11 @@ const NavBar = () => {
             <div className={NavStyle.navContainer}>
                 <Image src="Gibraltar.svg" width={90} height={90} className={NavStyle.logo}></Image>
                 <h1 className={NavStyle.brandName}>Gibraltr</h1>
+                <ul className={NavStyle.navItems}>
+                    <li className={NavStyle.navItem}>Find Visas</li>
+                    <li className={NavStyle.navItem}>About</li>
+                    <li className={NavStyle.navItem}>FAQ</li>
+                </ul>
             </div>
         </div>
 
