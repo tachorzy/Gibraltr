@@ -1,5 +1,5 @@
 .main {
-  @apply bg-zinc-300 flex flex-col justify-between content-center pl-24;
+  @apply bg-stone-100 flex flex-col justify-between content-center pl-24;
   min-height: 100vh;
 }
 

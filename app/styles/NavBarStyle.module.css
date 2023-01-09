@@ -1,12 +1,11 @@
 .navContainer{
-    @apply bg-zinc-300 h-20 w-screen border-b-4 shadow-xl border-stone-800 flex flex-row;
-    top: 50rem;
+    @apply bg-stone-100 h-20 w-screen border-b-4 shadow-xl border-stone-800 flex flex-row;
 }
 
 .logo{
-    @apply hover:h-24 hover:w-24 ml-24 mt-3
+    @apply hover:h-24 hover:w-24 ml-24
 }
 
 .brandName{
-    @apply text-stone-700 font-thin pt-8 ml-3 text-5xl;
+    @apply text-stone-700 font-thin pt-7 ml-1.5 text-4xl;
 }
