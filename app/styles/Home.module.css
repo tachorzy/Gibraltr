@@ -2,7 +2,7 @@
   @apply sticky
 }
 .main {
-  @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-70 bg-right flex flex-col justify-between content-center pl-24;
+  @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24;
   min-height: 100vh;
   background-image: url('/passport-stamps.svg');
 }
@@ -22,4 +22,21 @@
 
 .info{
   @apply text-stone-700 text-lg mr-96
+}
+
+.infoContainer{
+  @apply flex flex-row mt-8 gap-x-10
+}
+
+.infoBox{
+  @apply w-56 h-36 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700
+
+}
+
+.infoBoxTitle{
+  @apply text-sm font-bold
+}
+
+.infoBoxText{
+  @apply text-xs
 }
