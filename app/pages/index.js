@@ -33,11 +33,12 @@ export default function Home() {
           </div>
           <div className={styles.main}>
             <div className={rubik.className}>
-                <div className="grid grid-rows-5 grid-cols-3 pl-24">
+                <div className="grid grid-rows-5 grid-cols-2 pl-24">
                   <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
                   <SearchBar></SearchBar>
+                  <HomePageInfo></HomePageInfo>
+                  {/* <Image src="lines.svg" width={450} height={450}></Image> */}
                 </div>
-                <HomePageInfo></HomePageInfo>
             </div>
           </div>
 
