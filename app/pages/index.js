@@ -26,9 +26,10 @@ export default function Home() {
         <link rel="icon" href="/gibraltar-solid.svg" />
       </Head>
 
+
       <main>
           <div className={styles.navBar}>
-                <NavBar></NavBar>
+                    <NavBar></NavBar>
           </div>
           <div className={styles.main}>
             <div className={rubik.className}>

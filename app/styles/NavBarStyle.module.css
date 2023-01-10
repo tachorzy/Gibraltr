@@ -1,9 +1,9 @@
 .navContainer{
-    @apply sticky top-0 bg-stone-200 h-20 w-screen flex flex-row shadow-lg;
+    @apply fixed top-0 bg-stone-200 h-20 w-screen flex flex-row shadow-lg;
 }
 
 .logo{
-    @apply hover:h-24 hover:w-24 ml-24 cursor-pointer
+    @apply ml-24 cursor-pointer
 }
 
 .brandName{
