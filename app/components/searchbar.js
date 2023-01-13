@@ -103,6 +103,12 @@ const SearchBar = () => {
     const [selectNationality, setSelectedNationality] = useState("Select passport...");
     const [selectDestination, setSelectedDestination] = useState("Choose destination...");
 
+    const handleSearch = (event) => {
+        const query = event.target.value;
+        setSearchQuery(query);
+        const filteredNationalityList = nationalityList.filter()
+    };
+
     return(        
         <div>
             <div className={SBStyle.SearchBarContainer}>

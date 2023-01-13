@@ -24,6 +24,9 @@ const HomePageInfo = () => {
                     <p className={styles.infoBoxText}>Arrive to immigration with rest assured that you've met your visa requirements.</p>
                 </span>
             </div>
+            <div>
+                <h3 className={styles.glossaryTitle}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3>
+            </div>
     </div>
     );
 }

@@ -25,7 +25,7 @@
 }
 
 .infoContainer{
-  @apply flex flex-row mt-8 gap-x-10
+  @apply flex flex-row mt-7 gap-x-10 mb-24
 }
 
 .infoBox{
@@ -39,4 +39,8 @@
 
 .infoBoxText{
   @apply text-xs
+}
+
+.glossaryTitle{
+  @apply text-3xl
 }
