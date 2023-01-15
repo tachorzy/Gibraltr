@@ -42,5 +42,5 @@
 }
 
 .glossaryTitle{
-  @apply text-3xl
+  @apply text-3xl text-stone-700
 }
