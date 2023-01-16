@@ -100,40 +100,59 @@ const SearchBar = () => {
         )
 
     //states
-    const [selectNationality, setSelectedNationality] = useState("Select passport...");
+    const [selectPassport, setSelectedPassport] = useState("Select passport...");
     const [selectDestination, setSelectedDestination] = useState("Choose destination...");
 
-    const handleSearch = (event) => {
-        const query = event.target.value;
-        setSearchQuery(query);
-        const filteredNationalityList = nationalityList.filter()
+    // const handleSearch = (event) => {
+    //     const query = event.target.value;
+    //     setSearchQuery(query);
+    //     const filteredNationalityList = nationalityList.filter()
+    // };
+
+    const handlePassportSelection = (event) => {
+        setSelectedPassport(event.target.value)
     };
+
+    const handleDestinationSelection = (event) => {
+        setSelectedDestination(event.target.value)
+    };
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        const response = await fetch('api/visa?passport=${selectedPassport}&destnation=${selectedDestination}');
+        const data = await response.json();
+        console.log(data);
+    }
 
     return(        
         <div>
             <div className={SBStyle.SearchBarContainer}>
                 <div className={SBStyle.iconTag}>
                     <div className={SBStyle.CustomSearchBar}>
-                        <Image src="passport-solid.svg" width={32} height={32} className={SBStyle.PassportImg}></Image>
-                        <Combobox value={selectNationality} onChange={setSelectedNationality}>
-                            <Combobox.Input className={SBStyle.Input}/>
-                            <div>
-                                <Combobox.Options className={SBStyle.ScrollContentContainer}>
-                                    {countryCodeList.map((code) => (
-                                    <Combobox.Option key={code} value={countries[code]} className={SBStyle.CountryOption}>
-                                        {countries[code]}
-                                    </Combobox.Option>
-                                    ))}
-                                </Combobox.Options>
-                            </div>
-                        </Combobox>
+                        <form onSubmit={handleFormSubmit}>
+                            <Image src="passport-solid.svg" width={32} height={32} className={SBStyle.PassportImg}></Image>
+                            <Combobox value={selectPassport} onChange={handlePassportSelection}>
+                                <Combobox.Input className={SBStyle.Input}/>
+                                <div>
+                                    <Combobox.Options className={SBStyle.ScrollContentContainer}>
+                                        {countryCodeList.map((code) => (
+                                        <Combobox.Option key={code} value={countries[code]} className={SBStyle.CountryOption}>
+                                            {countries[code]}
+                                        </Combobox.Option>
+                                        ))}
+                                    </Combobox.Options>
+                                </div>
+                            </Combobox>
+                        </form>
+
                     </div>
                 </div>
             
                 <div className={SBStyle.iconTag}>
-                    <div className={SBStyle.CustomSearchBar}>            
+                    <div className={SBStyle.CustomSearchBar}>      
+                        <form onSubmit={handleFormSubmit}>      
                             <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
-                            <Combobox value={selectDestination} onChange={setSelectedDestination}>
+                            <Combobox value={selectDestination} onChange={handleDestinationSelection}>
                                 <Combobox.Input className={SBStyle.Input}/>
                                 <div>
                                     <span className="inline-block w-full">
@@ -147,12 +166,13 @@ const SearchBar = () => {
                                     </span>
                                 </div>
                             </Combobox>        
-                        </div>
+                        </form>
+                    </div>
                 </div>
                                             
-                <div className={SBStyle.Button}>
+                <button type="submit" className={SBStyle.Button}>
                     Do you need a visa?
-                </div> 
+                </button> 
             </div>
         </div>
     );
