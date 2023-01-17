@@ -109,13 +109,13 @@ const SearchBar = () => {
     //     const filteredNationalityList = nationalityList.filter()
     // };
 
-    const handlePassportSelection = (event) => {
-        setSelectedPassport(event.target.value)
-    };
+    // const handlePassportSelection = (event) => {
+    //     setSelectedPassport(event.target.value)
+    // };
 
-    const handleDestinationSelection = (event) => {
-        setSelectedDestination(event.target.value)
-    };
+    // const handleDestinationSelection = (event) => {
+    //     setSelectedDestination(event.target.value)
+    // };
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
@@ -131,7 +131,7 @@ const SearchBar = () => {
                     <div className={SBStyle.CustomSearchBar}>
                         <form onSubmit={handleFormSubmit}>
                             <Image src="passport-solid.svg" width={32} height={32} className={SBStyle.PassportImg}></Image>
-                            <Combobox value={selectPassport} onChange={handlePassportSelection}>
+                            <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
                                 <Combobox.Input className={SBStyle.Input}/>
                                 <div>
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
@@ -152,7 +152,7 @@ const SearchBar = () => {
                     <div className={SBStyle.CustomSearchBar}>      
                         <form onSubmit={handleFormSubmit}>      
                             <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
-                            <Combobox value={selectDestination} onChange={handleDestinationSelection}>
+                            <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
                                 <Combobox.Input className={SBStyle.Input}/>
                                 <div>
                                     <span className="inline-block w-full">
