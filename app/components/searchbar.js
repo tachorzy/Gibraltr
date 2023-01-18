@@ -107,7 +107,7 @@ const SearchBar = () => {
         event.preventDefault();
         try{
             console.log(`CHECK VALUES PASSED: ${selectPassport} and ${selectDestination}`)
-            const response = await fetch('api/visa?passport=${selectPassport}&destnation=${selectDestination}');
+            const response = await fetch(`api/visa?passport=${selectPassport}&destination=${selectDestination}`);
             const data = await response.json();
             console.log(data);
         } catch(error){
