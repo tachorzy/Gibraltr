@@ -1,9 +1,11 @@
 import fetch from 'node-fetch';
 
-export default async function handler(req, res, searchPassport, searchCountry) {
+export default async function handler(req, res) {
     // const searchPassport = 'GB';
     // const searchCountry = 'AL';
     try {
+        const { searchPassport, searchCountry } = req.query       
+        console.log(`RECEIVED PASSPORT AND COUNTRY: ${searchPassport} and ${searchCountry}`)
         const response = await fetch('https://raw.githubusercontent.com/ilyankou/passport-index-dataset/master/passport-index-tidy-iso2.csv');
         const text = await response.text();
         
