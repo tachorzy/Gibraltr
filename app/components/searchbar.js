@@ -13,6 +13,10 @@ const SearchBar = () => {
     //overwriting all official names to their more commonly known names, as well as changing some endonyms to their English exonyms
     overwrite([
         {
+            code: 'US',
+            name: 'United States'
+        },
+        {
             code: 'GB',
             name: 'United Kingdom'
         },

@@ -37,7 +37,6 @@ export default function Home() {
                   <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
                   <SearchBar></SearchBar>
                   <HomePageInfo></HomePageInfo>
-                  {/* <Image src="lines.svg" width={450} height={450}></Image> */}
                 </div>
             </div>
           </div>

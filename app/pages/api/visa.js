@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         const searchPassport = req.query.passport;
         const searchCountry = req.query.destination;
 
-        const response = await fetch('https://raw.githubusercontent.com/ilyankou/passport-index-dataset/master/passport-index-tidy-iso2.csv');
+        const response = await fetch('https://raw.githubusercontent.com/ilyankou/passport-index-dataset/master/passport-index-tidy.csv');
         const text = await response.text();
         
         // split the file into lines and then, the first line into an array of column names
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
             for (let j = 0; j < headers.length; j++) {
                 row[headers[j]] = values[j];
             }
-            
+
             // check if the current row matches the passport and country we're searching for
             if (row.Passport === searchPassport && row.Destination === searchCountry) {
                 searchResult = row.Requirement;

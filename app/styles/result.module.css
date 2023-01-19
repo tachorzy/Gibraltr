@@ -1,0 +1,33 @@
+.navBar{
+    @apply sticky
+}
+
+.main {
+    @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24;
+    min-height: 100vh;
+}
+
+.gridContainer{
+    @apply grid columns-2 mr-96
+}
+  
+.countryProfileHeader{
+   @apply text-stone-700 mt-32 flex flex-row gap-x-0.5
+}
+  
+.countryProfileTitle{
+    @apply mt-20 text-6xl;
+}
+
+.title{
+    @apply text-stone-700 mt-36 mb-6 text-5xl
+}
+
+.visaInfo{
+    @apply text-stone-700 ml-5 mt-8 text-3xl justify-between;
+    width: 25rem;
+}
+
+.PassportImg{
+    @apply mx-4 mt-0.5
+}
