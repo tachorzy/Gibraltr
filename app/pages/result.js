@@ -35,14 +35,11 @@ export default function Home() {
             <div className={albula.className}>
                 <div className={styles.gridContainer}>
                     <div className={styles.countryProfileHeader}>
-                        {/*Placeholder Image and Title ~~ HARDCODED for now*/}
                         <Image src="Casablanca.svg" width={130} height={130} className={styles.PassportImg}></Image>
                         <h1 className={styles.countryProfileTitle}>Morocco</h1>
                     </div>
                     <div className={rubik.className}>
-                        {/*Placeholder text ~~ HARDCODED for now*/}
                         <h3 className={styles.visaInfo}>You don't need a visa for Morocco if you have a <b>United States</b> passport</h3>
-
                     </div>
                 </div>
             </div>
