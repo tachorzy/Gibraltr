@@ -1,5 +1,6 @@
 import { getCodeList, overwrite } from 'country-list'
 
+//removing all non-countries from the listing, e.g. Antarctica and British/French/Dutch overseas territories 
 const nonCountries = ['aq', 'as', 'ai', 'aw', 'ax', 'bm', 'bl', 'bq', 'bv', 'cw', 'io', 'ky', 'cx', 'cc', 'ck', 'fk', 'fo', 'gf', 
 'pf', 'tf', 'gg' , 'gi', 'gl', 'gp', 'gs', 'gu', 'hm', 'im', 'je', 'mf', 'mq', 'yt', 'ms', 'an', 'nc', 'nu', 'nf', 'mp', 'pn', 'pr', 're',
  'sh', 'pm', 'sj', 'sx', 'tk', 'tc', 'um', 'vg', 'vi', 'wf', 'eh'];
@@ -92,7 +93,8 @@ overwrite([
     }
 ])
 //retrieving the list of the countries, first as an Object with keys and values then we filter that list of the keys of the non-countries
-const countries = getCodeList()
-const countryCodeList = Object.keys(countries).filter(code => 
+export const countries = getCodeList()
+export const countryCodeList = Object.keys(countries).filter(code => 
     !nonCountries.includes(code)
     )
+
