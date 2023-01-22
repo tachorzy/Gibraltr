@@ -6,21 +6,9 @@ const nextConfig = {
 module.exports = nextConfig
 
 module.exports = {
-  experimental: { appDir: true },
   webpack(config) {
+    config.experiments = { topLevelAwait: true, layers: true },
     config.module.rules.push({  
-      test: /\.svg$/,
-      use: ["@svgr/webpack"]
-    });
-
-    return config;
-  }
-};
-
-module.exports = {
-  experimental: { appDir: true },
-  webpack(config) {
-    config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"]
     });
