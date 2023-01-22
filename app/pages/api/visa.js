@@ -1,13 +1,14 @@
 import fetch from 'node-fetch';
 import { getVisaRequirements } from '../../scripts/visadata.js'
-
+import { isoCodes } from '../../scripts/countrydata.js'
 
 export default async function handler(req, res) {
 
     try {
+        
         const searchPassport = req.query.passport;
         const searchDestination = req.query.destination;
-        
+
         const visaRequirements = await getVisaRequirements();
         const key = JSON.stringify({ searchPassport, searchDestination })
         const requirement = visaRequirements.get(key);

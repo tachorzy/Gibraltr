@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-const csvURL = 'https://raw.githubusercontent.com/ilyankou/passport-index-dataset/master/passport-index-tidy.csv'
+const csvURL = 'https://raw.githubusercontent.com/ilyankou/passport-index-dataset/master/passport-index-tidy-iso2.csv'
 
 export async function getVisaRequirements(){
     const response = await fetch(csvURL)

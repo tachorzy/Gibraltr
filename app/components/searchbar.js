@@ -1,8 +1,9 @@
 import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
-import { countries, countryCodeList } from '../scripts/countrydata.js'
+import { countries, isoCodes, countryCodeList } from '../scripts/countrydata.js'
 import { Combobox } from '@headlessui/react'
+import { useRouter } from 'next/router';
 
 const SearchBar = () => {
 
@@ -13,10 +14,15 @@ const SearchBar = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try{
-            console.log(`CHECK VALUES PASSED: ${selectPassport} and ${selectDestination}`)
-            const response = await fetch(`api/visa?passport=${selectPassport}&destination=${selectDestination}`);
+            const passportKey = selectPassport.toLowerCase()
+            const destinationKey = selectDestination.toLowerCase()
+
+            const response = await fetch(`api/visa?passport=${isoCodes[passportKey]}&destination=${isoCodes[destinationKey]}`);
             const data = await response.json();
             console.log(data);
+            useRouter.push({
+                pathName: "./result.js",
+            })
         } catch(error){
             console.error(error);
         }
