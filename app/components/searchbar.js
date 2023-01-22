@@ -11,6 +11,8 @@ const SearchBar = () => {
     const [selectPassport, setSelectedPassport] = useState("Select passport...");
     const [selectDestination, setSelectedDestination] = useState("Choose destination...");
 
+    const router = useRouter();
+
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try{
@@ -19,10 +21,7 @@ const SearchBar = () => {
 
             const response = await fetch(`api/visa?passport=${isoCodes[passportKey]}&destination=${isoCodes[destinationKey]}`);
             const data = await response.json();
-            console.log(data);
-            useRouter.push({
-                pathName: "./result.js",
-            })
+            router.push('/result')
         } catch(error){
             console.error(error);
         }
