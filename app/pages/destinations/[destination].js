@@ -28,7 +28,7 @@ export async function getServerSideProps({ query }){
 
     const passportISO = isoCodes[passportKey]
     const destinationISO = isoCodes[destinationKey]
-    console.log(`PASSING ISOCODES: ${passportISO} ${destinationISO}`)
+
     const visaRequirements = await getVisaRequirements();
     const key = JSON.stringify({ passportISO, destinationISO });
 
@@ -43,7 +43,7 @@ export default function Destination({ requirement, passport, destination}){
                 <title>Gibraltar</title>
                 <meta name="description" content="It's Best to Know Before You Go!" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="gibraltar-solid.svg" />
+                <link rel="icon" href="/gibraltar-solid.svg" />
             </Head>
 
             <div className={styles.navBar}>
@@ -54,11 +54,11 @@ export default function Destination({ requirement, passport, destination}){
                 <div className={albula.className}>
                     <div className={styles.gridContainer}>
                         <div className={styles.countryProfileHeader}>
-                            <Image src="Casablanca.svg" width={130} height={130} className={styles.PassportImg}></Image>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={styles.PassportImg}></Image>
                             <h1 className={styles.countryProfileTitle}>{destination}</h1>
                         </div>
                         <div className={rubik.className}>
-                            <h3 className={styles.visaInfo}>You don't need a visa for Morocco if you have a <b>{passport}</b> passport</h3>
+                            <h3 className={styles.visaInfo}>You don't need a visa for {destination} if you have a <b>{passport}</b> passport</h3>
                         </div>
                     </div>
                 </div>
