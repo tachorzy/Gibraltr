@@ -10,8 +10,8 @@ export async function getVisaRequirements(){
     const visaRequirements = new Map();
 
     rows.forEach(row => {
-        const [searchPassport, searchDestination, requirement] = row.split(',');
-        const keyNationPair = JSON.stringify({searchPassport, searchDestination});
+        const [passportISO, destinationISO, requirement] = row.split(',');
+        const keyNationPair = JSON.stringify({passportISO, destinationISO});
         visaRequirements.set(keyNationPair, requirement);
     })
     return visaRequirements;

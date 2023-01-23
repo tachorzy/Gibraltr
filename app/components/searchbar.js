@@ -16,12 +16,12 @@ const SearchBar = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try{
-            const passportKey = selectPassport.toLowerCase()
-            const destinationKey = selectDestination.toLowerCase()
-
-            const response = await fetch(`api/visa?passport=${isoCodes[passportKey]}&destination=${isoCodes[destinationKey]}`);
-            const data = await response.json();
-            router.push('/result')
+            // const response = await fetch(`api/visa?passport=${isoCodes[passportKey]}&destination=${isoCodes[destinationKey]}`);
+            // const data = await response.json();
+            router.push({
+                pathname: `/destinations/[destination]`,
+                query: { passport: selectPassport, destination: selectDestination},
+            })
         } catch(error){
             console.error(error);
         }
