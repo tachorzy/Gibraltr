@@ -16,7 +16,7 @@
 }
   
 .countryProfileTitle{
-    @apply mt-20 text-6xl;
+    @apply mt-20 text-6xl mr-96;
 }
 
 .title{
