@@ -2,7 +2,6 @@ import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { countries, isoCodes, countryCodeList } from '../scripts/countrydata.js'
-import { Combobox } from '@headlessui/react'
 import { useRouter } from 'next/router'
 
 const SearchBar = () => {
@@ -29,6 +28,21 @@ const SearchBar = () => {
             console.error(error);
         }
     };
+
+    const passportCombobox = useCombobox({
+        items: countryCodeList.map(code => countries[code]),
+        onSelectedItemChange: ({ selectedItem }) => setSelectedPassport(selectedItem),
+        initialSelectedItem: selectPassport
+    })
+    
+    const destinationCombobox = useCombobox({
+        items: countryCodeList.map(code => countries[code]),
+        onSelectedItemChange: ({ selectedItem }) => setSelectedDestination(selectedItem),
+        initialSelectedItem: selectDestination
+    })
+
+
+
     // const handleInput = (event) => {
     //     // setSelectedPassport(event.target.value);
     //     setFilteredCountries(Object.entries(countryCodeList).filter(([isoCode, countryName]) =>

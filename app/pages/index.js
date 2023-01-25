@@ -29,7 +29,6 @@ export default function Home() {
         <link rel="icon" href="/gibraltar-solid.svg" />
       </Head>
 
-
       <main>
           <div className={styles.navBar}>
                     <NavBar></NavBar>
@@ -37,7 +36,6 @@ export default function Home() {
           <div className={styles.main}>
             <div className={rubik.className}>
                 <div className="grid grid-rows-5 grid-cols-2 pl-24">
-                  <ComboBox></ComboBox>
                   <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
                   <SearchBar></SearchBar>
                   <HomePageInfo></HomePageInfo>
