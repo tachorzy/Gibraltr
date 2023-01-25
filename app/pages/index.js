@@ -3,8 +3,11 @@ import Image from 'next/image'
 import NavBar from '../components/navbar'
 import SearchBar from '../components/searchbar'
 import HomePageInfo from '../components/homepageInfo'
-import { Roboto, Rubik } from '@next/font/google'
+import { Combo, Roboto, Rubik } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+
+//for testing:
+import ComboBox from '../components/combobox'
 
 const roboto = Roboto({ 
   subsets: ['latin'], 
@@ -34,9 +37,12 @@ export default function Home() {
           <div className={styles.main}>
             <div className={rubik.className}>
                 <div className="grid grid-rows-5 grid-cols-2 pl-24">
+                  <ComboBox></ComboBox>
                   <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
                   <SearchBar></SearchBar>
                   <HomePageInfo></HomePageInfo>
+                </div>
+                <div>
                 </div>
             </div>
           </div>

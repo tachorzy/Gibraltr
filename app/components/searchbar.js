@@ -1,23 +1,26 @@
 import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import { countries, isoCodes, countryCodeList } from '../scripts/countrydata.js'
 import { Combobox } from '@headlessui/react'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 const SearchBar = () => {
 
-    //states
-    const [selectPassport, setSelectedPassport] = useState("Select passport...");
-    const [selectDestination, setSelectedDestination] = useState("Choose destination...");
+    //Hooks and States -- to change the state values. The initial state are the prompts
+    const INITIAL_PASSPORT_STATE = "Select passport..."
+    const INITIAL_DESTINATION_STATE = "Choose Destination..."
+
+    const [selectPassport, setSelectedPassport] = useState(INITIAL_PASSPORT_STATE);
+    const [selectDestination, setSelectedDestination] = useState(INITIAL_DESTINATION_STATE);
+    
+    const [query, setQuery] = useState('');
 
     const router = useRouter();
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try{
-            // const response = await fetch(`api/visa?passport=${isoCodes[passportKey]}&destination=${isoCodes[destinationKey]}`);
-            // const data = await response.json();
             router.push({
                 pathname: `/destinations/[destination]`,
                 query: { passport: selectPassport, destination: selectDestination},
@@ -25,7 +28,12 @@ const SearchBar = () => {
         } catch(error){
             console.error(error);
         }
-    }
+    };
+    // const handleInput = (event) => {
+    //     // setSelectedPassport(event.target.value);
+    //     setFilteredCountries(Object.entries(countryCodeList).filter(([isoCode, countryName]) =>
+    //         countryName.toLowerCase().includes(event.target.value.toLowerCase())    
+    //     ));    }
 
     return(        
         <div>
@@ -53,13 +61,13 @@ const SearchBar = () => {
                         <div className={SBStyle.CustomSearchBar}>      
                             <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
                             <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
-                                <Combobox.Input className={SBStyle.Input}/>
+                                <Combobox.Input className={SBStyle.Input} displayValue={(country) => country}/>
                                 <div>
                                     <span className="inline-block w-full">
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
-                                        {countryCodeList.map((code) => (
-                                        <Combobox.Option key={code} value={countries[code]} className={SBStyle.CountryOption}>
-                                            {countries[code]}
+                                        {countryCodeList.map((isoCode) => (
+                                        <Combobox.Option key={isoCode} value={countries[isoCode]} className={SBStyle.CountryOption}>
+                                            {countries[isoCode]}
                                         </Combobox.Option>
                                         ))}
                                     </Combobox.Options>
