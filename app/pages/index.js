@@ -6,9 +6,6 @@ import HomePageInfo from '../components/homepageInfo'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
-//for testing:
-import ComboBox from '../components/combobox'
-
 const roboto = Roboto({ 
   subsets: ['latin'], 
   weight: '400' 

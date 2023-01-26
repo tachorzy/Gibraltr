@@ -1,8 +1,9 @@
 import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { countries, isoCodes, countryCodeList } from '../scripts/countrydata.js'
 import { useRouter } from 'next/router'
+import { Combobox } from '@headlessui/react'
 
 const SearchBar = () => {
 
@@ -13,7 +14,8 @@ const SearchBar = () => {
     const [selectPassport, setSelectedPassport] = useState(INITIAL_PASSPORT_STATE);
     const [selectDestination, setSelectedDestination] = useState(INITIAL_DESTINATION_STATE);
     
-    const [query, setQuery] = useState('');
+    // const [query, setQuery] = useState('');
+    const inputRef = useRef(null)
 
     const router = useRouter();
 
@@ -29,19 +31,7 @@ const SearchBar = () => {
         }
     };
 
-    const passportCombobox = useCombobox({
-        items: countryCodeList.map(code => countries[code]),
-        onSelectedItemChange: ({ selectedItem }) => setSelectedPassport(selectedItem),
-        initialSelectedItem: selectPassport
-    })
-    
-    const destinationCombobox = useCombobox({
-        items: countryCodeList.map(code => countries[code]),
-        onSelectedItemChange: ({ selectedItem }) => setSelectedDestination(selectedItem),
-        initialSelectedItem: selectDestination
-    })
-
-
+    //Need to figure out filtering the countries list for autocompletion in the custom made options menu.
 
     // const handleInput = (event) => {
     //     // setSelectedPassport(event.target.value);
@@ -57,7 +47,7 @@ const SearchBar = () => {
                         <div className={SBStyle.CustomSearchBar}>
                             <Image src="passport-solid.svg" width={32} height={32} className={SBStyle.PassportImg}></Image>
                             <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
-                                <Combobox.Input className={SBStyle.Input}/>
+                                <Combobox.Input className={SBStyle.Input} ref={inputRef}/>
                                 <div>
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
                                         {countryCodeList.map((code) => (
@@ -75,7 +65,7 @@ const SearchBar = () => {
                         <div className={SBStyle.CustomSearchBar}>      
                             <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
                             <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
-                                <Combobox.Input className={SBStyle.Input} displayValue={(country) => country}/>
+                                <Combobox.Input className={SBStyle.Input} ref={inputRef}/>
                                 <div>
                                     <span className="inline-block w-full">
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
