@@ -58,7 +58,18 @@ export default function Destination({ requirement, passport, destination}){
                             <h1 className={styles.countryProfileTitle}>{destination}</h1>
                         </div>
                         <div className={rubik.className}>
-                            <h3 className={styles.visaInfo}>You don't need a visa for {destination} if you have a(n) <b>{passport}</b> passport</h3>
+                            {
+                                requirement !== "visa required" && requirement !== "e-visa" && 
+                                    <h3 className={styles.visaInfo}>
+                                        You don't need a visa for {destination} if you have a(n) <b>{passport}
+                                    </b> passport</h3>
+                            }
+                            {
+                                requirement === "visa required" &&
+                                <h3 className={styles.visaInfo}>
+                                    You need a visa for {destination} if you have a(n) <b>{passport}
+                                </b> passport</h3>
+                            }
                         </div>
                     </div>
                 </div>
