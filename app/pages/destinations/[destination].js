@@ -70,6 +70,9 @@ export default function Destination({ requirement, passport, destination}){
                                         You need a visa for {destination} if you have a(n) <b>{passport}
                                     </b> passport</h3>
                             }
+                            <span>
+                                
+                            </span>
                         </div>
                     </div>
                 </div>

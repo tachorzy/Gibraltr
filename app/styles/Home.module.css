@@ -7,6 +7,10 @@
   background-image: url('/passport-stamps.svg');
 }
 
+.infoPageSection {
+  @apply bg-stone-100 flex flex-col justify-between content-center pl-24;
+}
+
 .WorldMap{
   @apply justify-end  
 }
@@ -42,5 +46,5 @@
 }
 
 .glossaryTitle{
-  @apply text-3xl text-stone-700
+  @apply text-3xl text-stone-700 mb-10
 }

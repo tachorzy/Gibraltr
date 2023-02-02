@@ -3,6 +3,7 @@ import Image from 'next/image'
 import NavBar from '../components/navbar'
 import SearchBar from '../components/searchbar'
 import HomePageInfo from '../components/homepageInfo'
+import LowerHomePageInfo from '../components/lowerhomepageinfo'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
@@ -41,7 +42,6 @@ export default function Home() {
                 </div>
             </div>
           </div>
-
       </main>
     </>
   )
