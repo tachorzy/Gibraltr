@@ -65,10 +65,10 @@ export default function Destination({ requirement, passport, destination}){
                                     </b> passport</h3>
                             }
                             {
-                                requirement === "visa required" &&
-                                <h3 className={styles.visaInfo}>
-                                    You need a visa for {destination} if you have a(n) <b>{passport}
-                                </b> passport</h3>
+                                (requirement === "visa required" || requirement == "e-visa") &&
+                                    <h3 className={styles.visaInfo}>
+                                        You need a visa for {destination} if you have a(n) <b>{passport}
+                                    </b> passport</h3>
                             }
                         </div>
                     </div>
