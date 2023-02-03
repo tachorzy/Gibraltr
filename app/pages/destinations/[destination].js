@@ -62,7 +62,7 @@ export default function Destination({ requirement, passport, destination}){
                                 requirement !== "visa required" && requirement !== "e-visa" && 
                                     <h3 className={styles.visaInfo}>
                                         You don't need a visa for {destination} if you have a(n) <b>{passport}
-                                    </b> passport</h3>
+                                    </b> passport</h3> 
                             }
                             {
                                 (requirement === "visa required" || requirement == "e-visa") &&
@@ -70,9 +70,6 @@ export default function Destination({ requirement, passport, destination}){
                                         You need a visa for {destination} if you have a(n) <b>{passport}
                                     </b> passport</h3>
                             }
-                            <span>
-                                
-                            </span>
                         </div>
                     </div>
                 </div>
