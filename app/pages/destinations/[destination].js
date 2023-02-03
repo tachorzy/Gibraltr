@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../../components/navbar'
+import ElectronicVisa from '../../components/evisa.js'
+import VisaOnArrival from '../../components/visaonarrival.js'
+import Visa from '../../components/visa.js'
 import { countries, isoCodes, countryCodeList } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
 import styles from '../../styles/result.module.css'
@@ -36,6 +39,34 @@ export async function getServerSideProps({ query }){
     return {props: {requirement, passport, destination}}
 }
 
+function displayVisaMessage(passport, destination, requirement) {
+    if (requirement !== "visa required" && requirement !== "e-visa") {
+       return( 
+            <h3 className={styles.visaInfo}>
+                You don't need a visa for {destination} if you have a(n) <b>{passport}
+            </b> passport</h3>
+       )
+    }
+    else if (requirement === "visa required" || requirement == "e-visa") {
+        return (
+            <h3 className={styles.visaInfo}>
+                You need a visa for {destination} if you have a(n) <b>{passport}
+            </b> passport</h3>
+        )
+    }
+}
+
+function displayVisaInfo(requirement){
+    switch(requirement){
+        case "e-visa":
+            return(<ElectronicVisa></ElectronicVisa>)
+        case "visa required":
+            return(<Visa></Visa>)
+        case "visa on arrival":
+            return(<VisaOnArrival></VisaOnArrival>)
+    }    
+}
+
 export default function Destination({ requirement, passport, destination}){
     return(
         <div>
@@ -58,18 +89,8 @@ export default function Destination({ requirement, passport, destination}){
                             <h1 className={styles.countryProfileTitle}>{destination}</h1>
                         </div>
                         <div className={rubik.className}>
-                            {
-                                requirement !== "visa required" && requirement !== "e-visa" && 
-                                    <h3 className={styles.visaInfo}>
-                                        You don't need a visa for {destination} if you have a(n) <b>{passport}
-                                    </b> passport</h3> 
-                            }
-                            {
-                                (requirement === "visa required" || requirement == "e-visa") &&
-                                    <h3 className={styles.visaInfo}>
-                                        You need a visa for {destination} if you have a(n) <b>{passport}
-                                    </b> passport</h3>
-                            }
+                                {displayVisaMessage(passport, destination, requirement)}
+                                {displayVisaInfo(requirement)}
                         </div>
                     </div>
                 </div>
