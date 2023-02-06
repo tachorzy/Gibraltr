@@ -3,11 +3,17 @@ import Image from 'next/image'
 import ElectronicVisa from '../components/evisa.js'
 import VisaOnArrival from '../components/visaonarrival.js'
 import Visa from '../components/visa.js'
+import localFont from '@next/font/local'
+
+const supremeMedium = localFont({
+    src: '../fonts/Supreme-Medium.otf',
+    weight: '200'
+  })
 
 const HomePageInfo = () => {
 
     return(
-        <div>
+        <div className={supremeMedium.className}>
             <h2 className={styles.infoTitle}>It's always best to know, before you go.</h2>
             <p className={styles.info}>That's why we're here to keep you aware of visa requirements for wherever you're headed.<br/>Stay informed of your options of a tourist visa for your destination and how to get them!</p>
             <div className={styles.infoContainer}>

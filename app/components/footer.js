@@ -14,10 +14,15 @@ const albula = localFont({
     weight: '500'
 })
 
+const supremeRegular = localFont({
+    src: '../fonts/Supreme-Regular.otf',
+    weight: '200'
+})
+
 const Footer = () => {
 
     return(
-        <div className={rubik.className}>
+        <div className={supremeRegular.className}>
             <div className={FooterStyle.footerContainer}>
                 <span>
                     <div className={albula.className}>
