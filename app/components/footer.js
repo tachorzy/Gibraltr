@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
             </div> 
             <div className={FooterStyle.copyrightContainer}>
-                <span className={FooterStyle.copyright}>© {Date().getFullYear} Gibraltr.com. All rights reserved.</span>
+                <span className={FooterStyle.copyright}>© {new Date().getFullYear()} Gibraltr.com. All rights reserved.</span>
             </div> 
         </div>
     );
