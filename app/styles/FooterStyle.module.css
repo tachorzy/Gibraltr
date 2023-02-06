@@ -1,0 +1,31 @@
+.footerContainer{
+    @apply flex flex-row bg-stone-800 h-52 py-8 pl-12 gap-x-24
+}
+
+.infoBox{
+    @apply ml-12 text-stone-200 w-56 leading-snug
+}
+
+.brandingTitle{
+    @apply ml-12 text-stone-200 mb-1
+}
+
+.sectionColumn{
+    @apply gap-y-2
+}
+
+.header{
+    @apply text-stone-400 font-medium mb-3 border-stone-400 pb-1 border-b-2 border-t-0 border-x-0 border-solid w-24
+}
+
+.text{
+    @apply text-stone-200 hover:text-stone-500 font-medium list-none pb-3
+}
+
+.copyrightContainer{
+    @apply bg-stone-800 pl-12 pb-4
+}
+
+.copyright{
+    @apply ml-12 text-stone-200 text-xs mt-16
+}

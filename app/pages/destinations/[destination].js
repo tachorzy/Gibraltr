@@ -78,7 +78,7 @@ export default function Destination({ requirement, passport, destination}){
             </Head>
 
             <div className={styles.navBar}>
-                        <NavBar></NavBar>
+                <NavBar></NavBar>
             </div>
 
             <div className={styles.main}>
@@ -90,7 +90,9 @@ export default function Destination({ requirement, passport, destination}){
                         </div>
                         <div className={rubik.className}>
                                 {displayVisaMessage(passport, destination, requirement)}
-                                {displayVisaInfo(requirement)}
+                                <div className={styles.infoContainer}>
+                                    {displayVisaInfo(requirement)}
+                                </div>
                         </div>
                     </div>
                 </div>

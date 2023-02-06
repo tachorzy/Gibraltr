@@ -3,11 +3,6 @@ import Image from 'next/image'
 import { Roboto, Montserrat, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
-const rubik = Rubik({
-    subsets: ['latin'],
-    weight: '400'
-})
-
 const albula = localFont({
     src: '../fonts/serpentype-albula-pro-bold.otf',
     weight: '500'
