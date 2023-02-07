@@ -4,9 +4,10 @@ import NavBar from '../../components/navbar'
 import ElectronicVisa from '../../components/evisa.js'
 import VisaOnArrival from '../../components/visaonarrival.js'
 import Visa from '../../components/visa.js'
-import { countries, isoCodes, countryCodeList } from '../../scripts/countrydata.js'
+import Schengen from '../../components/schengen'
+import { countries, isoCodes, countryCodeList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
-import styles from '../../styles/result.module.css'
+import DestinationStyle from '../../styles/DestinationStyle.module.css'
 import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
@@ -42,14 +43,14 @@ export async function getServerSideProps({ query }){
 function displayVisaMessage(passport, destination, requirement) {
     if (requirement !== "visa required" && requirement !== "e-visa") {
        return( 
-            <h3 className={styles.visaInfo}>
+            <h3 className={DestinationStyle.visaInfo}>
                 You don't need a visa for {destination} if you have a(n) <b>{passport}
             </b> passport</h3>
        )
     }
     else if (requirement === "visa required" || requirement == "e-visa") {
         return (
-            <h3 className={styles.visaInfo}>
+            <h3 className={DestinationStyle.visaInfo}>
                 You need a visa for {destination} if you have a(n) <b>{passport}
             </b> passport</h3>
         )
@@ -67,6 +68,13 @@ function displayVisaInfo(requirement){
     }    
 }
 
+function displaySchengenInfo(destination){
+    console.log(`destination: ${destination} isoCode: ${isoCodes[destination.toLowerCase()]}`)
+    let destinationISO = isoCodes[destination.toLowerCase()].toLowerCase()
+    if(schengenCountries.includes(destinationISO))
+        return (<Schengen></Schengen>)
+}
+
 export default function Destination({ requirement, passport, destination}){
     return(
         <div>
@@ -77,21 +85,22 @@ export default function Destination({ requirement, passport, destination}){
                 <link rel="icon" href="/gibraltar-solid.svg" />
             </Head>
 
-            <div className={styles.navBar}>
+            <div className={DestinationStyle.navBar}>
                 <NavBar></NavBar>
             </div>
 
-            <div className={styles.main}>
+            <div className={DestinationStyle.main}>
                 <div className={albula.className}>
-                    <div className={styles.gridContainer}>
-                        <div className={styles.countryProfileHeader}>
-                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={styles.PassportImg}></Image>
-                            <h1 className={styles.countryProfileTitle}>{destination}</h1>
+                    <div className={DestinationStyle.gridContainer}>
+                        <div className={DestinationStyle.countryProfileHeader}>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
+                            <h1 className={DestinationStyle.countryProfileTitle}>{destination}</h1>
                         </div>
                         <div className={rubik.className}>
                                 {displayVisaMessage(passport, destination, requirement)}
-                                <div className={styles.infoContainer}>
+                                <div className={DestinationStyle.infoContainer}>
                                     {displayVisaInfo(requirement)}
+                                    {displaySchengenInfo(destination)}
                                 </div>
                         </div>
                     </div>

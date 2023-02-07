@@ -100,3 +100,5 @@ export const countryCodeList = Object.keys(countries).filter(code =>
 
 export const isoCodes = getNameList()
 
+//Schengen Zone information:
+export const schengenCountries = ["at", "be", "cz", "dk", "fi", "fr", "de", "gr", "hr","ie", "it", "lu", "nl", "no", "pt", "es", "se", "ch"];

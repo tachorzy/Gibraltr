@@ -7,16 +7,17 @@ const supremeMedium = localFont({
     weight: '200'
   })
 
-const ElectronicVisa = () => {
+const Schengen = () => {
 
     return(
         <div className={styles.infoBox}>
             <span className={supremeMedium.className}>
-                <p className={styles.infoBoxTitle}>e-Visa</p>
-                <p className={styles.infoBoxText}>Electronic visas are filled out online on an official government website or through a travel agency.</p>
+                <Image src='/EU.svg' width={36} height={36}></Image>
+                <p className={styles.infoBoxTitle}>Schengen Zone</p>
+                <p className={styles.infoBoxText}>Freedom of travel between other Schengen countries and stay for up to 90 days in a 180-day period. Once you have a visa.</p>
             </span>
         </div>  
     );
 }
 
-export default ElectronicVisa;
+export default Schengen;

@@ -10,12 +10,12 @@ const supremeMedium = localFont({
 const Visa = () => {
 
     return(
-        <span className={styles.infoBox}>
+        <div className={styles.infoBox}>
             <span className={supremeMedium.className}>
                 <p className={styles.infoBoxTitle}>Visa Required</p>
                 <p className={styles.infoBoxText}>You must apply for a visa prior to entry. This likely means you'll have to file documents, pay a fee, and visiting an embassy.</p>
             </span>
-        </span>
+        </div>
     );
 }
 

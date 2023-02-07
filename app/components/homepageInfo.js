@@ -8,12 +8,18 @@ import localFont from '@next/font/local'
 const supremeMedium = localFont({
     src: '../fonts/Supreme-Medium.otf',
     weight: '200'
-  })
+})
+
+const supremeRegular = localFont({
+    src: '../fonts/Supreme-Regular.otf',
+    weight: '200'
+})
+
 
 const HomePageInfo = () => {
 
     return(
-        <div className={supremeMedium.className}>
+        <div className={supremeRegular.className}>
             <h2 className={styles.infoTitle}>It's always best to know, before you go.</h2>
             <p className={styles.info}>That's why we're here to keep you aware of visa requirements for wherever you're headed.<br/>Stay informed of your options of a tourist visa for your destination and how to get them!</p>
             <div className={styles.infoContainer}>
