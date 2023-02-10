@@ -12,9 +12,9 @@ const Schengen = () => {
     return(
         <div className={styles.infoBox}>
             <span className={supremeMedium.className}>
-                <Image src='/EU.svg' width={36} height={36}></Image>
+                <Image src='/EU.svg' width={30} height={30}></Image>
                 <p className={styles.infoBoxTitle}>Schengen Zone</p>
-                <p className={styles.infoBoxText}>Freedom of travel between other Schengen countries and stay for up to 90 days in a 180-day period. Once you have a visa.</p>
+                <p className={styles.infoBoxText}>Freedom of movement. Stay up to 90 days in a 180-day period. Visa is valid for entire Schengen Zone.</p>
             </span>
         </div>  
     );
