@@ -18,6 +18,10 @@
     height: 93%
 }
 
+.ButtonInactive{
+    @apply border-transparent cursor-pointer w-9/12 mb-0.5 mt-1 ml-10 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600;
+    height: 93%
+}
 .iconTag{
     @apply bg-stone-300 rounded-lg mt-1 w-4/12 ml-2
 }
