@@ -24,7 +24,7 @@ const SearchBar = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         
-        if(selectPassport === INITIAL_PASSPORT_STATE || selectDestination === INITIAL_PASSPORT_STATE)
+        if(selectPassport === INITIAL_PASSPORT_STATE || selectDestination === INITIAL_DESTINATION_STATE)
             return;
 
         try{
