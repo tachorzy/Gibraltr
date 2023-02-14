@@ -14,7 +14,7 @@ const Schengen = () => {
             <span className={supremeMedium.className}>
                 <Image src='/EU.svg' width={30} height={30}></Image>
                 <p className={styles.infoBoxTitle}>Schengen Zone</p>
-                <p className={styles.infoBoxText}>Freedom of movement. Stay up to 90 days in a 180-day period. Applies across Schengen Zone.</p>
+                <p className={styles.infoBoxText}> Freedom of movement applies across Schengen Zone. Stay up to 90 days in a 180-day period.</p>
             </span>
         </div>  
     );

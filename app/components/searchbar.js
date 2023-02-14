@@ -14,15 +14,22 @@ const SearchBar = () => {
     const [selectPassport, setSelectedPassport] = useState(INITIAL_PASSPORT_STATE);
     const [selectDestination, setSelectedDestination] = useState(INITIAL_DESTINATION_STATE);
     
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
     // const [query, setQuery] = useState('');
     const inputRef = useRef(null)
 
     const router = useRouter();
-
+    
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        
+        if(selectPassport === INITIAL_PASSPORT_STATE || selectDestination === INITIAL_PASSPORT_STATE)
+            return;
+
         try{
             router.push({
+                
                 pathname: `/destinations/[destination]`,
                 query: { passport: selectPassport, destination: selectDestination},
             })
@@ -30,14 +37,6 @@ const SearchBar = () => {
             console.error(error);
         }
     };
-
-    //Need to figure out filtering the countries list for autocompletion in the custom made options menu.
-
-    // const handleInput = (event) => {
-    //     // setSelectedPassport(event.target.value);
-    //     setFilteredCountries(Object.entries(countryCodeList).filter(([isoCode, countryName]) =>
-    //         countryName.toLowerCase().includes(event.target.value.toLowerCase())    
-    //     ));    }
 
     return(        
         <div>
