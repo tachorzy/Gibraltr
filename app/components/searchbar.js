@@ -38,11 +38,11 @@ const SearchBar = () => {
         }
     };
 
-    let button;
+    let searchButton;
     if(selectPassport === INITIAL_PASSPORT_STATE || selectDestination === INITIAL_DESTINATION_STATE)
-        button = <button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>
+        searchButton = <button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>
     else
-        button = <button type="submit" className={SBStyle.Button}> Do you need a visa?</button>
+        searchButton = <button type="submit" className={SBStyle.Button}> Do you need a visa?</button>
     return(        
         <div>
             <form type="submit" onSubmit={handleFormSubmit}>
@@ -84,7 +84,7 @@ const SearchBar = () => {
                             </Combobox>         
                         </div>
                     </div>
-                    {button}
+                    {searchButton}
                 </div>
             </form>
         </div>
