@@ -1,4 +1,4 @@
-import { getCodeList, getNameList, overwrite } from 'country-list'
+import { getNames, getCodeList, getNameList, overwrite } from 'country-list'
 
 //removing all non-countries from the listing, e.g. Antarctica and British/French/Dutch overseas territories 
 const nonCountries = ['aq', 'as', 'ai', 'aw', 'ax', 'bm', 'bl', 'bq', 'bv', 'cw', 'io', 'ky', 'cx', 'cc', 'ck', 'fk', 'fo', 'gf', 
@@ -99,6 +99,9 @@ export const countryCodeList = Object.keys(countries).filter(code =>
     )
 
 export const isoCodes = getNameList()
+export const countryNameList = Object.keys(isoCodes);
+
+export const countriesArray = getNames()
 
 //Schengen Zone information:
 export const schengenCountries = ["at", "be", "cz", "dk", "fi", "fr", "de", "gr", "hr","ie", "it", "lu", "nl", "no", "pt", "es", "se", "ch"];
