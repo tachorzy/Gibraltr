@@ -35,7 +35,7 @@
 }
 
 .ScrollContentContainer{
-    @apply mt-2.5 ml-2 h-80 overflow-y-scroll shadow-2xl bg-stone-100 rounded-b-xl text-sm text-stone-600 justify-start list-none absolute;
+    @apply mt-2.5 ml-2 max-h-80 overflow-y-scroll shadow-2xl bg-stone-100 rounded-b-xl text-sm text-stone-600 justify-start list-none absolute;
     width: 14.45%;
 }
 

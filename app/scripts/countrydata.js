@@ -92,16 +92,23 @@ overwrite([
         name: 'Venezuela'
     }
 ])
+
 //retrieving the list of the countries, first as an Object with keys and values then we filter that list of the keys of the non-countries
-export const countries = getCodeList()
-export const countryCodeList = Object.keys(countries).filter(code => 
+export const filteredISOKeys = Object.keys(getCodeList()).filter(code => 
     !nonCountries.includes(code)
     )
 
-export const isoCodes = getNameList()
-export const countryNameList = Object.keys(isoCodes);
+export const isoCodesList = getNameList()
 
-export const countriesArray = getNames()
+export const countries = getNames()
+
+export const filteredCountryKeys = Object.keys(getNameList()).filter(country =>
+    !nonCountries.includes(getNameList()[country].toLowerCase())
+);
+
+export const filteredCountries = countries.filter(country =>
+    Object.values(filteredCountryKeys).includes(country.toLowerCase())
+)
 
 //Schengen Zone information:
 export const schengenCountries = ["at", "be", "cz", "dk", "fi", "fr", "de", "gr", "hr","ie", "it", "lu", "nl", "no", "pt", "es", "se", "ch"];

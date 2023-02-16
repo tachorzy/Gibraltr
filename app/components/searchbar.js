@@ -1,7 +1,7 @@
 import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
-import { countries, isoCodes, countriesArray, countryNameList, countryCodeList } from '../scripts/countrydata.js'
+import { filteredCountries, isoCodesList, countriesArray, filteredISOKeys, filteredCountryKeys } from '../scripts/countrydata.js'
 import { useRouter } from 'next/router'
 import { Combobox } from '@headlessui/react'
 
@@ -13,8 +13,8 @@ const SearchBar = () => {
     const [selectPassport, setSelectedPassport] = useState(INITIAL_PASSPORT_STATE);
     const [selectDestination, setSelectedDestination] = useState(INITIAL_DESTINATION_STATE);
     
-    const [query, setPassportQuery] = useState('')
-    const [query, setDestinationQuery] = useState('')
+    const [passportQuery, setPassportQuery] = useState('')
+    const [destinationQuery, setDestinationQuery] = useState('')
 
     const inputRef = useRef(null)
 
@@ -43,24 +43,24 @@ const SearchBar = () => {
         searchButton = <button type="submit" className={SBStyle.ButtonActive}> Do you need a visa?</button>
 
     const filteredPassports =
-        query === ''
-            ? countriesArray
-            : countriesArray.filter((passport) => {
+        passportQuery === ''
+            ? filteredCountries
+            : filteredCountries.filter((passport) => {
                 console.log(`Passport: ${passport}`)
-                console.log(`Query: ${query}`)
-                console.log(passport.toLowerCase().includes(query.toLowerCase()))
-                return passport.toLowerCase().includes(query.toLowerCase())
+                console.log(`Query: ${passportQuery}`)
+                console.log(passport.toLowerCase().includes(passportQuery.toLowerCase()))
+                return passport.toLowerCase().startsWith(passportQuery.toLowerCase())
             })
 
     const filteredDestinations =
-    query === ''
-        ? countriesArray
-        : countriesArray.filter((destination) => {
-            console.log(`Passport: ${passport}`)
-            console.log(`Query: ${query}`)
-            console.log(destination.toLowerCase().includes(query.toLowerCase()))
-            return destination.toLowerCase().includes(query.toLowerCase())
-        })
+        destinationQuery === ''
+            ? filteredCountries
+            : filteredCountries.filter((destination) => {
+                console.log(`Destination: ${destination}`)
+                console.log(`Query: ${destinationQuery}`)
+                console.log(destination.toLowerCase().includes(destinationQuery.toLowerCase()))
+                return destination.toLowerCase().startsWith(destinationQuery.toLowerCase())
+            })
 
     return(        
         <div>
@@ -74,7 +74,7 @@ const SearchBar = () => {
                                 <div>
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
                                         {filteredPassports.map((code) => (
-                                        <Combobox.Option key={isoCodes[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
+                                        <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
                                             {code}
                                         </Combobox.Option>
                                         ))}
@@ -93,7 +93,7 @@ const SearchBar = () => {
                                     <span className="inline-block w-full">
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
                                         {filteredDestinations.map((code) => (
-                                        <Combobox.Option key={isoCodes[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
+                                        <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
                                             {code}
                                         </Combobox.Option>
                                         ))}
