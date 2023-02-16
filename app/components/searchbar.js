@@ -10,8 +10,8 @@ const SearchBar = () => {
     const INITIAL_PASSPORT_STATE = "Select passport..."
     const INITIAL_DESTINATION_STATE = "Choose Destination..."
 
-    const [selectPassport, setSelectedPassport] = useState(INITIAL_PASSPORT_STATE);
-    const [selectDestination, setSelectedDestination] = useState(INITIAL_DESTINATION_STATE);
+    const [selectPassport, setSelectedPassport] = useState('');
+    const [selectDestination, setSelectedDestination] = useState('');
     
     const [passportQuery, setPassportQuery] = useState('')
     const [destinationQuery, setDestinationQuery] = useState('')
@@ -23,7 +23,7 @@ const SearchBar = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         
-        if(selectPassport === INITIAL_PASSPORT_STATE || selectDestination === INITIAL_DESTINATION_STATE)
+        if(selectPassport === '' || selectDestination === '')
             return;
         try{
             router.push({
@@ -37,7 +37,7 @@ const SearchBar = () => {
     };
 
     let searchButton;
-    if(selectPassport === INITIAL_PASSPORT_STATE || selectDestination === INITIAL_DESTINATION_STATE)
+    if(selectPassport === '' || selectDestination === '')
         searchButton = <button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>
     else
         searchButton = <button type="submit" className={SBStyle.ButtonActive}> Do you need a visa?</button>
@@ -70,7 +70,7 @@ const SearchBar = () => {
                         <div className={SBStyle.CustomSearchBar}>
                             <Image src="passport-solid.svg" width={32} height={32} className={SBStyle.PassportImg}></Image>
                             <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
-                                <Combobox.Input className={SBStyle.Input} ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)}/>
+                                <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={SBStyle.Input} />
                                 <div>
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
                                         {filteredPassports.map((code) => (
@@ -88,7 +88,7 @@ const SearchBar = () => {
                         <div className={SBStyle.CustomSearchBar}>      
                             <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
                             <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
-                                <Combobox.Input className={SBStyle.Input} ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)}/>
+                                <Combobox.Input ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)} placeholder={INITIAL_DESTINATION_STATE} className={SBStyle.Input} />
                                 <div>
                                     <span className="inline-block w-full">
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
