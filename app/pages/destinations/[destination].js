@@ -5,7 +5,7 @@ import ElectronicVisa from '../../components/evisa.js'
 import VisaOnArrival from '../../components/visaonarrival.js'
 import Visa from '../../components/visa.js'
 import Schengen from '../../components/schengen'
-import { countries, isoCodes, countryCodeList, schengenCountries } from '../../scripts/countrydata.js'
+import { countries, isoCodesList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
 import DestinationStyle from '../../styles/DestinationStyle.module.css'
 import { Roboto, Rubik } from '@next/font/google'
@@ -30,8 +30,8 @@ export async function getServerSideProps({ query }){
     const passportKey = passport?.toLowerCase()
     const destinationKey = destination?.toLowerCase()
 
-    const passportISO = isoCodes[passportKey]
-    const destinationISO = isoCodes[destinationKey]
+    const passportISO = isoCodesList[passportKey]
+    const destinationISO = isoCodesList[destinationKey]
 
     const visaRequirements = await getVisaRequirements();
     const key = JSON.stringify({ passportISO, destinationISO });
@@ -69,8 +69,7 @@ function displayVisaInfo(requirement){
 }
 
 function displaySchengenInfo(destination){
-    console.log(`destination: ${destination} isoCode: ${isoCodes[destination.toLowerCase()]}`)
-    let destinationISO = isoCodes[destination.toLowerCase()].toLowerCase()
+    let destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
     if(schengenCountries.includes(destinationISO))
         return (<Schengen></Schengen>)
 }
