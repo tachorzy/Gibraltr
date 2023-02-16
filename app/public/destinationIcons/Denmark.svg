@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512pt" height="512pt" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#443f3c">
+  <path d="m88 400h16v56h-16z"/>
+  <path d="m48 400h16v56h-16z"/>
+  <path d="m48 320h16v32h-16z"/>
+  <path d="m48 264h16v32h-16z"/>
+  <path d="m48 208h16v32h-16z"/>
+  <path d="m80 320h16v32h-16z"/>
+  <path d="m80 264h16v32h-16z"/>
+  <path d="m80 208h16v32h-16z"/>
+  <path d="m112 320h16v32h-16z"/>
+  <path d="m112 264h16v32h-16z"/>
+  <path d="m112 208h16v32h-16z"/>
+  <path d="m144 320h16v32h-16z"/>
+  <path d="m144 264h16v32h-16z"/>
+  <path d="m144 208h16v32h-16z"/>
+  <path d="m176 320h16v32h-16z"/>
+  <path d="m176 264h16v32h-16z"/>
+  <path d="m176 208h16v32h-16z"/>
+  <path d="m64 136h16v24h-16z"/>
+  <path d="m96 136h16v24h-16z"/>
+  <path d="m128 136h16v24h-16z"/>
+  <path d="m160 136h16v24h-16z"/>
+  <path d="m240 400h16v56h-16z"/>
+  <path d="m240 320h16v32h-16z"/>
+  <path d="m240 264h16v32h-16z"/>
+  <path d="m240 208h16v32h-16z"/>
+  <path d="m280 320h16v32h-16z"/>
+  <path d="m280 264h16v32h-16z"/>
+  <path d="m280 208h16v32h-16z"/>
+  <path d="m320 320h16v32h-16z"/>
+  <path d="m320 264h16v32h-16z"/>
+  <path d="m320 208h16v32h-16z"/>
+  <path d="m256 136h16v24h-16z"/>
+  <path d="m304 136h16v24h-16z"/>
+  <path d="m478.4 152h-110.4v-8.8008l-17.398-87.199h-38.602v-40h-48v40h-72v-40h-48v40h-110.6l-17.398 87.199v352.8h480v-264.9zm-318.4-120h16v24h-16zm16 448h-32v-48c0-8.8008 7.1992-16 16-16s16 7.1992 16 16zm32 0h-16v-48c0-17.699-14.301-32-32-32s-32 14.301-32 32v48h-96v-96h176zm0-112h-176v-176h176zm0.19922-225.6-0.19922 0.80078v32.801h-176v-31.199l14.602-72.801h175.7zm71.801-110.4h16v24h-16zm40 448h-32v-64h32zm32 0h-16v-80h-64v80h-48v-96h128zm0-112h-128v-176h128zm0-192h-128v-31.199l14.602-72.801h98.898l14.602 72.801v31.199zm16-8h97.602l12.398 56h-110zm72 312h-32v-64h32zm40 0h-24v-80h-64v80h-24v-240h112z"/>
+  <path d="m392 184h16v24h-16z"/>
+  <path d="m432 184h16v24h-16z"/>
+  <path d="m384 256h16v32h-16z"/>
+  <path d="m416 256h16v32h-16z"/>
+  <path d="m448 256h16v32h-16z"/>
+  <path d="m384 304h16v32h-16z"/>
+  <path d="m416 304h16v32h-16z"/>
+  <path d="m448 304h16v32h-16z"/>
+  <path d="m384 352h16v32h-16z"/>
+  <path d="m416 352h16v32h-16z"/>
+  <path d="m448 352h16v32h-16z"/>
+ </g>
+</svg>
