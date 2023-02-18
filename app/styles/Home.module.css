@@ -38,8 +38,13 @@
 
 }
 
+.infoBoxTitleContainer{
+  @apply grid grid-cols-3;
+}
+
 .infoBoxTitle{
-  @apply text-sm font-bold
+  @apply text-sm font-bold col-span-2;
+  vertical-align: middle;
 }
 
 .infoBoxText{
@@ -48,4 +53,21 @@
 
 .glossaryTitle{
   @apply text-3xl text-stone-700 mb-10
+}
+
+.infoBoxImage{
+  @apply ml-8;
+}
+
+.visaInfoBox{
+  @apply w-64 h-44 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700
+}
+
+.visaInfoBoxTitle{
+  @apply text-lg font-bold col-span-2 mb-2.5;
+  vertical-align: middle;
+}
+
+.visaInfoBoxText{
+  @apply text-sm leading-relaxed
 }

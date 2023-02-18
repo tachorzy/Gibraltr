@@ -10,10 +10,10 @@ const supremeMedium = localFont({
 const ElectronicVisa = () => {
 
     return(
-        <div className={styles.infoBox}>
+        <div className={styles.visaInfoBox}>
             <span className={supremeMedium.className}>
-                <p className={styles.infoBoxTitle}>e-Visa</p>
-                <p className={styles.infoBoxText}>Electronic visas are filled out online on an official government website or through a travel agency.</p>
+                <p className={styles.visaInfoBoxTitle}>e-Visa</p>
+                <p className={styles.visaInfoBoxText}>Electronic visas are filled out online on an official government website or through a travel agency.</p>
             </span>
         </div>  
     );
