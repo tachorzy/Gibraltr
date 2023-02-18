@@ -8,6 +8,7 @@ import Schengen from '../../components/schengen'
 import { countries, isoCodesList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
 import DestinationStyle from '../../styles/DestinationStyle.module.css'
+import Footer from '../../components/footer'
 import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
@@ -105,6 +106,7 @@ export default function Destination({ requirement, passport, destination}){
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 
