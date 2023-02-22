@@ -56,11 +56,11 @@
 }
 
 .infoBoxImage{
-  @apply ml-8;
+  @apply ml-16;
 }
 
 .visaInfoBox{
-  @apply w-64 h-44 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700
+  @apply w-96 h-40 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700
 }
 
 .visaInfoBoxTitle{

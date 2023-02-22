@@ -4,6 +4,7 @@ import NavBar from '../../components/navbar'
 import ElectronicVisa from '../../components/evisa.jsx'
 import VisaOnArrival from '../../components/visaonarrival.jsx'
 import Visa from '../../components/visa.jsx'
+import VisaFree from '../../components/visafree.jsx'
 import Schengen from '../../components/schengen.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
@@ -61,11 +62,13 @@ function displayVisaMessage(passport, destination, requirement) {
 function displayVisaInfo(requirement){
     switch(requirement){
         case "e-visa":
-            return(<ElectronicVisa></ElectronicVisa>)
+            return(<ElectronicVisa/>)
         case "visa required":
-            return(<Visa></Visa>)
+            return(<Visa/>)
         case "visa on arrival":
-            return(<VisaOnArrival></VisaOnArrival>)
+            return(<VisaOnArrival/>)
+        default:
+            return(<VisaFree/>)
     }    
 }
 
@@ -101,9 +104,10 @@ export default function Destination({ requirement, passport, destination}){
                                 <span className={DestinationStyle.visaMessage}>
                                     {displayVisaMessage(passport, destination, requirement)}
                                 </span>
-
-                                {displayVisaInfo(requirement)}
-                                {displaySchengenInfo(destination)}
+                                <span className={DestinationStyle.infoCardContainer}>
+                                    {displayVisaInfo(requirement)}
+                                    {displaySchengenInfo(destination)}
+                                </span>
                             </div>
                         </div>
                     </div>

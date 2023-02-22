@@ -33,9 +33,14 @@
 }
 
 .infoContainer{
-  @apply grid grid-cols-2 grid-rows-4 ml-5  mt-24 mb-24 gap-x-56
+  @apply grid grid-cols-2 grid-rows-4 ml-5 mt-24 mb-24 gap-x-56
 }
 
 .visaMessage{
-    @apply col-span-2
+    @apply col-span-2 row-span-1 h-12
+}
+
+.infoCardContainer {
+    @apply flex flex-col gap-y-5 row-span-2;
+
 }
