@@ -8,7 +8,7 @@
 }
 
 .gridContainer{
-    @apply flex flex-row mr-96 mt-24
+    @apply flex flex-row mt-24
 }
   
 .countryProfileHeader{
@@ -25,7 +25,7 @@
 
 .visaInfo{
     @apply text-stone-700 mt-8 text-3xl justify-between leading-10;
-    width: 32rem; 
+    width: 30rem; 
 }
 
 .PassportImg{
@@ -41,9 +41,9 @@
 }
 
 .infoCardContainer {
-    @apply flex flex-col gap-y-5 row-span-2;
+    @apply flex flex-col gap-y-5 row-span-3 mt-16;
 }
 
 .countryProfileContainer{
-    @apply flex flex-col w-full
+    @apply flex flex-col w-full ml-7
 }

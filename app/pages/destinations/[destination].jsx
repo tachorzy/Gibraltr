@@ -105,10 +105,8 @@ export default function Destination({ requirement, passport, destination}){
                             </div>
                         </div>
 
-
                         <div className={rubik.className}>
                             <div className={DestinationStyle.infoContainer}>
-
                                 <span className={DestinationStyle.infoCardContainer}>
                                     {displayVisaInfo(requirement)}
                                     {displaySchengenInfo(destination)}

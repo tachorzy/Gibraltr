@@ -60,14 +60,14 @@
 }
 
 .visaInfoBox{
-  @apply w-96 h-40 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700
+  @apply w-96 h-40 text-stone-700 border-2 border-inherit border-solid rounded-xl p-4 pt-5 border-stone-300 bg-stone-200
 }
 
 .visaInfoBoxTitle{
-  @apply text-lg font-bold col-span-2 mb-2.5;
+  @apply text-xl font-bold col-span-2 mb-2.5;
   vertical-align: middle;
 }
 
 .visaInfoBoxText{
-  @apply text-sm leading-relaxed
+  @apply leading-relaxed
 }
