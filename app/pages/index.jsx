@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>  
       <Head>
-        <title>Gibraltar</title>
+        <title>Gibraltr</title>
         <meta name="description" content="It's Best to Know Before You Go!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/gibraltar-solid.svg" />

@@ -8,15 +8,15 @@
 }
 
 .gridContainer{
-    @apply grid columns-2 mr-96
+    @apply flex flex-row mr-96 mt-24
 }
   
 .countryProfileHeader{
-   @apply text-stone-700 mt-32 flex flex-row gap-x-0.5
+   @apply text-stone-700 mt-44 flex flex-row gap-x-0.5
 }
   
 .countryProfileTitle{
-    @apply mt-20 text-6xl mr-96;
+    @apply mt-20 text-6xl mr-52;
 }
 
 .title{
@@ -24,14 +24,18 @@
 }
 
 .visaInfo{
-    @apply text-stone-700 ml-5 mt-8 text-3xl justify-between;
+    @apply text-stone-700 mt-8 text-3xl justify-between;
     width: 25rem;
 }
 
 .PassportImg{
-    @apply mx-4 mt-0.5
+    @apply mx-4 mt-6 align-bottom
 }
 
 .infoContainer{
-  @apply flex flex-row ml-5 mt-7 gap-x-10 mb-24
+  @apply grid grid-cols-2 grid-rows-4 ml-5  mt-24 mb-24 gap-x-56
+}
+
+.visaMessage{
+    @apply col-span-2
 }

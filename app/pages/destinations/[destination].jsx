@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../../components/navbar'
-import ElectronicVisa from '../../components/evisa.js'
-import VisaOnArrival from '../../components/visaonarrival.js'
-import Visa from '../../components/visa.js'
-import Schengen from '../../components/schengen'
+import ElectronicVisa from '../../components/evisa.jsx'
+import VisaOnArrival from '../../components/visaonarrival.jsx'
+import Visa from '../../components/visa.jsx'
+import Schengen from '../../components/schengen.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
 import DestinationStyle from '../../styles/DestinationStyle.module.css'
-import Footer from '../../components/footer'
+import Footer from '../../components/footer.jsx'
 import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
@@ -97,11 +97,14 @@ export default function Destination({ requirement, passport, destination}){
                             <h1 className={DestinationStyle.countryProfileTitle}>{destination}</h1>
                         </div>
                         <div className={rubik.className}>
-                                {displayVisaMessage(passport, destination, requirement)}
-                                <div className={DestinationStyle.infoContainer}>
-                                    {displayVisaInfo(requirement)}
-                                    {displaySchengenInfo(destination)}
-                                </div>
+                            <div className={DestinationStyle.infoContainer}>
+                                <span className={DestinationStyle.visaMessage}>
+                                    {displayVisaMessage(passport, destination, requirement)}
+                                </span>
+
+                                {displayVisaInfo(requirement)}
+                                {displaySchengenInfo(destination)}
+                            </div>
                         </div>
                     </div>
                 </div>
