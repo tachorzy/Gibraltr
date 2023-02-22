@@ -41,7 +41,7 @@
 }
 
 .infoCardContainer {
-    @apply flex flex-col gap-y-5 row-span-3 mt-16;
+    @apply flex flex-col gap-y-6 row-span-3 mt-16;
 }
 
 .countryProfileContainer{

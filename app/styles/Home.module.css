@@ -64,7 +64,7 @@
 }
 
 .visaInfoBoxTitle{
-  @apply text-xl font-bold col-span-2 mb-2.5;
+  @apply text-lg font-bold col-span-2 mb-2.5;
   vertical-align: middle;
 }
 
