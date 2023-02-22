@@ -24,8 +24,8 @@
 }
 
 .visaInfo{
-    @apply text-stone-700 mt-8 text-3xl justify-between;
-    width: 25rem;
+    @apply text-stone-700 mt-8 text-3xl justify-between leading-10;
+    width: 32rem; 
 }
 
 .PassportImg{
@@ -37,10 +37,13 @@
 }
 
 .visaMessage{
-    @apply col-span-2 row-span-1 h-12
+    @apply w-full ml-3.5
 }
 
 .infoCardContainer {
     @apply flex flex-col gap-y-5 row-span-2;
+}
 
+.countryProfileContainer{
+    @apply flex flex-col w-full
 }

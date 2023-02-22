@@ -95,15 +95,20 @@ export default function Destination({ requirement, passport, destination}){
             <div className={DestinationStyle.main}>
                 <div className={albula.className}>
                     <div className={DestinationStyle.gridContainer}>
-                        <div className={DestinationStyle.countryProfileHeader}>
-                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
-                            <h1 className={DestinationStyle.countryProfileTitle}>{destination}</h1>
+                        <div className={DestinationStyle.countryProfileContainer}>
+                            <div className={DestinationStyle.countryProfileHeader}>
+                                <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
+                                <h1 className={DestinationStyle.countryProfileTitle}>{destination}</h1>
+                            </div>
+                            <div className={DestinationStyle.visaMessage}>
+                                {displayVisaMessage(passport, destination, requirement)}
+                            </div>
                         </div>
+
+
                         <div className={rubik.className}>
                             <div className={DestinationStyle.infoContainer}>
-                                <span className={DestinationStyle.visaMessage}>
-                                    {displayVisaMessage(passport, destination, requirement)}
-                                </span>
+
                                 <span className={DestinationStyle.infoCardContainer}>
                                     {displayVisaInfo(requirement)}
                                     {displaySchengenInfo(destination)}
