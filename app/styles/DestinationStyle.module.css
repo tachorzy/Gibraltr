@@ -12,7 +12,7 @@
 }
   
 .countryProfileHeader{
-   @apply text-stone-700 mt-44 flex flex-row gap-x-0.5
+   @apply text-stone-700 mt-24 flex flex-row gap-x-0.5
 }
   
 .countryProfileTitle{

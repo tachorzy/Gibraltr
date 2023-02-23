@@ -1,5 +1,9 @@
 .navContainer{
-    @apply fixed top-0 bg-stone-200 h-20 w-screen flex flex-row shadow-lg;
+    @apply fixed top-0 bg-stone-200 h-20 w-screen space-x-96 flex flex-row shadow-lg;
+}
+
+.brandingContainer{
+    @apply flex flex-row mr-96
 }
 
 .logo{
@@ -7,11 +11,11 @@
 }
 
 .brandName{
-    @apply text-stone-700 font-thin pt-7 ml-1.5 text-4xl mr-96;
+    @apply text-stone-700 font-thin pt-7 ml-1.5 text-4xl;
 }
 
 .navItems{
-    @apply ml-64 list-none mt-10 flex flex-row
+    @apply list-none mt-10 flex flex-row text-right content-end
 }
 
 .navItem{
