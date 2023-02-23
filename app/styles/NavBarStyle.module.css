@@ -15,7 +15,7 @@
 }
 
 .navItems{
-    @apply w-6/12 list-none mt-10 flex flex-row text-right justify-end
+    @apply w-1/2 list-none mt-10 flex flex-row text-right justify-end
 }
 
 .navItem{
