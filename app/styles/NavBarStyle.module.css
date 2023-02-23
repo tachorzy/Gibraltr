@@ -3,7 +3,7 @@
 }
 
 .brandingContainer{
-    @apply flex flex-row mr-96
+    @apply flex flex-row
 }
 
 .logo{
@@ -15,7 +15,7 @@
 }
 
 .navItems{
-    @apply list-none mt-10 flex flex-row text-right content-end
+    @apply w-6/12 list-none mt-10 flex flex-row text-right justify-end
 }
 
 .navItem{
