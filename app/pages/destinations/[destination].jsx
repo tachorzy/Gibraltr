@@ -78,7 +78,7 @@ function displaySchengenInfo(destination){
         return (<Schengen></Schengen>)
 }
 
-export default function Destination({ requirement, passport, destination}){
+export default function Destination({ requirement, passport, destination }){
     return(
         <div>
             <Head>
