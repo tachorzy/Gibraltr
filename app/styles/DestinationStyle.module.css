@@ -33,11 +33,11 @@
 }
 
 .infoContainer{
-  @apply grid grid-cols-2 grid-rows-4 ml-5 mt-24 mb-24 gap-x-56
+  @apply grid grid-cols-2 grid-rows-4 mr-10 mt-24 mb-24 gap-x-56
 }
 
 .visaMessage{
-    @apply w-full ml-3.5
+    @apply w-11/12 ml-3.5
 }
 
 .infoCardContainer {
@@ -45,5 +45,5 @@
 }
 
 .countryProfileContainer{
-    @apply flex flex-col w-full ml-7
+    @apply flex flex-col w-11/12 ml-7
 }

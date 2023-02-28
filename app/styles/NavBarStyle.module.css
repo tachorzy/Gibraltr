@@ -19,5 +19,5 @@
 }
 
 .navItem{
-    @apply mx-4 hover:border-b-8 hover:border-b-stone-800 cursor-pointer	text-stone-700
+    @apply mx-4 hover:border-b-8 hover:border-b-stone-800 cursor-pointer hover:border-inherit text-stone-700
 }

@@ -29,3 +29,7 @@
 .copyright{
     @apply ml-12 text-stone-200 text-xs mt-16
 }
+
+.calculationContainer{
+    @apply text-stone-700
+}
