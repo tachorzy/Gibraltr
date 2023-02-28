@@ -3,11 +3,13 @@ import Image from 'next/image'
 import NavBar from '../components/navbar'
 import SearchBar from '../components/searchbar'
 import HomePageInfo from '../components/homepageInfo'
+import InfoCard from '../components/infocard'
 import Footer from '../components/footer'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import AboutStyles from '../styles/AboutUsStyle.module.css'
+import { motion } from 'framer-motion';
 
 const roboto = Roboto({ 
   subsets: ['latin'], 
@@ -55,16 +57,43 @@ export default function Home() {
                     <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4> */}
             </div>
           </div>
-          <div className={AboutStyles.bannerLight}></div>
+          <div className={AboutStyles.bannerLight}>
+            <div className={styles.infoCard}>
+              <div className={supremeMedium.className}>
+                <h2 className={AboutStyles.infoCardTitle}>197+<br/>countries
+                </h2>
+                <p className={AboutStyles.infoCardText}>Representing every destination.</p>
+              </div>
+            </div>
+
+            <div className={styles.infoCard}>
+              <div className={supremeMedium.className}>
+                <h2 className={AboutStyles.infoCardTitle}>197+<br/>passports
+                </h2>
+                <p className={AboutStyles.infoCardText}>Available for every nationality.</p>
+              </div>
+            </div>
+
+            <div className={styles.infoCard}>
+              <div className={supremeMedium.className}>
+                <h2 className={AboutStyles.infoCardTitle}>Over 3000<br/>embassies
+                </h2>
+                <p className={AboutStyles.infoCardText}>Accesible to all travelers.</p>
+              </div>
+            </div>
+
+            <div className={styles.infoCard}>
+              <div className={supremeMedium.className}>
+                <h2 className={AboutStyles.infoCardTitle}>Endless<br/>results
+                </h2>
+                <p className={AboutStyles.infoCardText}>Remaining reliable and up to date.</p>
+              </div>
+            </div>
+
+          </div>
+
           <div className={AboutStyles.main}>
             <div className={supremeMedium.className}>
-                    {/* <h2 className={AboutStyles. aboutUsTitle}>About us</h2>
-                    <p className={AboutStyles.paragraph}>
-                      Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination.
-                    </p> */}
-                    {/* <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
-                    <h3 className={AboutStyles.subtitle}>Wisely plan your trip</h3>
-                    <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4> */}
             </div>
           </div>
           <Footer></Footer>

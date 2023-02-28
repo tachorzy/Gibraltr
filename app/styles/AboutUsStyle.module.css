@@ -13,8 +13,8 @@
 }
 
 .bannerLight{
-    @apply flex flex-row w-screen bg-stone-200;
-    height: 20rem;
+    @apply flex flex-row w-screen bg-stone-200 py-16 pl-24 gap-x-16 content-center;
+    height: 21rem;
 }
 
 .title{
@@ -87,4 +87,12 @@
   
 .visaInfoBoxText{
     @apply leading-relaxed
+}
+
+.infoCardTitle{
+    @apply text-4xl text-stone-700;
+}
+
+.infoCardText{
+    @apply text-lg text-stone-700 leading-relaxed mb-32 mt-2.5
 }

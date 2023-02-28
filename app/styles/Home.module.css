@@ -71,3 +71,12 @@
 .visaInfoBoxText{
   @apply leading-relaxed
 }
+
+/*This shows on the About Us Page*/
+.infoCard{
+  @apply w-64 h-52 text-stone-700 border-2 border-inherit border-solid rounded-2xl p-4 px-9 pt-9 border-stone-200 bg-stone-100
+}
+
+.infoCardTitle{
+  @apply text-4xl text-stone-700
+}
