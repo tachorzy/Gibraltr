@@ -6,19 +6,28 @@
 .infoPageSection {
     @apply bg-stone-100 flex flex-col justify-between content-center pl-24;
 }
+  .backgroundImage{
+  }
   
-.WorldMap{
-    @apply justify-end  
+.banner{
+    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90;
+    height: 29rem;
+    background-image: url('/Gibraltar.svg');
 }
-  
+
 .title{
-    @apply text-stone-700 mt-60 mb-6 text-5xl
+    @apply text-stone-200 text-7xl ml-24 pt-56
 }
 
 .subtitle{
     @apply text-stone-700 text-4xl
 }
-  
+
+.aboutUsTitle{
+    @apply text-stone-700 text-4xl mt-20
+}
+
+
 .centeredTitle{
     @apply text-stone-700 mt-60 mb-6 text-5xl text-center w-2/3
 }

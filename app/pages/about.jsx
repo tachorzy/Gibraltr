@@ -38,13 +38,19 @@ export default function Home() {
           <div className={styles.navBar}>
                     <NavBar></NavBar>
           </div>
+          <div className={supremeMedium.className}>
+            <div className={AboutStyles.banner}>
+                <h1 className={AboutStyles.title}>We enable responsible travel.</h1>
+            </div>
+          </div>
+
           <div className={AboutStyles.main}>
             <div className={supremeMedium.className}>
                 <div className="grid grid-rows-5 grid-cols-2 pl-24">
-                    <h1 className={AboutStyles.title}>We enable responsible travel.</h1>
-                    <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
+                    <h2 className={AboutStyles.aboutUsTitle}>About us</h2>
+                    {/* <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
                     <h3 className={AboutStyles.subtitle}>Wisely plan your trip</h3>
-                    <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4>
+                    <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4> */}
                 </div>
             </div>
           </div>
