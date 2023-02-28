@@ -13,7 +13,10 @@ module.exports = {
       colors: {
         'marble': '#e5e5e4',
       }
-    },
+    },  
+  },
+  layers: {
+    utilities: ['@tailwind utilities', '@layer utilities', 'animate'],
   },
   plugins: [],
 }

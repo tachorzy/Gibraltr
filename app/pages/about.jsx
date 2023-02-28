@@ -9,7 +9,8 @@ import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import AboutStyles from '../styles/AboutUsStyle.module.css'
-import { motion } from 'framer-motion';
+import "animate.css"
+
 
 const roboto = Roboto({ 
   subsets: ['latin'], 
