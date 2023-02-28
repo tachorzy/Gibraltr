@@ -1,0 +1,75 @@
+.main {
+    @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24;
+    min-height: 100vh;
+}
+  
+.infoPageSection {
+    @apply bg-stone-100 flex flex-col justify-between content-center pl-24;
+}
+  
+.WorldMap{
+    @apply justify-end  
+}
+  
+.title{
+    @apply text-stone-700 mt-60 mb-6 text-5xl
+}
+
+.subtitle{
+    @apply text-stone-700 text-4xl
+}
+  
+.centeredTitle{
+    @apply text-stone-700 mt-60 mb-6 text-5xl text-center w-2/3
+}
+
+  /*HomePageInfo: Home Page information title, paragraph and infographics*/
+.infoTitle{
+    @apply text-stone-700 mt-16 mb-4 text-2xl
+}
+  
+.info{
+    @apply text-stone-700 text-lg mr-96
+}
+  
+.infoContainer{
+    @apply flex flex-row mt-7 gap-x-10 mb-24
+}
+  
+.infoBox{
+    @apply w-56 h-36 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700  
+}
+  
+.infoBoxTitleContainer{
+    @apply grid grid-cols-3;
+}
+  
+.infoBoxTitle{
+    @apply text-sm font-bold col-span-2;
+    vertical-align: middle;
+}
+  
+.infoBoxText{
+    @apply text-xs
+}
+  
+.glossaryTitle{
+    @apply text-3xl text-stone-700 mb-10
+}
+  
+.infoBoxImage{
+    @apply ml-16;
+}
+  
+.visaInfoBox{
+    @apply w-96 h-40 text-stone-700 border-2 border-inherit border-solid rounded-xl p-4 pt-5 border-stone-300 bg-stone-200
+}
+  
+.visaInfoBoxTitle{
+    @apply text-lg font-bold col-span-2 mb-2.5;
+    vertical-align: middle;
+}
+  
+.visaInfoBoxText{
+    @apply leading-relaxed
+}
