@@ -46,18 +46,25 @@ export default function Home() {
 
           <div className={AboutStyles.main}>
             <div className={supremeMedium.className}>
-                <div className="grid grid-rows-5 grid-cols-2 pl-24">
                     <h2 className={AboutStyles. aboutUsTitle}>About us</h2>
                     <p className={AboutStyles.paragraph}>
                       Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination.
                     </p>
-
-
-
                     {/* <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
                     <h3 className={AboutStyles.subtitle}>Wisely plan your trip</h3>
                     <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4> */}
-                </div>
+            </div>
+          </div>
+          <div className={AboutStyles.bannerLight}></div>
+          <div className={AboutStyles.main}>
+            <div className={supremeMedium.className}>
+                    {/* <h2 className={AboutStyles. aboutUsTitle}>About us</h2>
+                    <p className={AboutStyles.paragraph}>
+                      Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination.
+                    </p> */}
+                    {/* <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
+                    <h3 className={AboutStyles.subtitle}>Wisely plan your trip</h3>
+                    <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4> */}
             </div>
           </div>
           <Footer></Footer>

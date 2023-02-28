@@ -1,18 +1,20 @@
 .main {
     @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24;
-    min-height: 100vh;
 }
   
 .infoPageSection {
     @apply bg-stone-100 flex flex-col justify-between content-center pl-24;
 }
-  .backgroundImage{
-  }
   
 .banner{
     @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90;
     height: 29rem;
     background-image: url('/Gibraltar.svg');
+}
+
+.bannerLight{
+    @apply flex flex-row w-screen bg-stone-200;
+    height: 20rem;
 }
 
 .title{
@@ -28,7 +30,7 @@
 }
 
 .paragraph{
-    @apply w-1/2 text-lg text-stone-700 leading-relaxed
+    @apply w-1/2 text-lg text-stone-700 leading-relaxed mb-32
 }
 
 
