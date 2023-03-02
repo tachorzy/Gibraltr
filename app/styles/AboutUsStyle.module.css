@@ -22,17 +22,20 @@
 }
 
 .subtitle{
-    @apply text-stone-700 text-4xl
+    @apply text-stone-700 text-4xl mt-16
 }
 
 .aboutUsTitle{
     @apply text-stone-700 text-4xl mt-16 mb-3.5
 }
 
-.paragraph{
+.paragraphLast{
     @apply w-1/2 text-lg text-stone-700 leading-relaxed mb-32
 }
 
+.paragraphRegular{
+    @apply w-1/2 text-lg text-stone-700 leading-relaxed mb-4
+}
 
 .centeredTitle{
     @apply text-stone-700 mt-60 mb-6 text-5xl text-center w-2/3

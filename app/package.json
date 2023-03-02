@@ -20,7 +20,7 @@
     "eslint-config-next": "13.1.1",
     "isomorphic-fetch": "^3.0.0",
     "isomorphic-unfetch": "^4.0.2",
-    "next": "^13.2.1",
+    "next": "^13.2.3",
     "node-fetch": "^3.3.0",
     "numpy": "^0.0.1",
     "react": "18.2.0",
