@@ -1,5 +1,5 @@
 .footerContainer{
-    @apply flex flex-row bg-stone-800 h-52 py-8 pl-12 gap-x-24
+    @apply flex flex-row bg-stone-800 h-52  py-8 pl-12 gap-x-24
 }
 
 .infoBox{
