@@ -42,10 +42,10 @@ const Footer = () => {
                 <div>
                     <h4 className={FooterStyle.header}>About Us</h4>
                     <li className={FooterStyle.text}>
-                        <Link href="/">Gibraltr</Link>
+                        <Link href="/about">Gibraltr</Link>
                     </li>
                     <li className={FooterStyle.text}>
-                        <Link href="/">Our vision</Link>
+                        <Link href="/about">Our vision</Link>
                     </li>
                 </div>
                 <div>
