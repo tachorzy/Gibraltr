@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { getVisaRequirements } from '../../scripts/visadata.js'
+import { getVisaRequirements } from '../../utils/visadata.js'
 
 export default async function handler(searchPassport, searchDestination) {
 
