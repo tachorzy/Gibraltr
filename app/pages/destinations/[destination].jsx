@@ -6,6 +6,7 @@ import VisaOnArrival from '../../components/visaonarrival.jsx'
 import Visa from '../../components/visa.jsx'
 import VisaFree from '../../components/visafree.jsx'
 import Schengen from '../../components/schengen.jsx'
+import KETA from '../../components/k-eta.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
 import DestinationStyle from '../../styles/DestinationStyle.module.css'
@@ -50,7 +51,7 @@ function displayVisaMessage(passport, destination, requirement) {
             </b> passport</h3>
        )
     }
-    else if (requirement === "visa required" || requirement == "e-visa") {
+    else if (requirement === "visa required" || requirement === "e-visa") {
         return (
             <h3 className={DestinationStyle.visaInfo}>
                 You need a visa for {destination} if you have a(n) <b>{passport}
@@ -77,6 +78,12 @@ function displaySchengenInfo(destination){
     if(schengenCountries.includes(destinationISO))
         return (<Schengen></Schengen>)
 }
+
+function displayKETA(destination, requirement){
+    if (destination === "South Korea" && requirement === "e-visa")
+        return(<KETA></KETA>)
+}
+
 
 export default function Destination({ requirement, passport, destination }){
     return(
@@ -110,6 +117,7 @@ export default function Destination({ requirement, passport, destination }){
                                 <span className={DestinationStyle.infoCardContainer}>
                                     {displayVisaInfo(requirement)}
                                     {displaySchengenInfo(destination)}
+                                    {displayKETA(destination, requirement)}
                                 </span>
                             </div>
                         </div>

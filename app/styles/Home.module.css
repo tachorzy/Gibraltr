@@ -68,6 +68,12 @@
   vertical-align: middle;
 }
 
+.visaInfoBoxTitleSmall{
+  @apply text-xs font-bold col-span-1 mb-2.5;
+  vertical-align: middle;
+}
+
+
 .visaInfoBoxText{
   @apply leading-relaxed
 }
