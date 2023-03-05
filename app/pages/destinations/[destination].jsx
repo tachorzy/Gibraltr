@@ -5,6 +5,7 @@ import ElectronicVisa from '../../components/evisa.jsx'
 import VisaOnArrival from '../../components/visaonarrival.jsx'
 import Visa from '../../components/visa.jsx'
 import VisaFree from '../../components/visafree.jsx'
+import TravelBan from '../../components/travelban.jsx'
 import Schengen from '../../components/schengen.jsx'
 import KETA from '../../components/k-eta.jsx'
 import IraqiKurdistanRegion from '../../components/iraqikurdistan.jsx'
@@ -61,6 +62,11 @@ function displayVisaMessage(passport, destination, requirement) {
     }
 }
 
+function displayTravelBan(passport, destination, requirement){
+    if(passport === "Pakistan" && destination === "Israel")
+        return(<TravelBan></TravelBan>)
+}
+
 function displayVisaInfo(requirement){
     switch(requirement){
         case "e-visa":
@@ -89,7 +95,6 @@ function displayIraqiKurdistan(destination, requirement){
     if (destination === "Iraq" && requirement === "visa on arrival")
         return(<IraqiKurdistanRegion></IraqiKurdistanRegion>)
 }
-
 
 export default function Destination({ requirement, passport, destination }){
     return(
@@ -123,6 +128,7 @@ export default function Destination({ requirement, passport, destination }){
                                 <span className={DestinationStyle.infoCardContainer}>
                                     {displayVisaInfo(requirement)}
                                     {displaySchengenInfo(destination)}
+                                    {displayTravelBan(passport, destination, requirement)}
                                     {displayKETA(destination, requirement)}
                                     {displayIraqiKurdistan(destination, requirement)}
                                 </span>
