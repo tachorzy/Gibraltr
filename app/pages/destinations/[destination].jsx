@@ -7,6 +7,7 @@ import Visa from '../../components/visa.jsx'
 import VisaFree from '../../components/visafree.jsx'
 import Schengen from '../../components/schengen.jsx'
 import KETA from '../../components/k-eta.jsx'
+import IraqiKurdistanRegion from '../../components/iraqikurdistan.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../scripts/countrydata.js'
 import { getVisaRequirements } from '../../scripts/visadata.js'
 import DestinationStyle from '../../styles/DestinationStyle.module.css'
@@ -84,6 +85,11 @@ function displayKETA(destination, requirement){
         return(<KETA></KETA>)
 }
 
+function displayIraqiKurdistan(destination, requirement){
+    if (destination === "Iraq" && requirement === "visa on arrival")
+        return(<IraqiKurdistanRegion></IraqiKurdistanRegion>)
+}
+
 
 export default function Destination({ requirement, passport, destination }){
     return(
@@ -118,6 +124,7 @@ export default function Destination({ requirement, passport, destination }){
                                     {displayVisaInfo(requirement)}
                                     {displaySchengenInfo(destination)}
                                     {displayKETA(destination, requirement)}
+                                    {displayIraqiKurdistan(destination, requirement)}
                                 </span>
                             </div>
                         </div>
