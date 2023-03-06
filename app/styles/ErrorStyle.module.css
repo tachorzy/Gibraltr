@@ -1,0 +1,18 @@
+.main {
+    @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24;
+}
+  
+.banner{
+    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90;
+    height: 29rem;
+    background-image: url('/Gibraltar.svg');
+}
+
+.bannerLight{
+    @apply flex flex-row w-screen bg-stone-200 py-16 pl-24 gap-x-16 content-center;
+    height: 21rem;
+}
+
+.title{
+    @apply text-stone-200 text-7xl ml-24 pt-56
+}
