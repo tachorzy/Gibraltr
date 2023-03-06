@@ -1,0 +1,5 @@
+.bannerHeader{
+    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-cover bg-opacity-90 mt-16 h-screen;
+    /* height: 29rem; */
+    background-image: url('/Gibraltar.svg');
+}

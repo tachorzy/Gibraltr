@@ -9,6 +9,7 @@ import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import AboutStyles from '../styles/AboutUsStyle.module.css'
+import FAQStyles from '../styles/FAQStyle.module.css'
 import "animate.css"
 
 
@@ -42,7 +43,7 @@ export default function Home() {
                     <NavBar></NavBar>
           </div>
           <div className={supremeMedium.className}>
-            <div className={AboutStyles.banner}>
+            <div className={FAQStyles.bannerHeader}>
                 <h1 className={AboutStyles.title}>Sorry, This Page is still underconstruction.</h1>
             </div>
           </div>

@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../components/navbar'
-import SearchBar from '../components/searchbar'
-import HomePageInfo from '../components/homepageInfo'
 import InfoCard from '../components/infocard'
 import Footer from '../components/footer'
 import { Combo, Roboto, Rubik } from '@next/font/google'
