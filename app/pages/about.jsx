@@ -27,7 +27,7 @@ const rubik = Rubik({
   weight: '400'
 })
 
-export default function Home() {
+export default function AboutUs() {
   return (
     <>  
       <Head>
