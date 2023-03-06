@@ -1,7 +1,7 @@
 import SBStyle from '../styles/SearchBarStyle.module.css'
 import Image from 'next/image'
-import { useEffect, useState, useRef } from 'react'
-import { filteredCountries, isoCodesList, countriesArray, filteredISOKeys, filteredCountryKeys } from '../utils/countrydata.js'
+import { useState, useRef } from 'react'
+import { filteredCountries, isoCodesList } from '../utils/countrydata.js'
 import { useRouter } from 'next/router'
 import { Combobox } from '@headlessui/react'
 
