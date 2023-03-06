@@ -1,11 +1,11 @@
 .main {
     @apply bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24;
 }
-  
-.banner{
-    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90;
-    height: 29rem;
-    background-image: url('/Gibraltar.svg');
+
+.bannerHeader{
+    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-left-top bg-opacity-90 mt-16 h-screen;
+    /* height: 29rem; */
+    background-image: url('/error.svg');
 }
 
 .bannerLight{
@@ -13,6 +13,12 @@
     height: 21rem;
 }
 
+.errorName {
+    @apply text-stone-300 text-9xl ml-80 pt-32
+}
+
 .title{
-    @apply text-stone-200 text-7xl ml-24 pt-56
+    @apply text-stone-200 text-7xl pt-56;
+    margin-left: 27.5rem;
+    width: 50rem;
 }

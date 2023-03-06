@@ -7,7 +7,7 @@
 }
   
 .banner{
-    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90;
+    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90 mt-2.5;
     height: 29rem;
     background-image: url('/Gibraltar.svg');
 }
@@ -26,7 +26,7 @@
 }
 
 .aboutUsTitle{
-    @apply text-stone-700 text-4xl mt-16 mb-3.5
+    @apply text-stone-700 text-4xl mt-14 mb-3.5
 }
 
 .paragraphLast{

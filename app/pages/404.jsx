@@ -9,6 +9,7 @@ import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import AboutStyles from '../styles/AboutUsStyle.module.css'
+import ErrorStyles from '../styles/ErrorStyle.module.css'
 import "animate.css"
 
 
@@ -26,7 +27,7 @@ export default function PageNotFound() {
   return (
     <>  
       <Head>
-        <title>About Gibraltr</title>
+        <title>Page Not Found</title>
         <meta name="description" content="It's Best to Know Before You Go!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/gibraltar-solid.svg" />
@@ -36,10 +37,12 @@ export default function PageNotFound() {
           <div className={styles.navBar}>
               <NavBar></NavBar>
           </div>
-          <div>
-            
+          <div className={supremeMedium.className}>
+            <div className={ErrorStyles.bannerHeader}>
+                <h2 className={ErrorStyles.title}>Papers Please! You've ventured a page too far.</h2>
+            </div>
           </div>
-          <div className={supremeMedium.className}></div>
+          <div></div>
           <Footer></Footer>
       </main>
     </>
