@@ -1,8 +1,5 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-import ElectronicVisa from './evisa.jsx'
-import VisaOnArrival from './visaonarrival.jsx'
-import Visa from './visa.jsx'
 import localFont from '@next/font/local'
 
 const supremeMedium = localFont({
