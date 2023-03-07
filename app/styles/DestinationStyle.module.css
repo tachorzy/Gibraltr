@@ -47,3 +47,15 @@
 .countryProfileContainer{
     @apply flex flex-col w-11/12 ml-7
 }
+
+.button {
+    @apply w-96 h-16 bg-stone-600 hover:bg-stone-700 text-stone-200 font-semibold text-xl rounded-xl ring-stone-600 border-none cursor-pointer
+}
+
+.buttonLinkContainer{
+    @apply flex flex-row justify-center gap-x-4
+}
+
+.buttonLinkIcon{
+    @apply mt-1
+}
