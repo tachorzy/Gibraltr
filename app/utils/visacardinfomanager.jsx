@@ -103,7 +103,7 @@ export function displayIraqiKurdistan(destination, requirement){
 export function displayEVisaButton(destination, requirement){ 
     if(requirement === "e-visa" && evisaWebsitesMap.get(destination))
         return(
-                <Link href={evisaWebsitesMap.get(destination)} >
+                <Link href={evisaWebsitesMap.get(destination)} target="_blank">
                     <ApplyButton/>
                 </Link>
         )
