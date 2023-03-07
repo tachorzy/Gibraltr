@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ElectronicVisa from '../components/evisa.jsx'
 import VisaOnArrival from '../components/visaonarrival.jsx'
 import Visa from '../components/visa.jsx'
@@ -6,7 +7,9 @@ import TravelBan from '../components/travelban.jsx'
 import Schengen from '../components/schengen.jsx'
 import KETA from '../components/k-eta.jsx'
 import IraqiKurdistanRegion from '../components/iraqikurdistan.jsx'
+import ApplyButton from '../components/applybutton.jsx'
 import { countries, isoCodesList, schengenCountries } from '/utils/countrydata.js'
+import { evisaWebsitesMap } from '/utils/evisawebsites.js'
 import DestinationStyle from '../styles/DestinationStyle.module.css'
 
 export function displayVisaMessage(passport, destination, requirement) {
@@ -95,4 +98,13 @@ export function displayKETA(destination, requirement){
 export function displayIraqiKurdistan(destination, requirement){
     if (destination === "Iraq" && requirement === "visa on arrival")
         return(<IraqiKurdistanRegion></IraqiKurdistanRegion>)
+}
+
+export function displayEVisaButton(destination, requirement){ 
+    if(requirement === "e-visa" && evisaWebsitesMap.get(destination))
+        return(
+                <Link href={evisaWebsitesMap.get(destination)} >
+                    <ApplyButton/>
+                </Link>
+        )
 }

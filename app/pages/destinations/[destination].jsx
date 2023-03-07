@@ -3,7 +3,7 @@ import Image from 'next/image'
 import NavBar from '../../components/navbar'
 import ApplyButton from '../../components/applybutton.jsx'
 import Footer from '../../components/footer.jsx'
-import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan } from '../../utils/visacardinfomanager.jsx'
+import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/visacardinfomanager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
 import DestinationStyle from '../../styles/DestinationStyle.module.css'
@@ -73,8 +73,8 @@ export default function Destination({ requirement, passport, destination }){
                                     {displaySchengenInfo(destination)}
                                     {displayTravelBan(passport, destination, requirement)}
                                     {displayKETA(destination, requirement)}
-                                    {displayIraqiKurdistan(destination, requirement)}
-                                    <ApplyButton></ApplyButton>
+                                    {displayIraqiKurdistan(destination, requirement)} 
+                                    {displayEVisaButton(destination, requirement)}
                                 </span>
                             </div>
                         </div>

@@ -1,31 +1,30 @@
-const evisaWebsitesMap = {
-    "Armenia":"https://evisa.mfa.am/",
-    "Azerbaijan":"https://evisa.gov.az/en/",
-    "Australia":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601",
-    "Bahrain":"https://www.evisa.gov.bh/",
-    "Ivory Coast": "https://www.cotedivoire.online/en/",
-    "Egypt":"https://visa2egypt.gov.eg/eVisa",
-    "Indonesia":"https://molina.imigrasi.go.id/#:~:text=e%2DVOA%20is%20a%20visa,Good%20Purchasing",
-    "India":"https://indianvisaonline.gov.in/evisa/tvoa.html",
-    "Kenya":"https://evisa.go.ke/",
-    "East Africa":"https://evisa.go.ke/east-african-tourist-visa.html",
-    "Cambodia":"https://www.evisa.gov.kh/",
-    "South Korea":"https://www.k-eta.go.kr/portal/apply/index.do",
-    "Laos":"https://laoevisa.gov.la/index",
-    "Sri Lanka":"https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US",
-    "Myanmar":"https://evisa.moip.gov.mm/",
-    "Nepal":"https://www.immigration.gov.np/page/visa-on-arrival",
-    "New Zealand":"https://nzeta.immigration.govt.nz/",
-    "Oman":"https://evisa.rop.gov.om/",
-    "Papau New Guinea":"https://evisa.ica.gov.pg/evisa/account/Apply?ReturnUrl=%2fevisa%2f",
-    "Saudi Arabia":"https://visa.visitsaudi.com/",
-    "Togo":"https://voyage.gouv.tg/",
-    "Türkiye":"https://www.evisa.gov.tr/",
+export const evisaWebsitesMap = new Map();
+
+evisaWebsitesMap.set("Armenia", "https://evisa.mfa.am/")
+evisaWebsitesMap.set("Azerbaijan", "https://evisa.gov.az/en/")
+evisaWebsitesMap.set("Australia", "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601")
+evisaWebsitesMap.set("Bahrain", "https://www.evisa.gov.bh/")
+evisaWebsitesMap.set("Ivory Coast", "https://www.cotedivoire.online/en/")
+evisaWebsitesMap.set("Egypt","https://visa2egypt.gov.eg/eVisa")
+evisaWebsitesMap.set("Indonesia","https://molina.imigrasi.go.id/#:~:text=e%2DVOA%20is%20a%20visa,Good%20Purchasing")
+evisaWebsitesMap.set("India","https://indianvisaonline.gov.in/evisa/tvoa.html")
+evisaWebsitesMap.set("Kenya","https://evisa.go.ke/")
+evisaWebsitesMap.set("East Africa","https://evisa.go.ke/east-african-tourist-visa.html")
+evisaWebsitesMap.set("Cambodia","https://www.evisa.gov.kh/")
+evisaWebsitesMap.set("South Korea","https://www.k-eta.go.kr/portal/apply/index.do")
+evisaWebsitesMap.set("Laos","https://laoevisa.gov.la/index")
+evisaWebsitesMap.set("Sri Lanka","https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US")
+evisaWebsitesMap.set("Myanmar","https://evisa.moip.gov.mm/")
+evisaWebsitesMap.set("Nepal","https://www.immigration.gov.np/page/visa-on-arrival")
+evisaWebsitesMap.set("New Zealand","https://nzeta.immigration.govt.nz/")
+evisaWebsitesMap.set("Oman","https://evisa.rop.gov.om/")
+evisaWebsitesMap.set("Papau New Guinea","https://evisa.ica.gov.pg/evisa/account/Apply?ReturnUrl=%2fevisa%2f")
+evisaWebsitesMap.set("Saudi Arabia","https://visa.visitsaudi.com/")
+evisaWebsitesMap.set("Togo","https://voyage.gouv.tg/")
+evisaWebsitesMap.set("Türkiye","https://www.evisa.gov.tr/")
     // "Tanzania":"https://eservices.immigration.go.tz/visa/",
     // "Uganda":"https://visas.immigration.go.ug/",
     // "":"",
-    "Uzbekistan":"https://e-visa.gov.uz/main",
-    "Vietnam":"https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt",
-    "Zimbabwe":"https://www.evisa.gov.zw/"
-
-}
+evisaWebsitesMap.set("Uzbekistan","https://e-visa.gov.uz/main")
+evisaWebsitesMap.set("Vietnam","https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt")
+evisaWebsitesMap.set("Zimbabwe","https://www.evisa.gov.zw/")
