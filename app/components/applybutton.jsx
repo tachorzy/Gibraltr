@@ -14,7 +14,7 @@ const ApplyButton = ({title}) => {
             <button className={DestinationStyles.button}>
                 <div className={supremeMedium.className}>
                     <div className={DestinationStyles.buttonLinkContainer}>
-                        <p>Apply for an evisa!</p>
+                        <p>Apply for an e-Visa!</p>
                             <Image src="/ApplyButtonLink.svg" width={20} height={20} className={DestinationStyles.buttonLinkIcon}></Image>
                     </div>
                 </div>

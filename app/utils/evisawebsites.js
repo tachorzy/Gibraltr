@@ -19,6 +19,7 @@ evisaWebsitesMap.set("Nepal","https://www.immigration.gov.np/page/visa-on-arriva
 evisaWebsitesMap.set("New Zealand","https://nzeta.immigration.govt.nz/")
 evisaWebsitesMap.set("Oman","https://evisa.rop.gov.om/")
 evisaWebsitesMap.set("Papau New Guinea","https://evisa.ica.gov.pg/evisa/account/Apply?ReturnUrl=%2fevisa%2f")
+evisaWebsitesMap.set("Philippines", "https://www.visa.gov.ph/")
 evisaWebsitesMap.set("Saudi Arabia","https://visa.visitsaudi.com/")
 evisaWebsitesMap.set("Togo","https://voyage.gouv.tg/")
 evisaWebsitesMap.set("Türkiye","https://www.evisa.gov.tr/")
