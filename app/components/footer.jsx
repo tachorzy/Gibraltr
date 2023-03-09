@@ -36,7 +36,7 @@ const Footer = () => {
                         <Link href="/">Find visas</Link>
                     </li>
                     <li className={FooterStyle.text}>                        
-                        <Link href="/">Embassy listing</Link>
+                        <Link href="/comingsoon">Embassy listing</Link>
                     </li>
                 </div>
                 <div>
@@ -51,13 +51,13 @@ const Footer = () => {
                 <div>
                     <h4 className={FooterStyle.header}>Support</h4>
                     <li className={FooterStyle.text}>
-                        <Link href="/">General FAQ</Link>
+                        <Link href="/comingsoon">General FAQ</Link>
                     </li>
                     <li className={FooterStyle.text}>
-                        <Link href="/">Visa FAQ</Link>
+                        <Link href="/comingsoon">Visa FAQ</Link>
                     </li>
                     <li className={FooterStyle.text}>
-                        <Link href="/">eVisas</Link>
+                        <Link href="/comingsoon">eVisas</Link>
                     </li>
                 </div>
             </div> 
