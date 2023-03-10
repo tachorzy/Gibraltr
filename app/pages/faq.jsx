@@ -44,8 +44,39 @@ export default function Home() {
           </div>
           <div className={supremeMedium.className}>
             <div className={FAQStyles.bannerHeader}>
-                <h1 className={AboutStyles.title}>Sorry, This Page is still underconstruction.</h1>
+              <h1 className={FAQStyles.title}>Frequently Asked Questions</h1>
             </div>
+            <h2 className={FAQStyles.subtitle}>Visa FAQ</h2>
+            <details>
+              <summary className={FAQStyles.detailsHeader}>
+              What is a travel visa?
+              </summary>
+              <p className={FAQStyles.detailsText}> test test</p>
+            </details>
+            <details>
+              <summary className={FAQStyles.detailsHeader}>
+              Why do you need a visa?
+              </summary>
+              <p className={FAQStyles.detailsText}> test test</p>
+            </details>
+            <details>
+              <summary className={FAQStyles.detailsHeader}>
+              What are the different types of visa requirements?
+              </summary>
+              <p className={FAQStyles.detailsText}> test test</p>
+            </details>
+            <details>
+              <summary className={FAQStyles.detailsHeader}>
+              What are the different types of visa requirements?
+              </summary>
+              <p className={FAQStyles.detailsText}> test test</p>
+            </details>
+            <details>
+              <summary className={FAQStyles.detailsHeader}>
+              What's a Schegen visa?
+              </summary>
+              <p className={FAQStyles.detailsText}> test test</p>
+            </details> 
           </div>
 
           <div className={AboutStyles.main}>

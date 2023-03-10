@@ -1,5 +1,21 @@
 .bannerHeader{
-    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-cover bg-opacity-90 mt-16 h-screen;
-    /* height: 29rem; */
+    @apply flex flex-row w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90 mt-2.5 mb-12;
+    height: 29rem;
     background-image: url('/Gibraltar.svg');
+}
+
+.title{
+    @apply text-stone-200 text-7xl ml-24 pt-56
+}
+
+.subtitle{
+    @apply text-stone-700 text-4xl mt-12 ml-16 mb-6 font-semibold underline
+}
+
+.detailsHeader{
+    @apply text-stone-700 text-3xl font-semibold mb-3.5 ml-16
+}
+
+.detailsText{
+    @apply text-stone-700 text-xl ml-24 mb-7
 }
