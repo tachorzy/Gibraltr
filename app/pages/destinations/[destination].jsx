@@ -71,7 +71,7 @@ export default function Destination({ requirement, passport, destination }){
                                 <span className={DestinationStyle.infoCardContainer}>
                                     {displayVisaInfo(requirement)}
                                     {displaySchengenInfo(destination)}
-                                    {displayTravelBan(passport, destination, requirement)}
+                                    {/* {displayTravelBan(passport, destination, requirement)} */}
                                     {displayKETA(destination, requirement)}
                                     {displayIraqiKurdistan(destination, requirement)} 
                                     {displayEVisaButton(destination, requirement)}

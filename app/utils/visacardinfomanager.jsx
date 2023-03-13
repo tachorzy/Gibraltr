@@ -29,47 +29,9 @@ export function displayVisaMessage(passport, destination, requirement) {
     }
 }
 
-export function displayTravelBan(passport, destination, requirement){
-    if (passport === "Israel")
-        switch(destination) {
-            case "Algeria":
-                return(<TravelBan></TravelBan>)
-            case "Brunei":
-                return(<TravelBan></TravelBan>)
-            case "Iran":
-                return(<TravelBan></TravelBan>)
-            case "Iraq":
-                return(<TravelBan></TravelBan>)
-            case "Kuwait": 
-                return(<TravelBan></TravelBan>)
-            case "Lebanon":
-                return(<TravelBan></TravelBan>)
-            case "Libya":
-                return(<TravelBan></TravelBan>)
-            case "Malaysia":
-                return(<TravelBan></TravelBan>)
-            case "Pakistan":
-                return(<TravelBan></TravelBan>)
-            case "Saudi Arabia":
-                return(<TravelBan></TravelBan>)
-            case "Syria":
-                return(<TravelBan></TravelBan>)
-            case "Yemen":
-                return(<TravelBan></TravelBan>)
-        }
+// export function displayTravelBan(passport, destination, requirement){
 
-    if (passport == "Iran" && destination === "Libya")
-        return(<TravelBan></TravelBan>)
-    if (passport === "North Korea" && destination === "Japan")
-        return(<TravelBan></TravelBan>)
-    if (passport === "Pakistan" && destination === "Israel")
-        return(<TravelBan></TravelBan>)
-    if (passport === "United States" && destination === "North Korea")
-        return(<TravelBan></TravelBan>)
-    /*Restriction is unclear for Ukranians entering Russia, Passport Index lists it as visa free but other sources site it as restricted*/
-    // if (passport === "Ukraine" && destination === "Russia")
-    //     return(<TravelBan></TravelBan>)
-}
+// }
 
 export function displayVisaInfo(requirement){
     switch (requirement) {
@@ -79,6 +41,8 @@ export function displayVisaInfo(requirement){
             return(<Visa/>)
         case "visa on arrival":
             return(<VisaOnArrival/>)
+        case "no admission":
+            return(<TravelBan></TravelBan>)
         default:
             return(<VisaFree/>)
     }    
