@@ -19,3 +19,7 @@
 .detailsText{
     @apply text-stone-700 text-xl ml-24 mb-7
 }
+
+.section{
+    @apply mb-3.5
+}

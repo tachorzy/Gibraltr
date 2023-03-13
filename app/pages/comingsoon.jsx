@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className={supremeMedium.className}>
             <div className={FAQStyles.bannerHeader}>
-                <h1 className={AboutStyles.title}>Sorry, This Page is still underconstruction.</h1>
+                <h1 className={AboutStyles.title}>Sorry, this page is still underconstruction.</h1>
             </div>
           </div>
 

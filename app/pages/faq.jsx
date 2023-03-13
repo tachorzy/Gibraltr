@@ -46,37 +46,75 @@ export default function Home() {
             <div className={FAQStyles.bannerHeader}>
               <h1 className={FAQStyles.title}>Frequently Asked Questions</h1>
             </div>
-            <h2 className={FAQStyles.subtitle}>Visa FAQ</h2>
-            <details>
-              <summary className={FAQStyles.detailsHeader}>
-              What is a travel visa?
-              </summary>
-              <p className={FAQStyles.detailsText}> test test</p>
-            </details>
-            <details>
-              <summary className={FAQStyles.detailsHeader}>
-              Why do you need a visa?
-              </summary>
-              <p className={FAQStyles.detailsText}> test test</p>
-            </details>
-            <details>
-              <summary className={FAQStyles.detailsHeader}>
-              What are the different types of visa requirements?
-              </summary>
-              <p className={FAQStyles.detailsText}> test test</p>
-            </details>
-            <details>
-              <summary className={FAQStyles.detailsHeader}>
-              What are the different types of visa requirements?
-              </summary>
-              <p className={FAQStyles.detailsText}> test test</p>
-            </details>
-            <details>
-              <summary className={FAQStyles.detailsHeader}>
-              What's a Schegen visa?
-              </summary>
-              <p className={FAQStyles.detailsText}> test test</p>
-            </details> 
+            
+            <section className={FAQStyles.section}>
+              <h2 className={FAQStyles.subtitle}>Visa FAQ</h2>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                What is a travel visa?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                Why do you need a visa?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                What are the different types of visa requirements?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                How do you apply for an e-Visa?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                What's a Schegen visa?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details> `
+            </section>
+
+            <section className={FAQStyles.section}>
+              <h2 className={FAQStyles.subtitle}>General FAQ</h2>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                How many countries are available on Gibraltr?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                Do you plan on supporting more nationalities?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                What are the different types of visa requirements?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                What are the different types of visa requirements?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details>
+              <details>
+                <summary className={FAQStyles.detailsHeader}>
+                What's a Schegen visa?
+                </summary>
+                <p className={FAQStyles.detailsText}> test test</p>
+              </details> `
+            </section>
+          
           </div>
 
           <div className={AboutStyles.main}>
