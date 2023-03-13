@@ -3,7 +3,7 @@
     <img src="https://i.imgur.com/XTkm2s9.png" height="100" width="240"></img>
 
 <h1 align="center">Gibraltr, your guide to travel visas</h1>
-<h3 align="center"><a href="www.gibraltr.com">Gibraltr.com</a></h3>
+<h3 align="center"><a href="https://www.gibraltr.com">Gibraltr.com</a></h3>
 
 ## About
 
