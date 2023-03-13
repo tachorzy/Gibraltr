@@ -31,7 +31,7 @@ function VisaFAQ(){
     <div>
         {Array.from(visaFAQContent.entries()).map(([visaFAQQuestion, visaFAQParagraph]) => {
           return(
-          <details>
+          <details key={visaFAQQuestion}>
             <summary className={FAQStyles.detailsHeader}>
             {visaFAQQuestion}
             </summary>
@@ -50,7 +50,7 @@ function GeneralFAQ(){
     <div>
         {Array.from(generalFAQContent.entries()).map(([generalFAQQuestion, generalFAQParagraph]) => {
           return(
-          <details>
+          <details key={generalFAQQuestion}>
             <summary className={FAQStyles.detailsHeader}>
             {generalFAQQuestion}
             </summary>

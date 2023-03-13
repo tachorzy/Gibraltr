@@ -13,7 +13,7 @@ const Visa = () => {
         <div className={styles.visaInfoBox}>
             <span className={supremeMedium.className}>
                 <p className={styles.visaInfoBoxTitle}>Visa Required</p>
-                <p className={styles.visaInfoBoxText}>You must apply for a visa prior to entry. This likely means you'll have to file documents, pay a fee, and visiting an embassy.</p>
+                <p className={styles.visaInfoBoxText}>{"You must apply for a visa prior to entry. This likely means you'll have to file documents, pay a fee, and visiting an embassy."}</p>
             </span>
         </div>
     );

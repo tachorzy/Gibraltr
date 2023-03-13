@@ -39,7 +39,7 @@ export default function ServerError() {
           </div>
           <div className={supremeMedium.className}>
             <div className={ErrorStyles.bannerHeader}>
-                <h2 className={ErrorStyles.title}>Papers Please! You've ventured a page too far.</h2>
+                <h2 className={ErrorStyles.title}>{"Papers Please! You've ventured a page too far."}</h2>
             </div>
           </div>
           <div></div>

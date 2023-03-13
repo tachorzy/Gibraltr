@@ -49,7 +49,7 @@ export default function AboutUs() {
             <div className={supremeMedium.className}>
                 <h2 className={AboutStyles.aboutUsTitle}>About us</h2>
                 <p className={AboutStyles.paragraphLast}>
-                  Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination.
+                  {"Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination."}
                 </p>
                 {/* <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
                 <h3 className={AboutStyles.subtitle}>Wisely plan your trip</h3>
@@ -94,7 +94,7 @@ export default function AboutUs() {
           <div className={AboutStyles.main}>
             <div className={supremeMedium.className}>
               <h4 className={AboutStyles.aboutUsTitle} id="our-vision">Our vision</h4>
-              <p className={AboutStyles.paragraphLast}>It's our mission to help you better understand your passport. Our passports are a privilege, each of them with their own freedoms and limits. Entering countries is not easy for all of us. Whether you have a strong or weak passport will greatly shape your travels. We aim to empower all of those yearning to travel. No matter their nation of origin. </p>
+              <p className={AboutStyles.paragraphLast}>{"It's our mission to help you better understand your passport. Our passports are a privilege, each of them with their own freedoms and limits. Entering countries is not easy for all of us. Whether you have a strong or weak passport will greatly shape your travels. We aim to empower all of those yearning to travel. No matter their nation of origin."} </p>
               {/* <p className={AboutStyles.paragraphLast}>We want to simplify the process of finding visa requirements.</p> */}
             </div>
           </div>

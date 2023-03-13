@@ -17,8 +17,8 @@ const HomePageInfo = () => {
 
     return(
         <div className={supremeRegular.className}>
-            <h2 className={styles.infoTitle}>It's always best to know, before you go.</h2>
-            <p className={styles.info}>That's why we're here to keep you aware of visa requirements for wherever you're headed.<br/>Stay informed of your options of a tourist visa for your destination and how to get them!</p>
+            <h2 className={styles.infoTitle}>{"It's always best to know, before you go."}</h2>
+            <p className={styles.info}>{"That's why we're here to keep you aware of visa requirements for wherever you're headed.<br/>Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
             <div className={styles.infoContainer}>
                 <span className={styles.infoBox}>
                     <Image src='/magnify.svg' width={34} height={34}></Image>
@@ -33,7 +33,7 @@ const HomePageInfo = () => {
                 <span className={styles.infoBox}>
                     <Image src='/passport-control-2.svg' width={34} height={34}></Image>
                     <p className={styles.infoBoxTitle}>Enter Stress Free</p>
-                    <p className={styles.infoBoxText}>Arrive to immigration with rest assured that you've met your visa requirements.</p>
+                    <p className={styles.infoBoxText}>{"Arrive to immigration with rest assured that you've met your visa requirements."}</p>
                 </span>
             </div>
 
@@ -42,13 +42,13 @@ const HomePageInfo = () => {
                 <div className={styles.infoBox}>
                     <span className={supremeMedium.className}>
                         <p className={styles.infoBoxTitle}>Visa Required</p>
-                        <p className={styles.infoBoxText}>You must apply for a visa prior to entry. This likely means you'll have to file documents, pay a fee, and visiting an embassy.</p>
+                        <p className={styles.infoBoxText}>{"You must apply for a visa prior to entry. This likely means you'll have to file documents, pay a fee, and visiting an embassy."}</p>
                     </span>
                 </div>
                 <div className={styles.infoBox}>
                     <span className={supremeMedium.className}>
                         <p className={styles.infoBoxTitle}>Visa-on-arrival</p>
-                        <p className={styles.infoBoxText}>Before going through customs, you'll have to fill out a form and possibly pay an entry-fee at the airport.</p>
+                        <p className={styles.infoBoxText}>{"Before going through customs, you'll have to fill out a form and possibly pay an entry-fee at the airport."}</p>
                     </span>
                 </div>
                 <div className={styles.infoBox}>
