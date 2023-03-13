@@ -21,7 +21,7 @@
 }
 
 .detailsText{
-    @apply text-stone-700 text-xl ml-24 mb-7 w-1/2
+    @apply text-stone-700 text-xl ml-24 mb-7 w-1/2 leading-relaxed
 }
 
 .section{
