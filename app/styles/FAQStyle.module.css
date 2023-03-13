@@ -16,6 +16,10 @@
     @apply text-stone-700 text-4xl mt-12 ml-16 mb-6 font-semibold underline
 }
 
+.container{
+    @apply flex-col gap-y-4 mt-14 mb-20
+}
+
 .detailsHeader{
     @apply text-stone-700 text-3xl font-semibold mb-3.5 ml-16
 }

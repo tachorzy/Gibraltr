@@ -78,12 +78,14 @@ export default function Home() {
           <div className={styles.navBar}>
                     <NavBar></NavBar>
           </div>
+          
           <div className={supremeMedium.className}>
             <div className={FAQStyles.bannerHeader}>
               <h1 className={FAQStyles.title}>Frequently Asked Questions</h1>
-            </div>
-            
-            <section className={FAQStyles.section}>
+          </div>
+          
+          <div className={FAQStyles.container}>
+          <section className={FAQStyles.section}>
               <h2 className={FAQStyles.subtitle}>Visa FAQ</h2>
               <VisaFAQ></VisaFAQ>    
             </section>
@@ -93,6 +95,8 @@ export default function Home() {
               <GeneralFAQ></GeneralFAQ>
             </section>
           
+          </div>            
+
           </div>
 
           <div className={AboutStyles.main}>
