@@ -87,32 +87,32 @@ export default function Home() {
                 <summary className={FAQStyles.detailsHeader}>
                 How many countries are available on Gibraltr?
                 </summary>
-                <p className={FAQStyles.detailsText}> test test</p>
+                <p className={FAQStyles.detailsText}>Gibraltr provides the latest information on visa requirements for <b>199</b> nationalities and destinations.</p>
               </details>
               <details>
                 <summary className={FAQStyles.detailsHeader}>
                 Do you plan on supporting more nationalities?
                 </summary>
-                <p className={FAQStyles.detailsText}> test test</p>
+                <p className={FAQStyles.detailsText}>It's our mission to represent and include as many nations as we can through available data. However, it's not an easy task to present every nation in the world. Some countries simply slip through the cracks and end up being left out, one such country is the partially recognized nation of Kosovo. Nevertheless, we do plan to add every nation with a well-founded diplomacy, visa policy and passport.</p>
               </details>
               <details>
                 <summary className={FAQStyles.detailsHeader}>
-                What are the different types of visa requirements?
+                Where are you sourcing your data?
                 </summary>
-                <p className={FAQStyles.detailsText}> test test</p>
+                <p className={FAQStyles.detailsText}>We receive our information on visa requirements through a regularly updated open-source data set built off of the Passport Index API.</p>
               </details>
               <details>
                 <summary className={FAQStyles.detailsHeader}>
-                What are the different types of visa requirements?
+                Are your results a reliable source?
                 </summary>
-                <p className={FAQStyles.detailsText}> test test</p>
+                <p className={FAQStyles.detailsText}>Our results should always reflect the latest data in the Passport Index. Gibraltr is a gateway to the latest visa information accessible to us. The rest of the work lies in your hands as a responsible visa applicant and traveler. Along the way in your research you'll form a sound and sensible itinerary.</p>
               </details>
-              <details>
+              {/* <details>
                 <summary className={FAQStyles.detailsHeader}>
                 What's a Schegen visa?
                 </summary>
                 <p className={FAQStyles.detailsText}> test test</p>
-              </details>
+              </details> */}
             </section>
           
           </div>
