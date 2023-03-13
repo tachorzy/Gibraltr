@@ -93,7 +93,7 @@ export default function AboutUs() {
 
           <div className={AboutStyles.main}>
             <div className={supremeMedium.className}>
-              <h4 className={AboutStyles.aboutUsTitle}>Our vision</h4>
+              <h4 className={AboutStyles.aboutUsTitle} id="our-vision">Our vision</h4>
               <p className={AboutStyles.paragraphLast}>It's our mission to help you better understand your passport. Our passports are a privilege, each of them with their own freedoms and limits. Entering countries is not easy for all of us. Whether you have a strong or weak passport will greatly shape your travels. We aim to empower all of those yearning to travel. No matter their nation of origin. </p>
               {/* <p className={AboutStyles.paragraphLast}>We want to simplify the process of finding visa requirements.</p> */}
             </div>

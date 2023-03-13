@@ -82,21 +82,19 @@ export default function Home() {
           <div className={supremeMedium.className}>
             <div className={FAQStyles.bannerHeader}>
               <h1 className={FAQStyles.title}>Frequently Asked Questions</h1>
-          </div>
+            </div>
           
-          <div className={FAQStyles.container}>
-          <section className={FAQStyles.section}>
-              <h2 className={FAQStyles.subtitle}>Visa FAQ</h2>
-              <VisaFAQ></VisaFAQ>    
-            </section>
+            <div className={FAQStyles.container}>
+              <section className={FAQStyles.section}>
+                  <h2 className={FAQStyles.subtitle}>General FAQ</h2>
+                  <GeneralFAQ></GeneralFAQ>
+              </section>
 
-            <section className={FAQStyles.section}>
-              <h2 className={FAQStyles.subtitle}>General FAQ</h2>
-              <GeneralFAQ></GeneralFAQ>
-            </section>
-          
+              <section className={FAQStyles.section}>
+                <h2 className={FAQStyles.subtitle} id="visa-faq">Visa FAQ</h2>
+                <VisaFAQ></VisaFAQ>    
+              </section>
           </div>            
-
           </div>
 
           <div className={AboutStyles.main}>

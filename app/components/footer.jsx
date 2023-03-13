@@ -45,16 +45,16 @@ const Footer = () => {
                         <Link href="/about">Gibraltr</Link>
                     </li>
                     <li className={FooterStyle.text}>
-                        <Link href="/about">Our vision</Link>
+                        <Link href="/about#our-vision">Our vision</Link>
                     </li>
                 </div>
                 <div>
                     <h4 className={FooterStyle.header}>Support</h4>
                     <li className={FooterStyle.text}>
-                        <Link href="/comingsoon">General FAQ</Link>
+                        <Link href="/faq">General FAQ</Link>
                     </li>
                     <li className={FooterStyle.text}>
-                        <Link href="/comingsoon">Visa FAQ</Link>
+                        <Link href="/faq#visa-faq">Visa FAQ</Link>
                     </li>
                     <li className={FooterStyle.text}>
                         <Link href="/comingsoon">eVisas</Link>

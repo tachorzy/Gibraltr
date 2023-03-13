@@ -8,7 +8,7 @@ import Footer from '../components/footer'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
-import AboutStyles from '../styles/AboutUsStyle.module.css'
+import ErrorStyles from '../styles/ErrorStyle.module.css'
 import FAQStyles from '../styles/FAQStyle.module.css'
 import "animate.css"
 
@@ -40,19 +40,14 @@ export default function Home() {
 
       <main>
           <div className={styles.navBar}>
-                    <NavBar></NavBar>
+              <NavBar></NavBar>
           </div>
           <div className={supremeMedium.className}>
-            <div className={FAQStyles.bannerHeader}>
-                <h1 className={AboutStyles.title}>Sorry, this page is still underconstruction.</h1>
+            <div className={ErrorStyles.bannerHeader}>
+                <h2 className={ErrorStyles.title}>Sorry, this page is currently still under construction.</h2>
             </div>
           </div>
-
-          <div className={AboutStyles.main}>
-            <div className={supremeMedium.className}>
-
-            </div>
-          </div>
+          <div></div>
           <Footer></Footer>
       </main>
     </>
