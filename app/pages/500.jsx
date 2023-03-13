@@ -27,10 +27,10 @@ export default function ServerError() {
   return (
     <>  
       <Head>
-        <title>Page Not Found</title>
+        <title>Server Error</title>
         <meta name="description" content="It's Best to Know Before You Go!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/gibraltar-solid.svg" />
+        <link rel="icon" href="/Gibraltar-solid.svg" />
       </Head>
 
       <main>
