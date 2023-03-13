@@ -18,7 +18,7 @@ const HomePageInfo = () => {
     return(
         <div className={supremeRegular.className}>
             <h2 className={styles.infoTitle}>{"It's always best to know, before you go."}</h2>
-            <p className={styles.info}>{"That's why we're here to keep you aware of visa requirements for wherever you're headed.<br/>Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
+            <p className={styles.info}>{"That's why we're here to keep you aware of visa requirements for wherever you're headed."}<br/>{"Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
             <div className={styles.infoContainer}>
                 <span className={styles.infoBox}>
                     <Image src='/magnify.svg' width={34} height={34}></Image>
