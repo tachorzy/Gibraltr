@@ -86,7 +86,7 @@ const SearchBar = () => {
                 
                     <div className={SBStyle.iconTag}>
                         <div className={SBStyle.CustomSearchBar}>      
-                            <Image src="pin.svg" width={28} height={28} className={SBStyle.DestinationImg}></Image>   
+                            <Image src="pin.svg" width={29.5} height={29.5} className={SBStyle.DestinationImg}></Image>   
                             <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
                                 <Combobox.Input ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)} placeholder={INITIAL_DESTINATION_STATE} className={SBStyle.Input} />
                                 <div>

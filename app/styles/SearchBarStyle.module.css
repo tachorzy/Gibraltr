@@ -1,6 +1,16 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .w-194{
+        width: 50rem;
+    }
+}
+
 .SearchBarContainer{
-    @apply rounded-2xl bg-stone-700 pb-3 pt-2 pl-3 gap-x-8 grid grid-rows-1 grid-cols-3;
-    width: 50rem
+    @apply rounded-2xl bg-stone-700 pb-3 md:lg:xl:2xl:pt-2 sm:pt-4 pl-3 md:lg:xl:2xl:gap-x-8 grid md:lg:xl:2xl:grid-rows-1 md:lg:xl:2xl:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:lg:xl:2xl:w-194 w-72 sm:content-center;
+    /* width: 50rem */
+    /* width: 25rem */
 }     
 
 .CustomSearchBar{
@@ -19,7 +29,7 @@
 }
 
 .ButtonInactive{
-    @apply border-transparent cursor-pointer w-9/12 mb-0.5 mt-1 ml-10 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600;
+    @apply border-transparent cursor-pointer md:lg:xl:2xl:w-9/12 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600;
     height: 93%
 }
 .iconTag{

@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       w: {
         '98': '26rem',
+        '194': '50rem',
       },
       colors: {
         'marble': '#e5e5e4',
