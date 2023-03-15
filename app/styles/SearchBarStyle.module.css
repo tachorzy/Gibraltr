@@ -20,7 +20,7 @@
 }
 
 .SearchBarContainer{
-    @apply rounded-2xl bg-stone-700 md:lg:xl:pb-3 pb-5 md:lg:xl:2xl:pt-2 pt-3.5 pl-3 md:lg:xl:2xl:gap-x-8 grid md:lg:xl:2xl:grid-rows-1 md:lg:xl:2xl:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:lg:xl:2xl:w-194 w-72 sm:content-center;
+    @apply rounded-2xl bg-stone-700 md:lg:xl:pb-3 pb-5 md:lg:xl:2xl:pt-2 pt-3.5 pl-4 md:lg:xl:2xl:gap-x-8 grid md:lg:xl:2xl:grid-rows-1 md:lg:xl:2xl:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:lg:xl:2xl:w-194 w-72 sm:content-center;
     /* width: 50rem */
     /* width: 25rem */
 }     
@@ -58,7 +58,7 @@
 
 .ScrollContentContainer{
     @apply mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 
-    overflow-hidden
+    overflow-y-auto
     rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115;
 }
 

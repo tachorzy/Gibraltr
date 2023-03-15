@@ -17,12 +17,12 @@
 }
 
 .title{
-  @apply text-stone-700 mt-36 mb-6 text-4xl
+  @apply text-stone-700 mt-36 md:lg:xl:mb-6 mb-7 text-4xl 
 }
 
 /*HomePageInfo: Home Page information title, paragraph and infographics*/
 .infoTitle{
-  @apply text-stone-700 mt-16 mb-4 text-2xl
+  @apply text-stone-700 md:lg:xl:2xl:mt-16 mt-12 mb-4 text-2xl
 }
 
 .info{
@@ -30,7 +30,7 @@
 }
 
 .infoContainer{
-  @apply flex md:lg:xl:flex-row flex-col mt-7 gap-x-10 mb-24 md:lg:xl:gap-y-0 gap-y-10
+  @apply flex md:lg:xl:flex-row flex-col md:lg:xl:2xl:mt-7 mt-14 gap-x-10 mb-24 md:lg:xl:gap-y-0 gap-y-10
 }
 
 .infoBox{
