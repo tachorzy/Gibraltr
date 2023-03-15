@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       w: {
+        // '0.115': '11.5%',
         '98': '26rem',
+        '194': '50rem',
       },
       colors: {
         'marble': '#e5e5e4',
