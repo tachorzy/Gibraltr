@@ -57,7 +57,9 @@
 }
 
 .ScrollContentContainer{
-    @apply mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115;
+    @apply mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 
+    overflow-hidden
+    rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115;
 }
 
 .CountryOption{
