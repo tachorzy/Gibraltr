@@ -24,7 +24,7 @@
 }
 
 .ButtonActive{
-    @apply border-transparent cursor-pointer w-9/12 mb-0.5 mt-1 ml-10 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700;
+    @apply border-transparent cursor-pointer md:lg:xl:2xl:w-9/12 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700;
     height: 93%
 }
 
