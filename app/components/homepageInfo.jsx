@@ -22,18 +22,24 @@ const HomePageInfo = () => {
             <div className={styles.infoContainer}>
                 <span className={styles.infoBox}>
                     <Image src='/magnify.svg' width={34} height={34}></Image>
-                    <p className={styles.infoBoxTitle}>Search for tourist visas</p>
-                    <p className={styles.infoBoxText}>Know whether or not your passport grants visa-free entry for your destination.</p>
+                    <div className={styles.infoBoxText}>
+                        <p className={styles.infoBoxTitle}>Search for tourist visas</p>
+                        <p className={styles.infoBoxText}>Know whether or not your passport grants visa-free entry for your destination.</p>
+                    </div>
                 </span>
                 <span className={styles.infoBox}>
-                <Image src='/visa.svg' width={34} height={34}></Image>
-                    <p className={styles.infoBoxTitle}>Find what you need</p>
-                    <p className={styles.infoBoxText}>Be sure whether visa applications are available online, at arrival or at an embassy.</p>
+                    <Image src='/visa.svg' width={34} height={34}></Image>
+                    <div className={styles.infoBoxText}>
+                        <p className={styles.infoBoxTitle}>Find what you need</p>
+                        <p className={styles.infoBoxText}>Be sure whether visa applications are available online, at arrival or at an embassy.</p>
+                    </div>
                 </span>
                 <span className={styles.infoBox}>
                     <Image src='/passport-control-2.svg' width={34} height={34}></Image>
-                    <p className={styles.infoBoxTitle}>Enter Stress Free</p>
-                    <p className={styles.infoBoxText}>{"Arrive to immigration with rest assured that you've met your visa requirements."}</p>
+                    <div className={styles.infoBoxText}>
+                        <p className={styles.infoBoxTitle}>Enter Stress Free</p>
+                        <p className={styles.infoBoxText}>{"Arrive to immigration with rest assured that you've met your visa requirements."}</p>
+                    </div>
                 </span>
             </div>
 
