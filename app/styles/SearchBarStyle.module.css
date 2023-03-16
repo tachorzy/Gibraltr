@@ -81,3 +81,7 @@
 .CountryOption{
     @apply hover:bg-stone-200 py-3 pl-4
 }
+
+.CountryOptionNotFound{
+    @apply py-3 pl-4
+}

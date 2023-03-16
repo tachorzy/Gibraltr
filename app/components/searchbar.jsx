@@ -44,7 +44,7 @@ const SearchBar = () => {
     };
 
     let searchButton = setButtonActivity(selectPassport, selectDestination);
-    
+
     const filteredPassports =
         passportQuery === ''
             ? filteredCountries
@@ -70,11 +70,17 @@ const SearchBar = () => {
                                 <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={SBStyle.Input} />
                                 <div>
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
-                                        {filteredPassports.map((code) => (
-                                        <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
-                                            {code}
-                                        </Combobox.Option>
-                                        ))}
+                                        {filteredPassports.length === 0 && selectPassport !== INITIAL_PASSPORT_STATE ? (
+                                            <div className={SBStyle.CountryOptionNotFound}>
+                                                {"No passport found."}
+                                            </div>
+                                        ) : (
+                                            filteredPassports.map((code) => (
+                                                <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
+                                                    {code}
+                                                </Combobox.Option>
+                                                ))
+                                        )}
                                     </Combobox.Options>
                                 </div>
                             </Combobox>
@@ -89,11 +95,17 @@ const SearchBar = () => {
                                 <div>
                                     <span className="inline-block w-full">
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
-                                        {filteredDestinations.map((code) => (
-                                        <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
-                                            {code}
-                                        </Combobox.Option>
-                                        ))}
+                                        {filteredDestinations.length === 0 && selectDestination !== INITIAL_DESTINATION_STATE ? (
+                                            <div className={SBStyle.CountryOptionNotFound}>
+                                                {"No destination found."}
+                                            </div>
+                                        ) : (
+                                            filteredDestinations.map((code) => (
+                                            <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
+                                                {code}
+                                            </Combobox.Option>
+                                            ))
+                                        )}
                                     </Combobox.Options>
                                     </span>
                                 </div>
