@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import localFont from '@next/font/local'
+require('tailwind-scrollbar')
 
 const supremeMedium = localFont({
     src: '../fonts/Supreme-Medium.otf',

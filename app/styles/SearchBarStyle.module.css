@@ -56,10 +56,26 @@
     @apply mt-3 ml-4
 }
 
+.scrollbar::-webkit-scrollbar-thumb{
+    @apply bg-stone-300 rounded-xl;
+}
+
+.scrollbar::-webkit-scrollbar-thumb::hover {
+    @apply bg-stone-400;
+}
+
+.scrollbar::-webkit-scrollbar {
+    @apply w-2.5 h-2.5 absolute bg-stone-200 rounded-tr-xl rounded-br-xl;
+}
+
+.scrollbar::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track::hover{
+    @apply bg-stone-200 rounded-tr-xl rounded-br-xl pt-1.5;
+}
+
 .ScrollContentContainer{
     @apply mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 
     overflow-y-auto
-    rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115;
+    rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115 scrollbar;
 }
 
 .CountryOption{
