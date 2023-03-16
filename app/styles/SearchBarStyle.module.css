@@ -65,11 +65,11 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb{
-    @apply w-2.5 h-2.5 bg-stone-300 rounded-xl rounded-xl;
+    @apply w-2.5 h-2.5 bg-stone-300 rounded-xl;
 }
 
-.scrollbar::-webkit-scrollbar-thumb::hover {
-    @apply bg-stone-400;
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-stone-400
 }
 
 .ScrollContentContainer{
