@@ -5,6 +5,13 @@ import { filteredCountries, isoCodesList } from '../utils/countrydata.js'
 import { useRouter } from 'next/router'
 import { Combobox } from '@headlessui/react'
 
+function setButtonActivity(selectPassportHook, selectDestinationHook){
+    if(selectPassportHook === '' || selectDestinationHook === '')
+        return(<button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>);
+    else
+        return(<button type="submit" className={SBStyle.ButtonActive}> Do you need a visa?</button>);
+}
+
 const SearchBar = () => {
 
     const INITIAL_PASSPORT_STATE = "Select passport..."
@@ -36,12 +43,8 @@ const SearchBar = () => {
         }
     };
 
-    let searchButton;
-    if(selectPassport === '' || selectDestination === '')
-        searchButton = <button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>
-    else
-        searchButton = <button type="submit" className={SBStyle.ButtonActive}> Do you need a visa?</button>
-
+    let searchButton = setButtonActivity(selectPassport, selectDestination);
+    
     const filteredPassports =
         passportQuery === ''
             ? filteredCountries
