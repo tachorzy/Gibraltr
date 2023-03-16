@@ -20,7 +20,7 @@
 }
 
 .SearchBarContainer{
-    @apply rounded-2xl bg-stone-700 md:lg:xl:pb-3 pb-5 md:lg:xl:2xl:pt-2 pt-3.5 pl-3 md:lg:xl:2xl:gap-x-8 grid md:lg:xl:2xl:grid-rows-1 md:lg:xl:2xl:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:lg:xl:2xl:w-194 w-72 sm:content-center;
+    @apply rounded-2xl bg-stone-700 md:lg:xl:pb-3 pb-5 md:lg:xl:2xl:pt-2 pt-3.5 pl-4 md:lg:xl:2xl:gap-x-8 grid md:lg:xl:2xl:grid-rows-1 md:lg:xl:2xl:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:lg:xl:2xl:w-194 w-72 sm:content-center;
     /* width: 50rem */
     /* width: 25rem */
 }     
@@ -56,10 +56,26 @@
     @apply mt-3 ml-4
 }
 
+.scrollbar::-webkit-scrollbar {
+    @apply w-2.5 h-2 absolute bg-stone-200 rounded-tr-xl rounded-br-xl;
+}
+
+.scrollbar::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track::hover{
+    @apply bg-stone-200 rounded-tr-xl rounded-br-xl pt-1.5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb{
+    @apply w-2.5 h-2.5 bg-stone-300 rounded-xl;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-stone-400
+}
+
 .ScrollContentContainer{
     @apply mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 
-    overflow-hidden
-    rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115;
+    overflow-y-auto
+    rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:lg:xl:w-0145 2xl:w-0115 scrollbar;
 }
 
 .CountryOption{
