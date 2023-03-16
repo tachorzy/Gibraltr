@@ -46,9 +46,6 @@ const SearchBar = () => {
         passportQuery === ''
             ? filteredCountries
             : filteredCountries.filter((passport) => {
-                console.log(`Passport: ${passport}`)
-                console.log(`Query: ${passportQuery}`)
-                console.log(passport.toLowerCase().includes(passportQuery.toLowerCase()))
                 return passport.toLowerCase().startsWith(passportQuery.toLowerCase())
             })
 
@@ -56,9 +53,6 @@ const SearchBar = () => {
         destinationQuery === ''
             ? filteredCountries
             : filteredCountries.filter((destination) => {
-                console.log(`Destination: ${destination}`)
-                console.log(`Query: ${destinationQuery}`)
-                console.log(destination.toLowerCase().includes(destinationQuery.toLowerCase()))
                 return destination.toLowerCase().startsWith(destinationQuery.toLowerCase())
             })
 
