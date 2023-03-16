@@ -43,8 +43,6 @@ const SearchBar = () => {
         }
     };
 
-    let searchButton = setButtonActivity(selectPassport, selectDestination);
-
     const filteredPassports =
         passportQuery === ''
             ? filteredCountries
@@ -112,7 +110,7 @@ const SearchBar = () => {
                             </Combobox>         
                         </div>
                     </div>
-                    {searchButton}
+                    {setButtonActivity(selectPassport, selectDestination)}
                 </div>
             </form>
         </div>
