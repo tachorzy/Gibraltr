@@ -25,6 +25,7 @@
     "numpy": "^0.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-type-animation": "^2.1.2",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
