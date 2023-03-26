@@ -105,7 +105,7 @@
 }
 
 .welcomeMessage{
-    @apply text-5xl font-bold text-stone-700 leading-relaxed mt-20 z-10
+    @apply text-5xl font-bold text-stone-700 leading-relaxed mt-20 z-10 h-16 mb-3
 }
 
 .developerName{
