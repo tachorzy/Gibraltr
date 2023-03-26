@@ -1,5 +1,5 @@
 .navContainer{
-    @apply fixed top-0 bg-stone-200 h-20 w-screen space-x-96 flex flex-row shadow-lg;
+    @apply fixed top-0 bg-stone-200 h-20 w-screen space-x-96 flex flex-row shadow-lg z-50;
 }
 
 .brandingContainer{

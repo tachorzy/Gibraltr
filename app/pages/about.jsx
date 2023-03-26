@@ -131,6 +131,7 @@ export default function AboutUs() {
                       'สวัสดี',
                       3000,
                     ]} 
+                    cursor={false}
                     repeat={Infinity}
                     speed={25}
                     deletionSpeed={25}
