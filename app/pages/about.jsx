@@ -147,7 +147,7 @@ export default function AboutUs() {
               </div>
 
               <h4 className={AboutStyles.aboutUsTitle}>An Open Source Solution for Visas</h4>
-              <p className={AboutStyles.paragraphLast}>{"LOREM IPSUM LOREM IPSUM LOREM IPSUM"}</p>
+              <p className={AboutStyles.paragraphLast}>{""}</p>
             </span>
           </section>
           <Footer></Footer>
