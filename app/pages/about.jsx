@@ -141,13 +141,13 @@ export default function AboutUs() {
                 </div>
                 <div className={AboutStyles.developerStory}>                  
                   <h4 className={AboutStyles.aboutUsTitle}>Made by a traveler for travelers</h4>
-                  <p className={AboutStyles.paragraphRegular}><strong>{"Planning a trip doesn't come without copious amounts of research."} </strong> {"That research begins with finding out whether or not you'll need a visa. Often times the struggle for a visa may shatter your dreams. Or the search for the right e-Visa application might just be a headache. That's why when I started Gibraltr, I wanted to create a candid tool for travelers like myself to better get a hold of tourist visas."}</p>
+                  <p className={AboutStyles.paragraphRegular}><strong>{"Planning a trip doesn't come without copious amounts of research."} </strong> {"That research begins with finding out whether or not you'll need a visa. Often times the struggle for a visa may shatter your dreams. Or the search for the right e-Visa application might just be a headache. That's why when I started Gibraltr, I wanted to create a painless tool for travelers like myself to better get a hold of tourist visas."}</p>
                   <p className={AboutStyles.paragraphLast}>{""}</p>
                 </div>
               </div>
 
               <h4 className={AboutStyles.aboutUsTitle}>An Open Source Solution for Visas</h4>
-              <p className={AboutStyles.paragraphLast}>{""}</p>
+              <p className={AboutStyles.paragraphLast}>{"Open source means transperancy. You can trust our search engine because all the gears that power Gibraltr are in plain sight. Additionally, open source means zero paywalls. We want to directly connect you with the official e-Visa portals of your destinations. Not a single search on Gibraltr will lead you to a corporate payment page. And lastly, open source means community. You are involved in the development of Gibraltr. We want you to be free to access, contribute and provide feedback to our code on GitHub."}</p>
             </span>
           </section>
           <Footer></Footer>
