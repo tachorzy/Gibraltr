@@ -53,7 +53,11 @@
 .infoContainer{
     @apply flex flex-row mt-7 gap-x-10 mb-24
 }
-  
+
+.infoContainerSplit{
+    @apply grid grid-cols-3 gap-x-5
+}
+
 .infoBox{
     @apply w-56 h-36 text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700  
 }
@@ -98,4 +102,20 @@
 
 .infoCardText{
     @apply text-lg text-stone-700 leading-relaxed mb-32 mt-2.5
+}
+
+.welcomeMessage{
+    @apply text-5xl font-bold text-stone-700 leading-relaxed mt-20 z-10 h-16 mb-3
+}
+
+.developerName{
+    @apply text-2xl font-bold text-stone-700 pb-1
+}
+
+.developerCredit{
+    @apply text-xl font-bold text-stone-500
+}
+
+.developerStory{
+    @apply col-span-2
 }

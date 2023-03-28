@@ -20,11 +20,12 @@
     "eslint-config-next": "13.1.1",
     "isomorphic-fetch": "^3.0.0",
     "isomorphic-unfetch": "^4.0.2",
-    "next": "^13.2.3",
+    "next": "^13.2.4",
     "node-fetch": "^3.3.0",
     "numpy": "^0.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-type-animation": "^2.1.2",
     "yarn": "^1.22.19"
   },
   "devDependencies": {

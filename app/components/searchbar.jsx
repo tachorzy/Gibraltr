@@ -5,6 +5,13 @@ import { filteredCountries, isoCodesList } from '../utils/countrydata.js'
 import { useRouter } from 'next/router'
 import { Combobox } from '@headlessui/react'
 
+function setButtonActivity(selectPassportHook, selectDestinationHook){
+    if(selectPassportHook === '' || selectDestinationHook === '')
+        return(<button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>);
+    else
+        return(<button type="submit" className={SBStyle.ButtonActive}> Do you need a visa?</button>);
+}
+
 const SearchBar = () => {
 
     const INITIAL_PASSPORT_STATE = "Select passport..."
@@ -36,19 +43,10 @@ const SearchBar = () => {
         }
     };
 
-    let searchButton;
-    if(selectPassport === '' || selectDestination === '')
-        searchButton = <button type="submit" className={SBStyle.ButtonInactive}> Do you need a visa?</button>
-    else
-        searchButton = <button type="submit" className={SBStyle.ButtonActive}> Do you need a visa?</button>
-
     const filteredPassports =
         passportQuery === ''
             ? filteredCountries
             : filteredCountries.filter((passport) => {
-                console.log(`Passport: ${passport}`)
-                console.log(`Query: ${passportQuery}`)
-                console.log(passport.toLowerCase().includes(passportQuery.toLowerCase()))
                 return passport.toLowerCase().startsWith(passportQuery.toLowerCase())
             })
 
@@ -56,9 +54,6 @@ const SearchBar = () => {
         destinationQuery === ''
             ? filteredCountries
             : filteredCountries.filter((destination) => {
-                console.log(`Destination: ${destination}`)
-                console.log(`Query: ${destinationQuery}`)
-                console.log(destination.toLowerCase().includes(destinationQuery.toLowerCase()))
                 return destination.toLowerCase().startsWith(destinationQuery.toLowerCase())
             })
 
@@ -73,11 +68,17 @@ const SearchBar = () => {
                                 <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={SBStyle.Input} />
                                 <div>
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
-                                        {filteredPassports.map((code) => (
-                                        <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
-                                            {code}
-                                        </Combobox.Option>
-                                        ))}
+                                        {filteredPassports.length === 0 && selectPassport !== INITIAL_PASSPORT_STATE ? (
+                                            <div className={SBStyle.CountryOptionNotFound}>
+                                                {"No passport found."}
+                                            </div>
+                                        ) : (
+                                            filteredPassports.map((code) => (
+                                                <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
+                                                    {code}
+                                                </Combobox.Option>
+                                                ))
+                                        )}
                                     </Combobox.Options>
                                 </div>
                             </Combobox>
@@ -92,18 +93,24 @@ const SearchBar = () => {
                                 <div>
                                     <span className="inline-block w-full">
                                     <Combobox.Options className={SBStyle.ScrollContentContainer}>
-                                        {filteredDestinations.map((code) => (
-                                        <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
-                                            {code}
-                                        </Combobox.Option>
-                                        ))}
+                                        {filteredDestinations.length === 0 && selectDestination !== INITIAL_DESTINATION_STATE ? (
+                                            <div className={SBStyle.CountryOptionNotFound}>
+                                                {"No destination found."}
+                                            </div>
+                                        ) : (
+                                            filteredDestinations.map((code) => (
+                                            <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={SBStyle.CountryOption}>
+                                                {code}
+                                            </Combobox.Option>
+                                            ))
+                                        )}
                                     </Combobox.Options>
                                     </span>
                                 </div>
                             </Combobox>         
                         </div>
                     </div>
-                    {searchButton}
+                    {setButtonActivity(selectPassport, selectDestination)}
                 </div>
             </form>
         </div>
