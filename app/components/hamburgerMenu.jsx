@@ -16,7 +16,7 @@ const HamburgerMenu = () => {
     return (
         <div>
             <button className={HamburgerMenuStyles.hamburgerMenuButton}onClick = {() => setIsActive(!isActive)}>
-                <Image src="/hamburger-menu-stone-700.svg" width={48} height={42} alt="" className="cursor-pointer"/>
+                <Image src="/hamburger-menu-stone-700.svg" width={42} height={42} alt="" className="cursor-pointer"/>
             </button>
 
             { isActive ? (
