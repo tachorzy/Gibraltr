@@ -1,5 +1,5 @@
 .navContainer{
-    @apply fixed top-0 bg-stone-200 h-20 w-screen space-x-96 flex flex-row shadow-lg z-50;
+    @apply fixed top-0 bg-stone-200 h-20 w-screen space-x-12 md:lg:xl:2xl:space-x-96 flex flex-row shadow-lg z-50;
 }
 
 .brandingContainer{
@@ -7,15 +7,15 @@
 }
 
 .logoMobile{
-    @apply ml-10 align-bottom cursor-pointer block md:lg:xl:2xl:hidden 
+    @apply ml-10 cursor-pointer block md:lg:xl:2xl:hidden 
 }
 
 .logoDesktop{
-    @apply ml-24 align-bottom cursor-pointer hidden md:lg:xl:2xl:block 
+    @apply ml-24 cursor-pointer hidden md:lg:xl:2xl:block 
 }
 
 .brandName{
-    @apply text-stone-700 font-thin pt-14 md:lg:xl:2xl:pt-7 ml-1.5 text-2xl md:lg:xl:2xl:text-4xl;
+    @apply text-stone-700 font-thin pt-6 md:lg:xl:2xl:mb-0 md:lg:xl:2xl:pt-7 ml-1.5 text-3xl md:lg:xl:2xl:text-4xl;
 }
 
 .navItems{
@@ -23,5 +23,9 @@
 }
 
 .navItem{
-    @apply mx-4 hover:border-b-4 hover:border-b-stone-700 cursor-pointer hover:border-solid border-l-0 border-t-0 border-r-0 text-stone-700
+    @apply mx-4 hover:border-b-4 hover:border-b-stone-700 cursor-pointer hover:border-solid border-l-0 border-t-0 border-r-0 text-stone-700 hidden md:lg:xl:2xl:block
+}
+
+.hamburgerMenu{
+    @apply block md:lg:xl:2xl:hidden
 }
