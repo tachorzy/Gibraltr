@@ -35,7 +35,7 @@ export default function Home() {
 
       <main>
           <div className={styles.navBar}>
-                    <NavBar></NavBar>
+            <NavBar></NavBar>
           </div>
           <div className={styles.main}>
             <div className={supremeMedium.className}>

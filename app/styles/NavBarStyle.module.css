@@ -6,16 +6,20 @@
     @apply flex flex-row
 }
 
-.logo{
-    @apply ml-24 cursor-pointer
+.logoMobile{
+    @apply ml-10 align-bottom cursor-pointer block md:lg:xl:2xl:hidden 
+}
+
+.logoDesktop{
+    @apply ml-24 align-bottom cursor-pointer hidden md:lg:xl:2xl:block 
 }
 
 .brandName{
-    @apply text-stone-700 font-thin pt-7 ml-1.5 text-4xl;
+    @apply text-stone-700 font-thin pt-14 md:lg:xl:2xl:pt-7 ml-1.5 text-2xl md:lg:xl:2xl:text-4xl;
 }
 
 .navItems{
-    @apply w-1/2 list-none mt-10 flex flex-row text-right justify-end
+    @apply w-1/2 list-none mt-10 flex flex-row text-right justify-end sm:invisible md:lg:xl:2xl:visible
 }
 
 .navItem{

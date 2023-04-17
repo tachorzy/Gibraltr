@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import { Combo, Roboto, Rubik } from '@next/font/google'
@@ -7,9 +6,8 @@ import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import AboutStyles from '../styles/AboutUsStyle.module.css'
 import FAQStyles from '../styles/FAQStyle.module.css'
-import { visaFAQContent, generalFAQContent } from '../utils/faqdata.jsx'
+import { visaFAQContent, generalFAQContent, devFAQContent } from '../utils/faqdata.jsx'
 import "animate.css"
-
 
 const roboto = Roboto({ 
   subsets: ['latin'], 
@@ -64,6 +62,24 @@ function GeneralFAQ(){
   );
 }
 
+function DevFAQ(){
+  return(<div>
+    {Array.from(devFAQContent.entries()).map(([devFAQQuestions, devFAQParagraph]) => {
+      return(
+      <details key={devFAQQuestions}>
+        <summary className={FAQStyles.detailsHeader}>
+        {devFAQQuestions}
+        </summary>
+        <div className={FAQStyles.detailsText}>
+          {devFAQParagraph}
+        </div>
+      </details>
+      )
+    })}
+  </div>)
+}
+
+
 export default function Home() {
   return (
     <>  
@@ -76,7 +92,7 @@ export default function Home() {
 
       <main className={FAQStyles.main}>
           <div className={styles.navBar}>
-                    <NavBar></NavBar>
+            <NavBar></NavBar>
           </div>
           
           <div className={supremeMedium.className}>
@@ -94,13 +110,12 @@ export default function Home() {
                 <h2 className={FAQStyles.subtitle} id="visa-faq">Visa FAQ</h2>
                 <VisaFAQ></VisaFAQ>    
               </section>
+
+              <section className={FAQStyles.section}>
+                <h2 className={FAQStyles.subtitle}>Developer FAQ</h2>
+                  <DevFAQ></DevFAQ>
+              </section>
           </div>            
-          </div>
-
-          <div className={AboutStyles.main}>
-            <div className={supremeMedium.className}>
-
-            </div>
           </div>
           <Footer></Footer>
       </main>

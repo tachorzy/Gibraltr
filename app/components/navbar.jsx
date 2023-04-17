@@ -15,7 +15,10 @@ const NavBar = () => {
         <div className={albula.className}>
             <div className={NavStyle.navContainer}>
                 <div className={NavStyle.brandingContainer}>
-                    <Image src="/Gibraltar.svg" width={90} height={90} className={NavStyle.logo}></Image>
+                    <Image src="/Gibraltar.svg" width={60} height={60} className={NavStyle.logoMobile}></Image>
+                    
+                    <Image src="/Gibraltar.svg" width={90} height={90} className={NavStyle.logoDesktop}></Image>
+                
                     <h1 className={NavStyle.brandName}>Gibraltr</h1>
                 </div>
                 <ul className={NavStyle.navItems}>
