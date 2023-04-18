@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import NavBar from '../components/navbar'
 import InfoCard from '../components/infocard'
 import Footer from '../components/footer'
@@ -147,7 +148,7 @@ export default function AboutUs() {
               </div>
 
               <h4 className={AboutStyles.aboutUsTitle}>An Open Source Solution for Visas</h4>
-              <p className={AboutStyles.paragraphLast}>{"Open source means transperancy. You can trust our search engine because all the gears that power Gibraltr are in plain sight. Additionally, open source means zero paywalls. We want to directly connect you with the official e-Visa portals of your destinations. Not a single search on Gibraltr will lead you to a corporate payment page. And lastly, open source means community. You are involved in the development of Gibraltr. We want you to be free to access, contribute and provide feedback to our code on GitHub."}</p>
+              <p className={AboutStyles.paragraphLast}>{"Open source means transperancy. You can trust our search engine because all the gears that power Gibraltr are in plain sight. Additionally, open source means zero paywalls. We want to directly connect you with the official e-Visa portals of your destinations. Not a single search on Gibraltr will lead you to a corporate payment page. And lastly, open source means community. You are involved in the development of Gibraltr. We want you to be free to access, contribute and provide feedback to our code on "}<Link href="https://github.com/tachorzy/Gibraltr" className={AboutStyles.link}>GitHub</Link>.</p>
             </span>
           </section>
           <Footer></Footer>
