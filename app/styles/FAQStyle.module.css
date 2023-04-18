@@ -21,7 +21,7 @@
 }
 
 .detailsHeader{
-    @apply text-stone-700 text-3xl font-semibold mb-3.5 ml-16
+    @apply text-stone-700 text-3xl font-semibold mb-3.5 ml-16 cursor-pointer
 }
 
 .detailsText{
@@ -30,4 +30,8 @@
 
 .section{
     @apply mb-3.5
+}
+
+.link{
+    @apply underline font-semibold
 }

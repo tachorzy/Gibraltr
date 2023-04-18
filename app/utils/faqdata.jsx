@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import FAQStyles from '../styles/FAQStyle.module.css'
 
 export const visaFAQContent = new Map();
@@ -14,3 +15,10 @@ generalFAQContent.set("How many countries are available on Gibraltr?", <p>Gibral
 generalFAQContent.set("Do you plan on supporting more nationalities?", "It's our mission to represent and include as many nations as we can through available data. However, it's not an easy task to present every nation in the world. Some countries simply slip through the cracks and end up being left out, one such country is the partially recognized nation of Kosovo. Nevertheless, we do plan to add every nation with a well-founded diplomacy, visa policy and passport.")
 generalFAQContent.set("Where are you sourcing your data?", "We receive our information on visa requirements through a regularly updated open-source data set built off of the Passport Index API.")
 generalFAQContent.set("Are your results a reliable source?", "Our results should always reflect the latest data in the Passport Index. Gibraltr is a gateway to the latest visa information accessible to us. The rest of the work lies in your hands as a responsible visa applicant and traveler. Along the way in your research you'll form a sound and sensible itinerary.")
+
+export const devFAQContent = new Map();
+
+devFAQContent.set("Is Gibraltr open source?","Yes, Gibraltr is an open source platform that's built from a community of those interested in travel.")
+devFAQContent.set("What is open source?", "Open source means that anyone can contribute to Gibraltr. However, contributions must be approved by the Gibraltr developer team.")
+devFAQContent.set("What tech stack is Gibraltr developed in?","Gibraltr is developed using Next.js, JavaScript, and TailwindCSS.")
+devFAQContent.set("Where can I contribute?", <p>You can make contributions to Gibraltr on our GitHub repository <Link href="https://github.com/tachorzy/Gibraltr" className={FAQStyles.link}>here</Link>.</p>)

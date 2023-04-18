@@ -119,3 +119,7 @@
 .developerStory{
     @apply col-span-2
 }
+
+.link{
+    @apply underline font-semibold
+}
