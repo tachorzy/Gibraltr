@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import localFont from '@next/font/local'
 require('tailwind-scrollbar')
@@ -13,6 +12,16 @@ const supremeRegular = localFont({
     weight: '200'
 })
 
+// const generalInfoCards = [['Search for tourist visas','Know whether or not your passport grants visa-free entry for your destination.'], ['Find what you need', 'Be sure whether visa applications are available online, at arrival or at an embassy.'], ['Enter Stress Free', 'Arrive to immigration with rest assured that you\'ve met your visa requirements.']]
+
+const generalInfoCards = new Map([
+    ['Search For Tourist Visas', { info: 'Know whether or not your passport grants visa-free entry for your destination.', image: '/magnify.svg' }],
+    ['Find What You Need', { info: 'Be sure whether visa applications are available online, at arrival or at an embassy.', image: '/visa.svg' }],
+    ['Enter Stress Free', { info: 'Arrive to immigration with rest assured that you\'ve met your visa requirements.', image: '/passport-control-2.svg' }]
+])
+
+const visaInfoCards = [['Visa Required', 'You must apply for a visa prior to entry. This likely means you\'ll have to file documents, pay a fee, and visiting an embassy.'], ['Visa-On-Arrival', 'Before going through customs, you\'ll have to fill out a form and possibly pay an entry-fee at the airport.'], ['E-Visa', 'Electronic visas are filled out online on an official government website or through a travel agency.']]
+
 
 const HomePageInfo = () => {
 
@@ -21,27 +30,15 @@ const HomePageInfo = () => {
             <h2 className={"text-sm font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>{"It's always best to know, before you go."}</h2>
             <p className={"text-stone-700 md:lg:xl:text-lg md:lg:xl:mr-96 sm:mr-10"}>{"That's why we're here to keep you aware of visa requirements for wherever you're headed."}<br/>{"Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
             <div className={"flex md:lg:xl:flex-row flex-col md:lg:xl:2xl:mt-7 mt-14 gap-x-10 mb-24 md:lg:xl:gap-y-0 gap-y-10"}>
-                <span className={"md:lg:xl:w-56 md:lg:xl:h-36 w-11/12 sm:h-24 flex md:lg:xl:flex-col flex-row text-stone-700 border-4 border-inherit border-dotted rounded-xl p-4 pt-5 border-stone-700"}>
-                    <Image src='/magnify.svg' width={34} height={34}></Image>
-                    <div className={"flex flex-col md:lg:xl:ml-0 ml-2 md:lg:text-xs sm:text-base"}>
-                        <p className={"text-sm font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>Search for tourist visas</p>
-                        <p className={"flex flex-col md:lg:xl:ml-0 ml-2 md:lg:text-xs sm:text-base"}>Know whether or not your passport grants visa-free entry for your destination.</p>
-                    </div>
-                </span>
-                <span className={"md:lg:xl:w-56 md:lg:xl:h-36 w-11/12 sm:h-24 flex md:lg:xl:flex-col flex-row text-stone-700 border-4 border-inherit border-dotted	rounded-xl p-4 pt-5 border-stone-700"}>
-                    <Image src='/visa.svg' width={34} height={34}></Image>
-                    <div className={"flex flex-col md:lg:xl:ml-0 ml-2 md:lg:text-xs sm:text-base"}>
-                        <p className={"text-sm font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>Find what you need</p>
-                        <p className={"flex flex-col md:lg:xl:ml-0 ml-2 md:lg:text-xs sm:text-base"}>Be sure whether visa applications are available online, at arrival or at an embassy.</p>
-                    </div>
-                </span>
-                <span className={styles.infoBox}>
-                    <Image src='/passport-control-2.svg' width={34} height={34}></Image>
-                    <div className={styles.infoBoxText}>
-                        <p className={"text-sm font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>Enter Stress Free</p>
-                        <p className={styles.infoBoxText}>{"Arrive to immigration with rest assured that you've met your visa requirements."}</p>
-                    </div>
-                </span>
+                    {Array.from(generalInfoCards.entries()).map(([title, infoCardDetails], index) => (
+                        <span className={"md:lg:xl:w-56 md:lg:xl:h-36 w-11/12 sm:h-24 flex md:lg:xl:flex-col flex-row text-stone-700 border-4 border-inherit border-dotted rounded-xl p-4 pt-5 border-stone-700"}>
+                            <Image src={infoCardDetails.image} width={34} height={34}></Image>
+                            <div className={"flex flex-col md:lg:xl:ml-0 ml-2 md:lg:text-xs sm:text-base"}>
+                                <p className={"text-sm font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>{title}</p>
+                                <p className={"flex flex-col md:lg:xl:ml-0 ml-2 md:lg:text-xs sm:text-base"}>{infoCardDetails.info}</p>
+                            </div>
+                        </span>
+                    ))}
             </div>
 
             <h3 className={styles.glossaryTitle}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3>
