@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import localFont from '@next/font/local'
 
 const supremeMedium = localFont({
