@@ -18,7 +18,7 @@ const HomePageInfo = () => {
 
     return(
         <div className={supremeRegular.className}>
-            <h2 className={"text-stone-700 md:lg:xl:2xl:mt-16 mt-12 mb-4 text-2xl"}>{"It's always best to know, before you go."}</h2>
+            <h2 className={"text-sm font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>{"It's always best to know, before you go."}</h2>
             <p className={"text-stone-700 md:lg:xl:text-lg md:lg:xl:mr-96 sm:mr-10"}>{"That's why we're here to keep you aware of visa requirements for wherever you're headed."}<br/>{"Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
             <div className={"flex md:lg:xl:flex-row flex-col md:lg:xl:2xl:mt-7 mt-14 gap-x-10 mb-24 md:lg:xl:gap-y-0 gap-y-10"}>
                 <span className={"md:lg:xl:w-56 md:lg:xl:h-36 w-11/12 sm:h-24 flex md:lg:xl:flex-col flex-row text-stone-700 border-4 border-inherit border-dotted rounded-xl p-4 pt-5 border-stone-700"}>
