@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import NavBar from '../components/navbar'
-import SearchBar from '../components/searchbar'
+import SearchBar from '../components/SearchBar'
 import HomePageInfo from '../components/homepageInfo'
 import Footer from '../components/footer'
 import { Roboto, Rubik } from '@next/font/google'
