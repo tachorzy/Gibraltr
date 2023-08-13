@@ -6,9 +6,9 @@ import { Combobox } from '@headlessui/react'
 
 function setButtonActivity(selectPassportHook, selectDestinationHook){
     if(selectPassportHook === '' || selectDestinationHook === '')
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[87%] h-14 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[73%] h-14 w-60 mb-0.5 mt-1 md:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600"}> Do you need a visa?</button>);
     else
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[87%] h-14 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[73%] h-14 w-60 mb-0.5 mt-1 md:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
 }
 
 const SearchBar = () => {
