@@ -10,11 +10,9 @@ const supremeMedium = localFont({
 const VisaOnArrival = () => {
 
     return(
-        <div className={styles.visaInfoBox}>
-            <span className={supremeMedium.className}>
-                <p className={styles.visaInfoBoxTitle}>Visa-on-arrival</p>
-                <p className={styles.visaInfoBoxText}>{"Before going through customs, you'll have to fill out a form and possibly pay an entry-fee at the airport."}</p>
-            </span>
+        <div className={supremeMedium.className + " w-96 h-40 text-stone-700 border-2 border-inherit border-solid rounded-xl p-4 pt-5 border-stone-300 bg-stone-200"}>
+            <p className={"text-lg font-bold col-span-2 mb-2.5 align-middle"}>Visa-on-arrival</p>
+            <p className={"leading-relaxed"}>{"Before going through customs, you'll have to fill out a form and possibly pay an entry-fee at the airport."}</p>
         </div>
     );
 }
