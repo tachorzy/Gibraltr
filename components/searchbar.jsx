@@ -6,9 +6,9 @@ import { Combobox } from '@headlessui/react'
 
 function setButtonActivity(selectPassportHook, selectDestinationHook){
     if(selectPassportHook === '' || selectDestinationHook === '')
-        return(<button type="submit" className={"border-transparent cursor-pointer md:lg:xl:2xl:w-9/12 h-14 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[87%] h-14 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600"}> Do you need a visa?</button>);
     else
-        return(<button type="submit" className={"border-transparent cursor-pointer md:lg:xl:2xl:w-9/12 h-14 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[87%] h-14 w-60 mb-0.5 mt-1 md:lg:xl:2xl:ml-10 ml-2 pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-5 py-2.5 text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
 }
 
 const SearchBar = () => {
@@ -64,8 +64,8 @@ const SearchBar = () => {
                         <Image src="passport-solid.svg" width={32} height={32} className={"absolute mt-2.5 ml-3.5"}></Image>
                         <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={"float-right h-14 w-9/12 p-2 py-4 text-stone-600 text=[1.025rem] border-transparent rounded-r-xl font-medium"}/>
-                            <div>
-                                <Combobox.Options className={"mt-6 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
+                            <div className="inline-block w-full">
+                                <Combobox.Options className={"mt-2 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
                                     {filteredPassports.length === 0 && selectPassport !== INITIAL_PASSPORT_STATE ? (
                                         <div className={"py-3 pl-4"}>
                                             {"No passport found."}
@@ -88,9 +88,8 @@ const SearchBar = () => {
                         <Image src="pin.svg" width={29.5} height={29.5} className={"absolute mt-3 ml-4"}></Image>   
                         <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)} placeholder={INITIAL_DESTINATION_STATE} className={"float-right h-14 w-9/12 p-2 py-4 text-stone-600 text-[1.025rem] border-transparent rounded-r-xl font-medium"} />
-                            <>
-                                <span className="inline-block w-full">
-                                    <Combobox.Options className={"mt-6 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
+                                <div className="inline-block w-full">
+                                    <Combobox.Options className={"mt-2 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
                                         {filteredDestinations.length === 0 && selectDestination !== INITIAL_DESTINATION_STATE ? (
                                             <div className={"py-3 pl-4"}>
                                                 {"No destination found."}
@@ -103,8 +102,7 @@ const SearchBar = () => {
                                             ))
                                         )}
                                     </Combobox.Options>
-                                </span>
-                            </>
+                                </div>
                         </Combobox>         
                     </div>
                 </div>
