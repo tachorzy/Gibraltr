@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom scrollbar for searchbar component */
+
+.scrollbar::-webkit-scrollbar {
+  @apply w-2.5 h-2 absolute bg-stone-200 rounded-tr-xl rounded-br-xl;
+}
+
+.scrollbar::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track::hover{
+  @apply bg-stone-200 rounded-tr-xl rounded-br-xl pt-1.5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb{
+  @apply w-2.5 h-2.5 bg-stone-300 rounded-xl;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-400
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

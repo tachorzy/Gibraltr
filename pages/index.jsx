@@ -36,12 +36,11 @@ export default function Home() {
           <div className={styles.navBar}>
             <NavBar></NavBar>
           </div>
-          <div className={"bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:lg:xl:pl-24 pl-10"}>
+          <div className={"bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-10"}>
             <div className={supremeMedium.className}>
-                <div className="grid grid-rows-5 grid-cols-2 pl-24">
+                <div className="gap-y-10">
                   <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
-                  {/* <SearchBar></SearchBar> */}
-                  <div></div>
+                  <SearchBar></SearchBar>
                   <HomePageInfo></HomePageInfo>
                 </div>
                 <div>
