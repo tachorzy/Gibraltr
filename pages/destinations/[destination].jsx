@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import NavBar from '../../components/navbar'
+import NavBar from '../../components/NavBar'
 import ApplyButton from '../../components/applybutton.jsx'
 import Footer from '../../components/footer.jsx'
 import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/visacardinfomanager.jsx'

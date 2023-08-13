@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ElectronicVisa from '../components/evisa.jsx'
+import ElectronicVisa from '../components/ElectronicVisa.jsx'
 import VisaOnArrival from '../components/visaonarrival.jsx'
 import Visa from '../components/visa.jsx'
 import VisaFree from '../components/visafree.jsx'
