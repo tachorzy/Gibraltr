@@ -65,7 +65,7 @@ const SearchBar = () => {
                         <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={"float-right h-14 w-9/12 p-2 py-4 text-stone-600 text=[1.025rem] border-transparent rounded-r-xl font-medium"}/>
                             <div>
-                                <Combobox.Options className={"mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:w-[14.5%] 2xl:w-[11.5%] scrollbar"}>
+                                <Combobox.Options className={"mt-6 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
                                     {filteredPassports.length === 0 && selectPassport !== INITIAL_PASSPORT_STATE ? (
                                         <div className={"py-3 pl-4"}>
                                             {"No passport found."}
@@ -90,7 +90,7 @@ const SearchBar = () => {
                             <Combobox.Input ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)} placeholder={INITIAL_DESTINATION_STATE} className={"float-right h-14 w-9/12 p-2 py-4 text-stone-600 text-[1.025rem] border-transparent rounded-r-xl font-medium"} />
                             <>
                                 <span className="inline-block w-full">
-                                    <Combobox.Options className={"mt-3 ml-3 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none absolute w-1/2 md:w-[14.5%] 2xl:w-[11.5%] scrollbar"}>
+                                    <Combobox.Options className={"mt-6 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
                                         {filteredDestinations.length === 0 && selectDestination !== INITIAL_DESTINATION_STATE ? (
                                             <div className={"py-3 pl-4"}>
                                                 {"No destination found."}
