@@ -12,6 +12,13 @@ const albula = localFont({
 
 const NavBar = () => {
 
+    const navItems = new Map([
+        ['Find Visas', { link: '/'}],
+        ['About', { link: '/about'}],
+        ['FAQ', { link: '/faq'}],
+    ])
+    
+
     return(
         <div className={albula.className}>
             <div className={NavStyle.navContainer}>
@@ -26,9 +33,9 @@ const NavBar = () => {
                     <HamburgerMenu></HamburgerMenu>
                 </div>
                 <ul className={NavStyle.navItems}>
-                    <Link className={NavStyle.navItem} href="/">Find Visas</Link>
-                    <Link className={NavStyle.navItem} href="/about">About</Link>
-                    <Link className={NavStyle.navItem} href="/faq">FAQ</Link>
+                    {Array.from(navItems.entries()).map(([title, details], index) => (
+                        <Link className={"mx-4 hover:border-b-4 hover:border-b-stone-700 cursor-pointer hover:border-solid border-l-0 border-t-0 border-r-0 text-stone-700 hidden md:lg:xl:2xl:block"} href={details.link}>{title}</Link>
+                    ))}
                 </ul>
             </div>
         </div>

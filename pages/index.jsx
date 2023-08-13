@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import NavBar from '../components/navbar'
+import NavBar from '../components/NavBar'
 import SearchBar from '../components/SearchBar'
 import HomePageInfo from '../components/homepageInfo'
 import Footer from '../components/footer'
@@ -38,8 +38,8 @@ export default function Home() {
           </div>
           <div className={"bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-10"}>
             <div className={supremeMedium.className}>
-                <div className="flex flex-col gap-y-4">
-                  <h1 className={styles.title}>Keep track of visas<br/>for your next trip.</h1>
+                <div className="flex flex-col gap-y-2">
+                  <h1 className={supremeMedium.className + " text-stone-700 mt-36 md:lg:xl:mb-6 mb-7 text-4xl"}>Keep track of visas<br/>for your next trip.</h1>
                   <SearchBar></SearchBar>
                   <HomePageInfo></HomePageInfo>
                 </div>
