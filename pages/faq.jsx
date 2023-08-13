@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import NavBar from '../components/navbar'
-import Footer from '../components/footer'
+import NavBar from '../components/NavBar.jsx'
+import Footer from '../components/Footer.jsx'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
-import AboutStyles from '../styles/AboutUsStyle.module.css'
 import FAQStyles from '../styles/FAQStyle.module.css'
 import { visaFAQContent, generalFAQContent, devFAQContent } from '../utils/faqdata.jsx'
 import "animate.css"
