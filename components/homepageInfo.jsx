@@ -41,7 +41,7 @@ const HomePageInfo = () => {
                     ))}
             </div>
             {/* remove stylesheet and make it DRY */}
-            {/* <h3 className={styles.glossaryTitle}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3> */}
+            <h3 className={styles.glossaryTitle}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3>
             {/* <div className={styles.infoContainer}>
                 <div className={styles.infoBox}>
                     <span className={supremeMedium.className}>
