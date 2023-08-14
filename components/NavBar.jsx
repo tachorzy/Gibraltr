@@ -19,10 +19,11 @@ const NavBar = () => {
     return(
         <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row  z-50"}>
             <div className={"flex flex-row relative "}>
-                <Image src="/Gibraltar.svg" width={75} height={75} className={"ml-10 fixed cursor-pointer block md:hidden "}></Image>
-                
-                <Image src="/Gibraltar.svg" width={90} height={90} className={"ml-9 fixed cursor-pointer hidden md:block"}></Image>
-            
+                <Link href="/">
+                    <Image src="/Gibraltar.svg" width={75} height={75} className={"select-none ml-10 fixed cursor-pointer block md:hidden "} alt="Gibraltr logo"></Image>
+                    
+                    <Image src="/Gibraltar.svg" width={90} height={90} className={"select-none ml-9 fixed cursor-pointer hidden md:block"} alt="Gibraltr logo"></Image>
+                </Link>
                 <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[97%] md:ml-40 text-3xl md:text-4xl"}>Gibraltr</h1>
             </div>
             <div className={"block md:hidden"}>
