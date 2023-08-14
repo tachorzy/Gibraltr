@@ -58,7 +58,7 @@ const SearchBar = () => {
 
     return(        
         <form type="submit" onSubmit={handleFormSubmit}>
-            <div className={"rounded-2xl bg-stone-700 mb-4 md:mb-12 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-4 md:gap-x-8 grid md:grid-rows-1 md:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:w-[58.6%] w-72 sm:content-center"}>
+            <div className={"rounded-2xl bg-stone-700 mb-4 md:mb-8 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-4 md:gap-x-8 grid md:grid-rows-1 md:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 md:w-[58.6%] w-72 sm:content-center"}>
                 <div className={"bg-stone-300 rounded-lg mt-1 w-4/12 h-14 ml-2"}>
                     <div className={"relative inline-block gap-x-3 justify-start content-center w-60"}>
                         <Image src="passport-solid.svg" width={32} height={32} className={"select-none absolute mt-2.5 ml-3.5"}></Image>
