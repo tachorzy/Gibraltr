@@ -24,7 +24,7 @@ const NavBar = () => {
                     
                     <Image src="/Gibraltar.svg" width={90} height={90} className={"select-none ml-9 fixed cursor-pointer hidden md:block"} alt="Gibraltr logo"></Image>
                 </Link>
-                <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[97%] md:ml-40 text-3xl md:text-4xl"}>Gibraltr</h1>
+                <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[97%] md:ml-[8.5rem] text-3xl md:text-4xl"}>Gibraltr</h1>
             </div>
             <div className={"block md:hidden"}>
                 <HamburgerMenu></HamburgerMenu>
