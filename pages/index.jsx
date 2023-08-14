@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '../components/NavBar.jsx'
 import SearchBar from '../components/SearchBar.jsx'
 import HomePageInfo from '../components/HomePageInfo.jsx'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
@@ -36,16 +36,12 @@ export default function Home() {
           <div className={styles.navBar}>
             <NavBar></NavBar>
           </div>
-          <div className={"bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-10"}>
-            <div className={supremeMedium.className}>
-                <div className="flex flex-col gap-y-2">
-                  <h1 className={supremeMedium.className + " text-stone-700 mt-36 md:lg:xl:mb-6 mb-7 text-4xl"}>Keep track of visas<br/>for your next trip.</h1>
-                  <SearchBar></SearchBar>
-                  <HomePageInfo></HomePageInfo>
-                </div>
-                <div>
-                </div>
-            </div>
+          <div className={supremeMedium.className + " bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-10"}>
+              <div className="flex flex-col gap-y-2">
+                <h1 className={"text-stone-700 mt-36 md:lg:xl:mb-6 mb-7 text-4xl"}>Keep track of visas<br/>for your next trip.</h1>
+                <SearchBar></SearchBar>
+                <HomePageInfo></HomePageInfo>
+              </div>
           </div>
           <Footer></Footer>
       </main>

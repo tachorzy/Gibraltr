@@ -29,10 +29,6 @@ export function displayVisaMessage(passport, destination, requirement) {
     }
 }
 
-// export function displayTravelBan(passport, destination, requirement){
-
-// }
-
 export function displayVisaInfo(requirement){
     switch (requirement) {
         case "e-visa":
@@ -67,8 +63,8 @@ export function displayIraqiKurdistan(destination, requirement){
 export function displayEVisaButton(destination, requirement){ 
     if(requirement === "e-visa" && evisaWebsitesMap.get(destination))
         return(
-                <Link href={evisaWebsitesMap.get(destination)} target="_blank">
-                    <ApplyButton/>
-                </Link>
+            <Link href={evisaWebsitesMap.get(destination)} target="_blank">
+                <ApplyButton/>
+            </Link>
         )
 }
