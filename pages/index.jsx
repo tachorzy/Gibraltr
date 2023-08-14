@@ -36,7 +36,7 @@ export default function Home() {
           <div className={styles.navBar}>
             <NavBar></NavBar>
           </div>
-          <div className={supremeMedium.className + " bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-10"}>
+          <div className={supremeMedium.className + " bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-40 pl-10"}>
               <div className="flex flex-col gap-y-2">
                 <h1 className={"text-stone-700 mt-36 md:lg:xl:mb-6 mb-7 text-4xl"}>Keep track of visas<br/>for your next trip.</h1>
                 <SearchBar></SearchBar>

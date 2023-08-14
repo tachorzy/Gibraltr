@@ -21,9 +21,9 @@ const NavBar = () => {
             <div className={"flex flex-row relative "}>
                 <Image src="/Gibraltar.svg" width={75} height={75} className={"ml-10 fixed cursor-pointer block md:hidden "}></Image>
                 
-                <Image src="/Gibraltar.svg" width={90} height={90} className={"ml-24 fixed cursor-pointer hidden md:block"}></Image>
+                <Image src="/Gibraltar.svg" width={90} height={90} className={"ml-9 fixed cursor-pointer hidden md:block"}></Image>
             
-                <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[155%] md:ml-[130%] text-3xl md:text-4xl"}>Gibraltr</h1>
+                <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[97%] md:ml-40 text-3xl md:text-4xl"}>Gibraltr</h1>
             </div>
             <div className={"block md:hidden"}>
                 <HamburgerMenu></HamburgerMenu>
