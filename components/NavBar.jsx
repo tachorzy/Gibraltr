@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import localFont from '@next/font/local'
-import HamburgerMenu from './hamburgerMenu'
+import HamburgerMenu from './HamburgerMenu.jsx'
 
 const albula = localFont({
     src: '../fonts/serpentype-albula-pro-bold.otf',
