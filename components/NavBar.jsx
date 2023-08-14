@@ -17,13 +17,13 @@ const navItems = new Map([
 const NavBar = () => {
     
     return(
-        <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row shadow-lg z-50"}>
+        <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row  z-50"}>
             <div className={"flex flex-row relative "}>
                 <Image src="/Gibraltar.svg" width={75} height={75} className={"ml-10 fixed cursor-pointer block md:hidden "}></Image>
                 
                 <Image src="/Gibraltar.svg" width={90} height={90} className={"ml-24 fixed cursor-pointer hidden md:block"}></Image>
             
-                <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[155%] text-3xl 2xl:text-4xl"}>Gibraltr</h1>
+                <h1 className={"text-stone-700 font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[155%] md:ml-[130%] text-3xl md:text-4xl"}>Gibraltr</h1>
             </div>
             <div className={"block md:hidden"}>
                 <HamburgerMenu></HamburgerMenu>
