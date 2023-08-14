@@ -1,16 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavBar from '../components/navbar'
-import InfoCard from '../components/infocard'
-import Footer from '../components/footer'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import { TypeAnimation } from 'react-type-animation'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import AboutStyles from '../styles/AboutUsStyle.module.css'
-import "animate.css"
-
 
 const roboto = Roboto({ 
   subsets: ['latin'], 
