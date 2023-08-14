@@ -1,7 +1,5 @@
-import NavStyle from '../styles/NavBarStyle.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Roboto, Montserrat, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import HamburgerMenu from './hamburgerMenu'
 
