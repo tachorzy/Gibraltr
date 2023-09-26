@@ -50,7 +50,7 @@ export default function Destination({ requirement, passport, destination }){
             </Head>
 
             <div className={DestinationStyle.navBar}>
-                <NavBar></NavBar>
+                <NavBar lightingMode="light"></NavBar>
             </div>
 
             <div className={DestinationStyle.main}>

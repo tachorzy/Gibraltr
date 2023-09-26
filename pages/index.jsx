@@ -34,7 +34,7 @@ export default function Home() {
 
       <main>
           <div className={styles.navBar}>
-            <NavBar></NavBar>
+            <NavBar lightingMode="light"></NavBar>
           </div>
           <div className={supremeMedium.className + " bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-40 pl-10"}>
               <div className="flex flex-col gap-y-2">

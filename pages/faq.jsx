@@ -29,10 +29,10 @@ function VisaFAQ(){
         {Array.from(visaFAQContent.entries()).map(([visaFAQQuestion, visaFAQParagraph]) => {
           return(
           <details key={visaFAQQuestion}>
-            <summary className={FAQStyles.detailsHeader}>
+            <summary className={"text-stone-700 text-3xl font-semibold mb-3.5 ml-16 cursor-pointer"}>
             {visaFAQQuestion}
             </summary>
-            <div className={FAQStyles.detailsText}>
+            <div className={"text-stone-700 text-xl ml-24 mb-7 w-1/2 leading-relaxed"}>
               {visaFAQParagraph}
             </div>
           </details>
@@ -48,10 +48,10 @@ function GeneralFAQ(){
         {Array.from(generalFAQContent.entries()).map(([generalFAQQuestion, generalFAQParagraph]) => {
           return(
           <details key={generalFAQQuestion}>
-            <summary className={FAQStyles.detailsHeader}>
+            <summary className={"text-stone-700 text-3xl font-semibold mb-3.5 ml-16 cursor-pointer"}>
             {generalFAQQuestion}
             </summary>
-            <div className={FAQStyles.detailsText}>
+            <div className={"text-stone-700 text-xl ml-24 mb-7 w-1/2 leading-relaxed"}>
               {generalFAQParagraph}
             </div>
           </details>
@@ -66,10 +66,10 @@ function DevFAQ(){
     {Array.from(devFAQContent.entries()).map(([devFAQQuestions, devFAQParagraph]) => {
       return(
       <details key={devFAQQuestions}>
-        <summary className={FAQStyles.detailsHeader}>
+        <summary className={"text-stone-700 text-3xl font-semibold mb-3.5 ml-16 cursor-pointer"}>
         {devFAQQuestions}
         </summary>
-        <div className={FAQStyles.detailsText}>
+        <div className={"text-stone-700 text-xl ml-24 mb-7 w-1/2 leading-relaxed"}>
           {devFAQParagraph}
         </div>
       </details>
@@ -89,33 +89,31 @@ export default function Home() {
         <link rel="icon" href="/Gibraltar-solid.svg" />
       </Head>
 
-      <main className={FAQStyles.main}>
-          <div className={styles.navBar}>
+      <main className={"bg-stone-100"}>
+          <div className={"sticky"}>
             <NavBar></NavBar>
           </div>
           
-          <div className={supremeMedium.className}>
-            <div className={FAQStyles.bannerHeader}>
-              <h1 className={FAQStyles.title}>Frequently Asked Questions</h1>
-            </div>
-          
-            <div className={FAQStyles.container}>
-              <section className={FAQStyles.section}>
-                  <h2 className={FAQStyles.subtitle}>General FAQ</h2>
-                  <GeneralFAQ></GeneralFAQ>
-              </section>
-
-              <section className={FAQStyles.section}>
-                <h2 className={FAQStyles.subtitle} id="visa-faq">Visa FAQ</h2>
-                <VisaFAQ></VisaFAQ>    
-              </section>
-
-              <section className={FAQStyles.section}>
-                <h2 className={FAQStyles.subtitle}>Developer FAQ</h2>
-                  <DevFAQ></DevFAQ>
-              </section>
-          </div>            
+          <div className={supremeMedium.className + " bg-[url('/Gibraltar.svg')] flex flex-row h-[29rem] w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90"}>
+            <h1 className={"text-stone-200 text-7xl ml-24 pt-56"}>Frequently Asked Questions</h1>
           </div>
+        
+          <div className={"flex-col gap-y-4 mt-14 mb-20"}>
+            <section className={"mb-3.5"}>
+                <h2 className={"text-stone-700 text-4xl mt-12 ml-16 mb-6 font-semibold underline"}>General FAQ</h2>
+                <GeneralFAQ></GeneralFAQ>
+            </section>
+
+            <section className={"mb-3.5"}>
+              <h2 className={"text-stone-700 text-4xl mt-12 ml-16 mb-6 font-semibold underline"} id="visa-faq">Visa FAQ</h2>
+              <VisaFAQ></VisaFAQ>    
+            </section>
+
+            <section className={"mb-3.5"}>
+              <h2 className={"text-stone-700 text-4xl mt-12 ml-16 mb-6 font-semibold underline"}>Developer FAQ</h2>
+                <DevFAQ></DevFAQ>
+            </section>
+          </div>            
           <Footer></Footer>
       </main>
     </>
