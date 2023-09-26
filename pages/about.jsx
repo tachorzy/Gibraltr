@@ -44,7 +44,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <section className={AboutStyles.main}>
+          <section className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24"}>
             <span className={supremeMedium.className}>
                 <h2 className={AboutStyles.aboutUsTitle}>About us</h2>
                 <p className={AboutStyles.paragraphLast}>

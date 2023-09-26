@@ -7,7 +7,6 @@ import styles from '../styles/Home.module.css'
 import ErrorStyles from '../styles/ErrorStyle.module.css'
 import "animate.css"
 
-
 const roboto = Roboto({ 
   subsets: ['latin'], 
   weight: '400' 

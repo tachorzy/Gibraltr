@@ -29,13 +29,11 @@ export default function PageNotFound() {
       </Head>
 
       <main>
-          <div className={styles.navBar}>
+          <div className={"sticky"}>
               <NavBar></NavBar>
           </div>
-          <div className={supremeMedium.className}>
-            <div className={ErrorStyles.bannerHeader}>
-                <h2 className={ErrorStyles.title}>{"Papers Please! You've ventured a page too far."}</h2>
-            </div>
+          <div className={supremeMedium.className + " bg-[url('/error.svg')] flex flex-row w-screen bg-stone-800 bg-no-repeat bg-left-top bg-opacity-90 mt-16 h-screen "}>
+              <h2 className={"text-stone-200 text-7xl pt-56 ml-[27.5rem] w-[50rem]"}>{"Papers Please! You've ventured a page too far."}</h2>
           </div>
           <div></div>
           <Footer></Footer>
