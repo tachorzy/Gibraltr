@@ -35,57 +35,42 @@ export default function AboutUs() {
       </Head>
 
       <main>
-          <div className={styles.navBar}>
-                    <NavBar></NavBar>
+          <div className={"sticky"}>
+              <NavBar lightMode={"dark"}></NavBar>
           </div>
-          <div className={supremeMedium.className}>
-            <div className={AboutStyles.banner}>
-                <h1 className={AboutStyles.title}>We enable responsible travel.</h1>
-            </div>
+          <div className={supremeMedium.className + " bg-[url('/Gibraltar.svg')] flex flex-row h-[29rem] w-screen bg-stone-800 bg-no-repeat bg-right bg-cover bg-opacity-90"}>
+              <h1 className={"text-stone-200 text-7xl ml-24 pt-56"}>We enable responsible travel.</h1>
           </div>
 
-          <section className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24"}>
-            <span className={supremeMedium.className}>
-                <h2 className={AboutStyles.aboutUsTitle}>About us</h2>
-                <p className={AboutStyles.paragraphLast}>
+          <section className={supremeMedium.className + " bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24"}>
+                <h2 className={"text-stone-700 text-4xl mt-14 mb-3.5"}>About us</h2>
+                <p className={"w-1/2 text-lg text-stone-700 leading-relaxed mb-32"}>
                   {"Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination."}
                 </p>
-                {/* <h2 className={AboutStyles.subtitle}>Travel at ease</h2>
-                <h3 className={AboutStyles.subtitle}>Wisely plan your trip</h3>
-                <h4 className={AboutStyles.centeredTitle}>Our mission is guiding you through the complexities of tourist visas.</h4> */}
-            </span>
           </section>
-          <div className={AboutStyles.bannerLight}>
-            <div className={styles.infoCard}>
-              <span className={supremeMedium.className}>
+          <div className={supremeMedium.className + " flex flex-row h-[21rem] w-screen bg-stone-200 py-16 pl-24 gap-x-16 content-center"}>
+            <div className={"w-64 h-52 text-stone-700 border-2 border-inherit border-solid rounded-2xl p-4 px-9 pt-9 border-stone-200 bg-stone-100"}>
                 <h2 className={AboutStyles.infoCardTitle}>197+<br/>countries
                 </h2>
                 <p className={AboutStyles.infoCardText}>Representing every destination.</p>
-              </span>
             </div>
 
             <div className={styles.infoCard}>
-              <span className={supremeMedium.className}>
                 <h2 className={AboutStyles.infoCardTitle}>197+<br/>passports
                 </h2>
                 <p className={AboutStyles.infoCardText}>Available for every nationality.</p>
-              </span>
             </div>
 
             <div className={styles.infoCard}>
-              <span className={supremeMedium.className}>
                 <h2 className={AboutStyles.infoCardTitle}>Over 3000<br/>embassies
                 </h2>
                 <p className={AboutStyles.infoCardText}>Accesible to all travelers.</p>
-              </span>
             </div>
 
             <div className={styles.infoCard}>
-              <span className={supremeMedium.className}>
                 <h2 className={AboutStyles.infoCardTitle}>Endless<br/>results
                 </h2>
                 <p className={AboutStyles.infoCardText}>Remaining reliable and up to date.</p>
-              </span>
             </div>
 
           </div>
