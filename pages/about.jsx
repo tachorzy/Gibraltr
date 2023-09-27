@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import AboutUsCredits from '../components/about/AboutUsCredits.jsx'
-import { Combo, Roboto, Rubik } from '@next/font/google'
+import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
 const roboto = Roboto({ 
