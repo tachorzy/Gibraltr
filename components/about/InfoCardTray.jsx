@@ -1,4 +1,5 @@
 import localFont from '@next/font/local'
+import InfoCard from './InfoCard'
 
 const supremeMedium = localFont({
     src: '../../fonts/Supreme-Medium.otf',
@@ -12,12 +13,11 @@ const aboutUsInfoCards = new Map([
     ['Endless\nresults', { info: 'Remaining reliable and up to date.' }]
 ])
 
-
 const InfoCardTray = () => {
     return(
         <div className={supremeMedium.className + " flex flex-row h-[21rem] w-screen bg-stone-200 py-16 pl-24 gap-x-16 content-center"}>
             {Array.from(aboutUsInfoCards.entries()).map(([title, infoCardDetails], index) => (
-                <InfoCard header={title} description={infoCardDetails}/>
+                <InfoCard header={title} description={infoCardDetails.info} key={index}/>
             ))}
         </div>
     );
