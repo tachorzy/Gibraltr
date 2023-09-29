@@ -10,7 +10,7 @@ const supremeMedium = localFont({
 const AboutUsCredits = () => {
 
     return(
-        <div className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center pl-24"}>
+        <div className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center md:pl-32 pl-10"}>
             <h4 className={supremeMedium.className + " text-stone-700 text-4xl mt-14 mb-3.5"} id="our-vision">Our vision</h4>
             <p className={"w-1/2 text-lg text-stone-700 leading-relaxed mb-32"}>{"It's our mission to help you better understand your passport. Our passports are a privilege, each of them with their own freedoms and limits. Entering countries is not easy for all of us. Whether you have a strong or weak passport will greatly shape your travels. We aim to empower all of those yearning to travel. No matter their nation of origin."} </p>
             {/* <p className={AboutStyles.paragraphLast}>We want to simplify the process of finding visa requirements.</p> */}
