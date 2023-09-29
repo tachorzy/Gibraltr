@@ -20,9 +20,9 @@ const NavBar = ({lightingMode}) => {
         <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row  z-50"}>
             <div className={"flex flex-row relative "}>
                 <Link href="/">
-                    <Image src="/Gibraltar.svg" width={75} height={75} className={"select-none ml-10 fixed cursor-pointer block md:hidden "} alt="Gibraltr logo"></Image>
+                    <Image src="/Gibraltar.svg" width={75} height={75} className={"select-none ml-10 absolute md:fixed cursor-pointer block md:hidden "} alt="Gibraltr logo"></Image>
                     
-                    <Image src="/Gibraltar.svg" width={90} height={90} className={"select-none ml-6 fixed cursor-pointer hidden md:block"} alt="Gibraltr logo"></Image>
+                    <Image src="/Gibraltar.svg" width={90} height={90} className={"select-none ml-6 absolute md:fixed cursor-pointer hidden md:block"} alt="Gibraltr logo"></Image>
                 </Link>
                 <h1 className={`${lightingMode == "light" ? "text-stone-700" : "text-stone-300"} font-thin absoltue pt-6 md:mb-0 md:pt-7 ml-[97%] md:ml-32 text-3xl md:text-4xl`}>Gibraltr</h1>
             </div>
