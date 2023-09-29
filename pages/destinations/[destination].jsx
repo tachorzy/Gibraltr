@@ -49,35 +49,31 @@ export default function Destination({ requirement, passport, destination }){
                 <link rel="icon" href="/Gibraltar-solid.svg" />
             </Head>
 
-            <div className={DestinationStyle.navBar}>
+            <div className={"sticky"}>
                 <NavBar lightingMode="light"></NavBar>
             </div>
 
-            <div className={DestinationStyle.main}>
-                <div className={albula.className}>
-                    <div className={DestinationStyle.gridContainer}>
-                        <div className={DestinationStyle.countryProfileContainer}>
-                            <div className={DestinationStyle.countryProfileHeader}>
-                                <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
-                                <h1 className={DestinationStyle.countryProfileTitle}>{destination}</h1>
-                            </div>
-                            <div className={DestinationStyle.visaMessage}>
-                                {displayVisaMessage(passport, destination, requirement)}
-                            </div>
+            <div className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center pl-24"}>
+                <div className={albula.className + " flex flex-row mt-24"}>
+                    <div className={"flex flex-col w-11/12 ml-7"}>
+                        <div className={"text-stone-700 mt-24 flex flex-row gap-x-0.5"}>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
+                            <h1 className={"mt-20 text-6xl mr-52"}>{destination}</h1>
                         </div>
+                        <div className={"w-11/12 ml-3.5"}>
+                            {displayVisaMessage(passport, destination, requirement)}
+                        </div>
+                    </div>
 
-                        <div className={rubik.className}>
-                            <div className={DestinationStyle.infoContainer}>
-                                <span className={DestinationStyle.infoCardContainer}>
-                                    {displayVisaInfo(requirement)}
-                                    {displaySchengenInfo(destination)}
-                                    {/* {displayTravelBan(passport, destination, requirement)} */}
-                                    {displayKETA(destination, requirement)}
-                                    {displayIraqiKurdistan(destination, requirement)} 
-                                    {displayEVisaButton(destination, requirement)}
-                                </span>
-                            </div>
-                        </div>
+                    <div className={rubik.className + " grid grid-cols-2 grid-rows-4 mr-10 mt-24 mb-24 gap-x-56"}>
+                        <span className={"flex flex-col gap-y-6 row-span-3 mt-16"}>
+                            {displayVisaInfo(requirement)}
+                            {displaySchengenInfo(destination)}
+                            {/* {displayTravelBan(passport, destination, requirement)} */}
+                            {displayKETA(destination, requirement)}
+                            {displayIraqiKurdistan(destination, requirement)} 
+                            {displayEVisaButton(destination, requirement)}
+                        </span>
                     </div>
                 </div>
             </div>
