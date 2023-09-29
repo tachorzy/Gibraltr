@@ -15,7 +15,7 @@ const aboutUsInfoCards = new Map([
 
 const InfoCardTray = () => {
     return(
-        <div className={supremeMedium.className + " flex flex-row h-[21rem] w-screen bg-stone-200 py-16 md:pl-32 pl-10 gap-x-16 content-center"}>
+        <div className={supremeMedium.className + " flex flex-row h-[21rem] w-screen bg-stone-200 py-16 md:pl-40 pl-10 gap-x-16 content-center"}>
             {Array.from(aboutUsInfoCards.entries()).map(([title, infoCardDetails], index) => (
                 <InfoCard header={title} description={infoCardDetails.info} key={index}/>
             ))}

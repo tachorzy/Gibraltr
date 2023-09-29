@@ -39,7 +39,7 @@ export default function AboutUs() {
               <h1 className={"text-stone-200 text-7xl md:pl-32 pl-10 pt-56"}>We enable responsible travel.</h1>
           </div>
 
-          <section className={supremeMedium.className + " bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center md:pl-32 pl-10"}>
+          <section className={supremeMedium.className + " bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right flex flex-col justify-between content-center md:pl-40 pl-10"}>
                 <h2 className={"text-stone-700 text-4xl mt-14 mb-3.5"}>About us</h2>
                 <p className={"w-1/2 text-lg text-stone-700 leading-relaxed mb-32"}>
                   {"Gibraltr was founded with the initiative of making travel visas easier to understand. In our everchanging connected world, travelers are responsible for knowing the power & privilege of their passport. And, you don't have to do it alone! Our search engine provides accurate and reliable visa information for all passport holders no matter their destination."}
