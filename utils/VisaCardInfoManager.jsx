@@ -14,14 +14,14 @@ import { evisaWebsitesMap } from '/utils/evisawebsites.js'
 export function displayVisaMessage(passport, destination, requirement) {
     if (requirement !== "visa required" && requirement !== "e-visa") {
        return( 
-            <h3 className={"w-[95%] md:w-[30rem] text-stone-700 mt-8 text-xl md:text-3xl justify-between leading-10"}>
+            <h3 className={"max-md:w-full w-3/4 text-stone-700 mt-3 md:mt-8 text-sm md:text-3xl justify-between leading-10"}>
                 You don't need a visa for {destination} if you have a(n) <b>{passport}
             </b> passport</h3>
        )
     }
     else if (requirement === "visa required" || requirement === "e-visa") {
         return (
-            <h3 className={"w-[95%] md:w-[30rem] text-stone-700 mt-8 text-xl md:text-3xl justify-between leading-10"}>
+            <h3 className={"max-md:w-full md:w-3/4 text-stone-700 mt-3 md:mt-8 text-sm md:text-3xl justify-between leading-10"}>
                 You need a visa for {destination} if you have a(n) <b>{passport}
             </b> passport</h3>
         )
