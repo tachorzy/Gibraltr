@@ -57,7 +57,7 @@ export default function Destination({ requirement, passport, destination }){
                 <div className={albula.className + " flex flex-col md:flex-row md:mt-24 mt-12"}>
                     <div className={"flex flex-col w-11/12 md:ml-7"}>
                         <div className={"text-stone-700 mt-24 flex flex-row gap-x-0.5"}>
-                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={"mx-4 mt-6 align-bottom"}></Image>
                             <h1 className={"mt-20 text-5xl md:text-6xl md:mr-52"}>{destination}</h1>
                         </div>
                         <div className={"w-11/12 ml-3.5"}>

@@ -8,9 +8,8 @@ import Schengen from '../components/Schengen.jsx'
 import KETA from '../components/KETA.jsx'
 import IraqiKurdistanRegion from '../components/IraqiKurdistanRegion.jsx'
 import ApplyButton from '../components/ApplyButton.jsx'
-import { countries, isoCodesList, schengenCountries } from '/utils/countrydata.js'
+import { isoCodesList, schengenCountries } from '/utils/countrydata.js'
 import { evisaWebsitesMap } from '/utils/evisawebsites.js'
-import DestinationStyle from '../styles/DestinationStyle.module.css'
 
 export function displayVisaMessage(passport, destination, requirement) {
     if (requirement !== "visa required" && requirement !== "e-visa") {
