@@ -21,7 +21,7 @@ const Footer = () => {
 
     return(
         <div>
-            <div className={supremeRegular.className + " flex flex-row bg-stone-800 h-52 py-8 pl-20 gap-x-24"}>
+            <div className={supremeRegular.className + " flex flex-row bg-stone-800 h-52 py-8 md:pl-28 pl-10 gap-x-24"}>
                 <span>
                     <h2 className={albula.className + " ml-12 text-stone-200 mb-1"}>Gibraltr</h2>
                     <div className={"ml-12 text-stone-200 w-56 leading-snug"}>Gibraltr is here to help you confidently navigate the world of travel visas. Check the latest visa reqiurements for 197+ countries.</div>
@@ -57,7 +57,7 @@ const Footer = () => {
                     </li>
                 </div>
             </div> 
-            <div className={"bg-stone-800 pl-12 pb-4"}>
+            <div className={"bg-stone-800 md:pl-28 pl-12 pb-4"}>
                 <span className={"ml-12 text-stone-200 text-xs mt-16"}>© {new Date().getFullYear()} Gibraltr.com. All rights reserved.</span>
             </div> 
         </div>
