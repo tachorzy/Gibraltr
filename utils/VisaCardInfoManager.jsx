@@ -15,14 +15,14 @@ import DestinationStyle from '../styles/DestinationStyle.module.css'
 export function displayVisaMessage(passport, destination, requirement) {
     if (requirement !== "visa required" && requirement !== "e-visa") {
        return( 
-            <h3 className={DestinationStyle.visaInfo}>
+            <h3 className={"w-[95%] md:w-[30rem] text-stone-700 mt-8 text-xl md:text-3xl justify-between leading-10"}>
                 You don't need a visa for {destination} if you have a(n) <b>{passport}
             </b> passport</h3>
        )
     }
     else if (requirement === "visa required" || requirement === "e-visa") {
         return (
-            <h3 className={DestinationStyle.visaInfo}>
+            <h3 className={"w-[95%] md:w-[30rem] text-stone-700 mt-8 text-xl md:text-3xl justify-between leading-10"}>
                 You need a visa for {destination} if you have a(n) <b>{passport}
             </b> passport</h3>
         )

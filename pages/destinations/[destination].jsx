@@ -53,12 +53,12 @@ export default function Destination({ requirement, passport, destination }){
                 <NavBar lightingMode="light"></NavBar>
             </div>
 
-            <div className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center pl-24"}>
-                <div className={albula.className + " flex flex-row mt-24"}>
-                    <div className={"flex flex-col w-11/12 ml-7"}>
+            <div className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-6"}>
+                <div className={albula.className + " flex flex-col md:flex-row md:mt-24 mt-12"}>
+                    <div className={"flex flex-col w-11/12 md:ml-7"}>
                         <div className={"text-stone-700 mt-24 flex flex-row gap-x-0.5"}>
                             <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={DestinationStyle.PassportImg}></Image>
-                            <h1 className={"mt-20 text-6xl mr-52"}>{destination}</h1>
+                            <h1 className={"mt-20 text-5xl md:text-6xl md:mr-52"}>{destination}</h1>
                         </div>
                         <div className={"w-11/12 ml-3.5"}>
                             {displayVisaMessage(passport, destination, requirement)}
