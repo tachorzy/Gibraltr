@@ -36,11 +36,9 @@ export default function Home() {
           <div className={styles.navBar}>
               <NavBar></NavBar>
           </div>
-          <div className={supremeMedium.className}>
-            <div className={ErrorStyles.bannerHeader}>
-                <h2 className={ErrorStyles.title}>Sorry, this page is currently still under construction.</h2>
+            <div className={supremeMedium.className + " bg-[url('/error.svg')] flex flex-row w-screen bg-stone-800 bg-no-repeat bg-left-top bg-opacity-90 mt-16 h-screen "}>
+                <h2 className={"text-stone-200 text-7xl pt-56 ml-[27.5rem] w-[50rem]"}>Sorry, this page is currently still under construction.</h2>
             </div>
-          </div>
           <div></div>
           <Footer></Footer>
       </main>
