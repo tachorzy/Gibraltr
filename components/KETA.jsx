@@ -14,7 +14,7 @@ const KETA = () => {
             <span className={"grid grid-cols-3"}>
                 <p className={"md:text-lg font-bold col-span-2 mb-2.5 align-middle"}>K-ETA</p>
                 {/* <p className={styles.visaInfoBoxTitleSmall}>{"(Korea Electronic Travel Authorization)"}</p> */}
-                <Image src='/taeguk.svg' width={35} height={35} className={"ml-16"}></Image>
+                <Image src='/taeguk.svg' width={35} height={35} className={"ml-10 max-md:mb-2 md:ml-16"}></Image>
             </span>
 
             <p className={"max-md:text-sm leading-relaxed"}>The K-ETA is a travel authorization that visa-free visitors to South Korea must receive via an online application.</p>
