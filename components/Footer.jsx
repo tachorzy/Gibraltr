@@ -21,10 +21,10 @@ const Footer = () => {
 
     return(
         <div>
-            <div className={supremeRegular.className + " flex flex-row bg-stone-800 h-52 py-8 md:pl-28 pl-10 gap-x-24"}>
-                <span>
-                    <h2 className={albula.className + " ml-12 text-stone-200 mb-1"}>Gibraltr</h2>
-                    <div className={"ml-12 text-stone-200 w-56 leading-snug"}>Gibraltr is here to help you confidently navigate the world of travel visas. Check the latest visa reqiurements for 197+ countries.</div>
+            <div className={supremeRegular.className + " flex flex-col md:flex-row bg-stone-800 h-full md:h-52 py-8 md:pl-28 max-md:px-14 gap-x-24"}>
+                <span className="md:ml-12 text-stone-200 max-md:mb-6">
+                    <h2 className={albula.className + " max-md:text-lg mb-1"}>Gibraltr</h2>
+                    <div className={"max-md:w-full w-56 leading-snug"}>Gibraltr is here to help you confidently navigate the world of travel visas. Check the latest visa reqiurements for 197+ countries.</div>
                 </span>
                 <div className={"gap-y-2"}>
                     <h4 className={"text-stone-400 font-medium mb-3 border-stone-400 pb-1 border-b-2 border-t-0 border-x-0 border-solid w-24"}>Documents</h4>
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
             </div> 
             <div className={"bg-stone-800 md:pl-28 pl-12 pb-4"}>
-                <span className={"ml-12 text-stone-200 text-xs mt-16"}>© {new Date().getFullYear()} Gibraltr.com. All rights reserved.</span>
+                <span className={"md:ml-12 text-stone-200 text-xs mt-10 md:mt-16"}>© {new Date().getFullYear()} Gibraltr.com. All rights reserved.</span>
             </div> 
         </div>
     );
