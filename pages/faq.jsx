@@ -5,6 +5,7 @@ import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import { visaFAQContent, generalFAQContent, devFAQContent } from '../utils/faqdata.jsx'
 import GeneralFAQ from '../components/faq/GeneralFAQ.jsx'
+import VisaFAQ from '../components/faq/VisaFAQ.jsx'
 import "animate.css"
 
 const roboto = Roboto({ 
