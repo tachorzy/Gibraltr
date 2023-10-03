@@ -1,4 +1,4 @@
-import { visaFAQContent } from '../utils/faqdata.jsx'
+import { visaFAQContent } from '../../utils/faqdata.jsx'
 
 export default function VisaFAQ(){
     return (

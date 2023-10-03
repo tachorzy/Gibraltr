@@ -1,4 +1,4 @@
-import { devFAQContent } from '../utils/faqdata.jsx'
+import { devFAQContent } from '../../utils/faqdata.jsx'
 
 export default function DevFAQ(){
     return(<div>
