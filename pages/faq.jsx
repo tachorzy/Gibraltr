@@ -3,9 +3,8 @@ import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
-import styles from '../styles/Home.module.css'
-import FAQStyles from '../styles/FAQStyle.module.css'
 import { visaFAQContent, generalFAQContent, devFAQContent } from '../utils/faqdata.jsx'
+import GeneralFAQ from '../components/faq/GeneralFAQ.jsx'
 import "animate.css"
 
 const roboto = Roboto({ 
@@ -34,25 +33,6 @@ function VisaFAQ(){
             </summary>
             <div className={"text-stone-700 text-xl ml-24 mb-7 w-1/2 leading-relaxed"}>
               {visaFAQParagraph}
-            </div>
-          </details>
-          )
-        })}
-    </div>
-  );
-}
-
-function GeneralFAQ(){
-  return (
-    <div>
-        {Array.from(generalFAQContent.entries()).map(([generalFAQQuestion, generalFAQParagraph]) => {
-          return(
-          <details key={generalFAQQuestion}>
-            <summary className={"text-stone-700 text-3xl font-semibold mb-3.5 ml-16 cursor-pointer"}>
-            {generalFAQQuestion}
-            </summary>
-            <div className={"text-stone-700 text-xl ml-24 mb-7 w-1/2 leading-relaxed"}>
-              {generalFAQParagraph}
             </div>
           </details>
           )
