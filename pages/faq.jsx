@@ -44,7 +44,7 @@ export default function Home() {
             </section>
 
             <section className={"mb-3.5"}>
-              <h2 className={"text-stone-700 text-4xl mt-12 ml-16 mb-6 font-semibold underline"}>Developer FAQ</h2>
+              <h2 className={"text-stone-700 text-4xl mt-12 md:pl-40 pl-10 mb-6 font-semibold underline"}>Developer FAQ</h2>
                 <DevFAQ></DevFAQ>
             </section>
           </div>            
