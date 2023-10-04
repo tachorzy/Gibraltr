@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/Gibraltar-solid.svg" />
       </Head>
 
-      <main className={"bg-stone-100"}>
+      <main className={"bg-stone-100 bg-opacity-90"}>
           <div className={"sticky"}>
             <NavBar></NavBar>
           </div>
@@ -32,7 +32,7 @@ export default function Home() {
             <h1 className={"text-stone-200 text-7xl md:pl-32 pl-10 pt-48 md:pt-56"}>Frequently Asked Questions</h1>
           </div>
         
-          <div className={"flex-col gap-y-4 mt-14 mb-20"}>
+          <div className={supremeMedium.className + " flex-col gap-y-4 mt-14 mb-20"}>
             <section className={"mb-3.5"}>
                 <h2 className={"text-stone-700 text-4xl mt-12 md:pl-40 pl-10  mb-6 font-semibold underline"}>General FAQ</h2>
                 <GeneralFAQ></GeneralFAQ>

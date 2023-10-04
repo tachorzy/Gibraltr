@@ -3,22 +3,11 @@ import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import InfoCardTray from '../components/about/InfoCardTray.jsx'
 import AboutUsCredits from '../components/about/AboutUsCredits.jsx'
-import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
-
-const roboto = Roboto({ 
-  subsets: ['latin'], 
-  weight: '400' 
-})
 
 const supremeMedium = localFont({
   src: '../fonts/Supreme-Medium.otf',
   weight: '200'
-})
-
-const rubik = Rubik({
-  subsets: ['latin'],
-  weight: '400'
 })
 
 export default function AboutUs() {
