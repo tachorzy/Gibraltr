@@ -58,8 +58,8 @@ const AboutUsCredits = () => {
             </div>
             <div className={"md:col-span-2"}>                  
                 <h4 className={"text-stone-700 text-4xl mt-14 mb-3.5"}>Made by a traveler for travelers</h4>
-                <p className={"w-[90%] md:w-1/2 text-lg text-stone-700 leading-relaxed mb-4"}><strong>{"Planning a trip doesn't come without copious amounts of research."} </strong> {"That research begins with finding out whether or not you'll need a visa. Often times the struggle for a visa may shatter your dreams. Or the search for the right e-Visa application might just be a headache. That's why when I started Gibraltr, I wanted to create a painless tool for travelers like myself to better get a hold of tourist visas."}</p>
-                <p className={"w-[90%] md:w-1/2 text-lg text-stone-700 leading-relaxed mb-32"}>{""}</p>
+                <p className={"w-2/3 md:w-[59%] text-lg text-stone-700 leading-relaxed mb-4"}><strong>{"Planning a trip doesn't come without copious research."} </strong> {"Visas are at the forefront of that research. Often times the struggle for a visa may shatter your dreams. Or the search for the right e-Visa application might just be a headache. That's why when I started Gibraltr, I wanted to create a painless tool for travelers like myself to better get a hold of tourist visas."}</p>
+                <p className={"w-2/3 md:w-[59%] text-lg text-stone-700 leading-relaxed mb-32"}>{""}</p>
             </div>
         </div>
 

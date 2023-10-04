@@ -2,11 +2,6 @@ import Link from 'next/link'
 import { Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
-const rubik = Rubik({
-    subsets: ['latin'],
-    weight: '400'
-})
-
 const albula = localFont({
     src: '../fonts/serpentype-albula-pro-bold.otf',
     weight: '500'
@@ -31,9 +26,9 @@ const Footer = () => {
                     <li className={"text-stone-200 hover:text-stone-500 font-medium list-none pb-3"}>
                         <Link href="/">Find visas</Link>
                     </li>
-                    <li className={"text-stone-200 hover:text-stone-500 font-medium list-none pb-3"}>                        
+                    {/* <li className={"text-stone-200 hover:text-stone-500 font-medium list-none pb-3"}>                        
                         <Link href="/comingsoon">Embassy listing</Link>
-                    </li>
+                    </li> */}
                 </div>
                 <div>
                     <h4 className={"text-stone-400 font-medium mb-3 border-stone-400 pb-1 border-b-2 border-t-0 border-x-0 border-solid w-24"}>About Us</h4>
