@@ -60,7 +60,7 @@ const SearchBar = () => {
         <form type="submit" onSubmit={handleFormSubmit}>
             <div className={"rounded-2xl bg-stone-700 mb-4 md:mb-8 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-4 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 grid lg:grid-rows-1 lg:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 w-72 lg:w-[75.5%] xl:w-[58.6%] sm:content-center"}>
                 <div className={"bg-stone-300 rounded-l-lg mt-1 w-[27.5%] h-14 ml-2"}>
-                    <div className={"relative inline-block gap-x-3 justify-start content-center w-60"}>
+                    <div className={"relative inline-block gap-x-3 justify-start content-center w-60 lg:w-52 xl:w-60"}>
                         <Image src="passport.svg" width={32} height={32} className={"select-none absolute mt-2.5 ml-3.5"}></Image>
                         <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={"float-right h-14 w-9/12 p-2 py-4 text-stone-600 dark:text-stone-200 text=[1.025rem] border-transparent rounded-r-xl font-medium"}/>
@@ -84,7 +84,7 @@ const SearchBar = () => {
                 </div>
             
                 <div className={"bg-stone-300 rounded-lg mt-1 w-4/12 h-14 h-1/12 ml-2"}>
-                    <div className={"relative inline-block justify-start content-center w-[15rem]"}>      
+                    <div className={"relative inline-block justify-start content-center w-60 lg:w-52 xl:w-60"}>      
                         <Image src="pin.svg" width={29.5} height={29.5} className={"select-none absolute mt-3 ml-4"}></Image>   
                         <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)} placeholder={INITIAL_DESTINATION_STATE} className={"float-right h-14 w-9/12 p-2 py-4 text-stone-600 dark:text-stone-200 text-[1.025rem] border-transparent rounded-r-xl font-medium"} />
