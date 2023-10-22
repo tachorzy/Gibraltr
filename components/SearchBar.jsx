@@ -6,9 +6,9 @@ import { Combobox } from '@headlessui/react'
 
 function setButtonActivity(selectPassportHook, selectDestinationHook){
     if(selectPassportHook === '' || selectDestinationHook === '')
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[73%] h-14 w-60 mb-0.5 mt-1 md:ml-10 ml-2 pt-[1.15rem] float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-4 text-center text-stone-600"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[73%] h-14 w-60 mb-0.5 mt-1 md:ml-10 lg:ml-5 xl:ml-10 ml-2 pt-[1.15rem] float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-4 text-center text-stone-600"}> Do you need a visa?</button>);
     else
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[73%] h-14 w-60 mb-0.5 mt-1 md:ml-10 ml-2 pt-[1.15rem] float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-4 text-center text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[73%] h-14 w-60 mb-0.5 mt-1 md:ml-10 lg:ml-5 xl:ml-10 ml-2 pt-[1.15rem] float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-4 text-center text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
 }
 
 const SearchBar = () => {
@@ -58,7 +58,7 @@ const SearchBar = () => {
 
     return(        
         <form type="submit" onSubmit={handleFormSubmit}>
-            <div className={"rounded-2xl bg-stone-700 mb-4 md:mb-8 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-4 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 grid lg:grid-rows-1 lg:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 w-72 lg:w-[58.6%] sm:content-center"}>
+            <div className={"rounded-2xl bg-stone-700 mb-4 md:mb-8 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-4 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 grid lg:grid-rows-1 lg:grid-cols-3 sm:grid-cols-1 sm:grid-rows-3 gap-y-4 w-72 lg:w-[80%] xl:w-[58.6%] sm:content-center"}>
                 <div className={"bg-stone-300 rounded-l-lg mt-1 w-[27.5%] h-14 ml-2"}>
                     <div className={"relative inline-block gap-x-3 justify-start content-center w-60"}>
                         <Image src="passport.svg" width={32} height={32} className={"select-none absolute mt-2.5 ml-3.5"}></Image>
