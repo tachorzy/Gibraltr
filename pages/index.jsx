@@ -5,7 +5,6 @@ import HomePageInfo from '../components/HomePageInfo.jsx'
 import Footer from '../components/Footer'
 import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
-import styles from '../styles/Home.module.css'
 
 const roboto = Roboto({ 
   subsets: ['latin'], 
@@ -33,7 +32,7 @@ export default function Home() {
       </Head>
 
       <main>
-          <div className={styles.navBar}>
+          <div className={""}>
             <NavBar lightingMode="light"></NavBar>
           </div>
           <div className={supremeMedium.className + " bg-stone-100 bg-[url('/passport-stamps.svg')] bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-40 pl-10"}>
