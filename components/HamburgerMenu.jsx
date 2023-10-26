@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
 
     return (
         <div>
-            <button className={"top-0 right-0 mt-2 p-2 rounded-2xl cursor-pointer select-none border-transparent bg-stone-200"}onClick = {() => setIsActive(!isActive)}>
+            <button className={"absolute top-0 right-0 align-baseline mt-2.5 p-2 rounded-2xl cursor-pointer select-none border-transparent"}onClick = {() => setIsActive(!isActive)}>
                 <Image src="/hamburger-menu-stone-700.svg" width={42} height={42} alt="" className="cursor-pointer"/>
             </button>
 

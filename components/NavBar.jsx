@@ -17,7 +17,7 @@ const navItems = new Map([
 const NavBar = ({lightingMode}) => {
             
     return(
-        <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row  z-50"}>
+        <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row z-50"}>
             <div className={"flex flex-row relative "}>
                 <Link href="/">
                     <Image src="/Gibraltar.svg" width={75} height={75} className={"select-none ml-10 absolute cursor-pointer block md:hidden "} alt="Gibraltr logo"></Image>
