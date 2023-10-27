@@ -13,11 +13,6 @@ const HamburgerMenu = () => {
 
     useOnClickOutside(menuRef, handleClickOutside)
 
-    const handleScroll = () => {
-
-    }
-
-
     return (
         <div>
             <button className={"absolute top-0 right-0 align-baseline mt-2.5 mr-4 p-2 rounded-2xl cursor-pointer select-none border-transparent"}onClick = {() => setIsActive(!isActive)}>
