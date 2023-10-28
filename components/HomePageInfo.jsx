@@ -15,7 +15,7 @@ const supremeRegular = localFont({
 const generalInfoCards = new Map([
     ['Search for tourist visas', { info: 'Know whether or not your passport grants visa-free entry for your destination.', image: '/magnify.svg' }],
     ['Find what you need', { info: 'Be sure whether visa applications are available online, at arrival or at an embassy.', image: '/documents.svg' }],
-    ['Enter stress free', { info: 'Arrive to immigration with rest assured that you\'ve met your visa requirements.', image: '/customs-officer.svg' }]
+    ['Enter stress free', { info: 'Arrive to immigration rest assured that you\'ve met your visa requirements.', image: '/customs-officer.svg' }]
 ])
 
 const visaInfoCards = [['Visa Required', 'You must apply for a visa prior to entry. This likely means you\'ll have to file documents, pay a fee, and visiting an embassy.'], ['Visa-On-Arrival', 'Before going through customs, you\'ll have to fill out a form and possibly pay an entry-fee at the airport.'], ['E-Visa', 'Electronic visas are filled out online on an official government website or through a travel agency.']]
