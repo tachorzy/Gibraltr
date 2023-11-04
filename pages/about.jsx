@@ -24,7 +24,7 @@ export default function AboutUs() {
           <div className={"sticky"}>
               <NavBar lightMode={"dark"}></NavBar>
           </div>
-          <div className={supremeMedium.className + " bg-[url('/Gibraltar.svg')] flex flex-row h-80 md:h-[29rem] w-screen bg-stone-800 bg-no-repeat max-md:bg-top md:bg-right bg-cover"}>
+          <div className={supremeMedium.className + " bg-[url('/gibraltar-stone-800.svg')] flex flex-row h-80 md:h-[29rem] w-screen bg-stone-800 bg-no-repeat max-md:bg-top md:bg-right bg-cover"}>
               <h1 className={"text-stone-200 text-4xl md:text-7xl md:pl-32 pl-10 pt-48 md:pt-56"}>We enable responsible travel.</h1>
           </div>
 
