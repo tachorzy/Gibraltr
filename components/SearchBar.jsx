@@ -58,7 +58,7 @@ const SearchBar = () => {
 
     return(        
         <form type="submit" onSubmit={handleFormSubmit}>
-            <div className={"rounded-2xl bg-stone-700 mb-4 md:mb-8 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-0.5 md:pl-4 lg:pl-4 md:gap-x-0 xl:gap-x-8 grid sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-y-3 lg:gap-y-4 w-72 md:w-[34.5rem] lg:w-[75.5%] xl:w-[58.6%] sm:content-center"}>
+            <div className={"rounded-2xl bg-stone-700 mb-10 md:mb-4 md:mb-8 md:pb-3 pb-5 md:pt-2 pt-3.5 pl-0.5 md:pl-4 lg:pl-4 md:gap-x-0 xl:gap-x-8 grid sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-y-3 lg:gap-y-4 w-72 md:w-[34.5rem] lg:w-[75.5%] xl:w-[58.6%] sm:content-center"}>
                 <div className={"bg-stone-300 rounded-l-lg mt-1 w-[20%] md:w-[27.25%] lg:w-4/12 md:rounded-r-2xl-0 h-[3.25rem] md:h-14 ml-6 md:mx-2 lg:ml-2"}>
                     <div className={"relative inline-block gap-x-3 justify-start content-center w-60 md:w-[15rem] lg:w-[13.35rem] xl:w-60 -mb-0.5 md:mb-0"}>
                         <Image src="passport.svg" width={32} height={32} className={"select-none absolute mt-2.5 ml-3.5"}></Image>
