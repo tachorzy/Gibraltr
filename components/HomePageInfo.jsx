@@ -30,7 +30,7 @@ const HomePageInfo = () => {
             <div className={"flex md:flex-row flex-col md:mt-7 mt-14 mb-24 gap-x-4 md:gap-y-0 gap-y-10"}>
                     {Array.from(generalInfoCards.entries()).map(([title, infoCardDetails], index) => (
                         <div key={index} className={"relative overflow-hidden md:w-60 md:h-36 bg-stone-200 w-11/12 sm:h-24 flex md:flex-col flex-row text-stone-700 border-[3px] border-inherit border-solid rounded-xl p-4 pt-5 max-lg:p-5 max-lg:py-6 border-stone-300"}>
-                            <Image src={infoCardDetails.image} width={105} height={105} className="absolute ml-48 md:ml-[8.25rem] mt-7 z-0"></Image>
+                            <Image src={infoCardDetails.image} width={105} height={105} className="absolute ml-48 md:ml-[8.25rem] mt-7 z-0" alt={`InfoCard Icon ${index}`}></Image>
                             <div className={"flex flex-col md:ml-0 ml-2 md:text-xs sm:text-base mb-2 z-50"}>
                                 <p className={"text-base font-bold col-span-2 md:ml-0 ml-2 align-middle"}>{title}</p>
                                 <p className={"flex flex-col w-[80%] md:ml-0 ml-2 md:text-xs text-base"}>{infoCardDetails.info}</p>
@@ -38,7 +38,11 @@ const HomePageInfo = () => {
                         </div>
                     ))}
             </div>
-
+            
+            <div className={"relative w-full overflow-hidden"}>
+                <h2 className={supremeMedium.className + " absolute w-full px-8 mt-64 z-40 font-extrabold drop-shadow-md text-4xl text-stone-100 "}>Seek adventure<br/>wisely</h2>
+                <Image src={"/GibraltarPhoto.jpg"} width={750} height={750} className="z-10 rounded-xl mb-24 contrast-100 brightness-95 sepia-[22%] backdrop-blur-lg"/>
+            </div>
             <h3 className={supremeMedium.className + " font-bold text-3xl text-stone-700 mb-10"}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3>
             <div className={"flex md:flex-row flex-col md:mt-7 mt-14 gap-x-4 mb-24 md:gap-y-0 gap-y-10"}>
                 {visaInfoCards.map(([visaType, visaDetails], index) => (
