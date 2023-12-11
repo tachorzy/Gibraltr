@@ -40,8 +40,8 @@ const HomePageInfo = () => {
             </div>
             
             <div className={"relative w-full overflow-hidden"}>
-                <h2 className={supremeMedium.className + " absolute w-full px-8 mt-64 z-40 font-extrabold drop-shadow-md text-4xl text-stone-100 "}>Seek adventure<br/>wisely</h2>
-                <Image src={"/GibraltarPhoto.jpg"} width={750} height={750} className="z-10 rounded-xl mb-24 contrast-100 brightness-95 sepia-[22%] backdrop-blur-lg"/>
+                <h2 className={supremeMedium.className + " absolute w-full px-7 mt-40 z-40 font-extrabold drop-shadow-2xl text-5xl text-neutral-100"}>Seek adventure<br/>wisely</h2>
+                <Image src={"/GibraltarBanner.png"} width={750} height={750} className="z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)]"/>
             </div>
             <h3 className={supremeMedium.className + " font-bold text-3xl text-stone-700 mb-10"}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3>
             <div className={"flex md:flex-row flex-col md:mt-7 mt-14 gap-x-4 mb-24 md:gap-y-0 gap-y-10"}>
