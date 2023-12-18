@@ -14,8 +14,8 @@ const supremeRegular = localFont({
 });
 
 const promotions = [
-  { title: 'Seek adventure\nresponsibly', info: 'Learn about our initiative to help make your travel planning stress-free.', image: '/GibraltarBanner1.png', link: '/about' },
-  { title: 'Europe\'s got new requirements in 2025: EITAS', info: 'Starting 2025, the EU will require a travel authorization for over 60 visa-exempt nationalities.', image: '/AthensBanner.png', link: 'https://travel-europe.europa.eu/etias_en' }
+  { title: <p>{`Seek adventure`}<br/>{'responsibly'}</p>, info: 'Learn about our initiative to help make your travel planning stress-free.', image: '/GibraltarBanner1.png', link: '/about' },
+  { title: <p>{'Off to Europe in 2025?'}<br/>{'Learn about the ETIAS!'}</p>, info: 'Starting 2025, the EU will require a travel authorization for over 60 visa-exempt nationalities.', image: '/AthensBannerTest8.png', link: 'https://travel-europe.europa.eu/etias_en' }
   // ['FAQPromo', { title: '', info: 'Accesible to all travelers.', image: '/GibraltarBanner2.png', link: '' }]
 ];
 
@@ -28,10 +28,9 @@ const PromoBanner = () => {
   });
 
   useEffect(() => {
-    // Select a random promotion when the component mounts
     const randomIndex = Math.floor(Math.random() * promotions.length);
     setPromo(promotions[randomIndex]);
-  }, []); // Empty dependency array ensures this effect runs only once, equivalent to componentDidMount
+  }, []); // Empty dependency array ensures this effect runs only once
 
   return (
     <div className={'relative w-full overflow-hidden'}>
@@ -43,7 +42,7 @@ const PromoBanner = () => {
         <span className='pl-1 group-hover:pl-1.5 duration-500'>›</span>
       </Link>
 
-      <Image src={promo?.image} width={750} height={750} className='z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)]' />
+      <Image src={promo?.image} width={750} height={750} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)]' />
     </div>
   );
 };
