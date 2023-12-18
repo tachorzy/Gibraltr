@@ -37,7 +37,7 @@ const PromoBanner = () => {
       <h2 className={supremeMedium.className + ' absolute w-full px-7 my-24 z-40 font-extrabold drop-shadow-2xl text-5xl text-neutral-100'}>{promo?.title}</h2>
       <p className={supremeRegular.className + ' absolute w-[32%] mr-72 px-7 mt-48 pt-2.5 z-40 drop-shadow-2xl text-base text-neutral-100'}>{promo?.info}</p>
 
-      <Link href={promo?.link} className={supremeMedium.className + ' group absolute z-40 px-7 mt-64 pt-2 justify-self-end text-neutral-100 font-semibold text-lg pt-2 flex-none'}>
+      <Link href={promo?.link} className={supremeMedium.className + ' group absolute z-40 px-7 mt-64 pt-2 justify-self-end text-neutral-100 font-semibold text-lg pt-2 flex-none'} target={promo?.link.startsWith('/') ? '' : '_blank' }>
         Read more
         <span className='pl-1 group-hover:pl-1.5 duration-500'>›</span>
       </Link>
