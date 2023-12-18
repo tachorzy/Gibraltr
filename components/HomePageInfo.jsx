@@ -43,7 +43,7 @@ const HomePageInfo = () => {
             <PromoBanner></PromoBanner>
 
             <h3 className={supremeMedium.className + " font-bold text-3xl text-stone-700 mb-10"}>Familiarize yourself with<br/>the different types of<br/>visa requirements.</h3>
-            <div className={"flex md:flex-row flex-col md:mt-7 mt-14 gap-x-[1.6rem] mb-24 md:gap-y-0 gap-y-10}>
+            <div className={"flex md:flex-row flex-col md:mt-7 mt-14 gap-x-[1.6rem] mb-24 md:gap-y-0 gap-y-10"}>
                 {visaInfoCards.map(([visaType, visaDetails], index) => (
                     <div key={index} className={supremeMedium.className + "relative overflow-hidden md:w-60 md:h-36 bg-stone-200 w-11/12 sm:h-24 flex flex-col text-stone-700 border-[3px] border-inherit border-solid rounded-xl p-4 pt-5 max-lg:p-5 max-lg:py-6 border-stone-300"}>
                         <p className={"text-base font-bold col-span-2 md:lg:xl:ml-0 ml-2 align-middle"}>{visaType}</p>
