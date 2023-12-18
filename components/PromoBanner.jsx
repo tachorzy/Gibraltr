@@ -36,6 +36,7 @@ const PromoBanner = () => {
   return (
     <div className={'relative w-full overflow-hidden'}>
       <h2 className={supremeMedium.className + ' absolute w-full px-7 my-14 md:my-24 z-40 font-extrabold drop-shadow-2xl text-2xl md:text-5xl text-neutral-100'}>{promo?.title}</h2>
+      {/* need to figure out a way to make the small text readable on mobile, especially with the background images */}
       <p className={supremeRegular.className + ' absolute w-[85%] md:w-[32%] mr-72 px-7 mt-28 md:mt-48 pt-2.5 z-40 font-extrabold md:font-normal drop-shadow-sm md:drop-shadow-2xl text-sm md:text-base text-neutral-100'}>{promo?.info}</p>
 
       <Link href={promo?.link} className={supremeMedium.className + ' group absolute z-40 px-7 mt-44 md:mt-64 pt-4 md:pt-2 justify-self-end text-neutral-100 font-semibold md:text-lg pt-2 flex-none'} target={promo?.link.startsWith('/') ? '' : '_blank' }>
@@ -43,7 +44,7 @@ const PromoBanner = () => {
         <span className='pl-1 group-hover:pl-1.5 duration-500'>›</span>
       </Link>
 
-      <Image src={promo?.image} width={750} height={750} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)] hidden md:block' />
+      <Image src={promo?.image} width={760} height={760} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)] hidden md:block' />
       <Image src={`/promotions/mobile${promo?.image}`} width={305} height={305} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)] block md:hidden' />
 
     </div>
