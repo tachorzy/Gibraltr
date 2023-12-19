@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import localFont from '@next/font/local'
@@ -15,7 +16,7 @@ const navItems = new Map([
 ])
 
 const NavBar = ({lightingMode}) => {
-            
+      
     return(
         <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row z-50"}>
             <div className={"flex flex-row relative "}>

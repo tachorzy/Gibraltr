@@ -46,7 +46,7 @@ const PromoBanner = () => {
         <span className='pl-1 group-hover:pl-1.5 duration-500'>›</span>
       </Link>
 
-      <Image src={promo?.image} width={760} height={760} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)] hidden md:block' />
+      <Image src={promo?.image} width={770} height={770} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)] hidden md:block' />
       <Image src={`/promotions/mobile${promo?.image}`} width={305} height={305} className='select-none z-10 rounded-xl mb-24 backdrop-blur-lg sepia-[20%] inline-block after:shadow-[inset 0 0 100px rgb(0, 0, 0, 0.06)] block md:hidden' />
 
     </div>
