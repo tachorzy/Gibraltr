@@ -30,9 +30,9 @@ const HomePageInfo = () => {
             <p className={"text-stone-700 text-lg md:text-xl md:mr-96 mr-5 w-[95%] md:w-[35rem] lg:w-[46rem]"}>{"That's why we're here to guide you through visas for wherever you're headed."}<br/>{"Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
             <div className={"flex md:flex-row flex-col md:mt-7 mt-14 mb-24 gap-x-[1.6rem] md:gap-y-0 gap-y-10"}>
                     {Array.from(generalInfoCards.entries()).map(([title, infoCardDetails], index) => (
-                        <div key={index} className={"relative overflow-hidden md:w-60 md:h-36 bg-stone-200 w-11/12 sm:h-24 flex md:flex-col flex-row text-stone-700 border-[3px] border-inherit border-solid rounded-xl p-4 pt-5 max-lg:p-5 max-lg:py-6 border-stone-300"}>
+                        <div key={index} className={"z-0 relative overflow-hidden md:w-60 md:h-36 bg-stone-200 w-11/12 sm:h-24 flex md:flex-col flex-row text-stone-700 border-[3px] border-inherit border-solid rounded-xl p-4 pt-5 max-lg:p-5 max-lg:py-6 border-stone-300"}>
                             <Image src={infoCardDetails.image} width={105} height={105} className="absolute ml-48 md:ml-[8.25rem] mt-7 z-0" alt={`InfoCard Icon ${index}`}></Image>
-                            <div className={"flex flex-col md:ml-0 ml-2 md:text-xs sm:text-base mb-2 z-50"}>
+                            <div className={"flex flex-col md:ml-0 ml-2 md:text-xs sm:text-base mb-2 z-10"}>
                                 <p className={"text-base font-bold col-span-2 md:ml-0 ml-2 align-middle"}>{title}</p>
                                 <p className={"flex flex-col w-[80%] md:ml-0 ml-2 md:text-xs text-base"}>{infoCardDetails.info}</p>
                             </div>
