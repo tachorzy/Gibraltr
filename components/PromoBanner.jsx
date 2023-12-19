@@ -17,6 +17,8 @@ const supremeRegular = localFont({
 const promotions = [
   { title: <p>{`Seek adventure`}<br/>{'responsibly'}</p>, info: 'Learn about our initiative to help make your travel planning stress-free.', image: '/GibraltarBanner1.png', link: '/about' },
   { title: <p>{'Off to Europe in 2025?'}<br/>{'Learn about the ETIAS!'}</p>, info: 'Starting 2025, the EU will require a travel authorization for over 60 visa-exempt nationalities.', image: '/AthenaBanner.png', link: 'https://travel-europe.europa.eu/etias_en' }
+//   { title: <p>{'Off to Europe in 2025?'}<br/>{'Learn about the ETIAS!'}</p>, info: 'Starting 2025, the EU will require a travel authorization for over 60 visa-exempt nationalities.', image: '/BeirutBannerTest2.png', link: 'https://travel-europe.europa.eu/etias_en' }
+
   // ['FAQPromo', { title: '', info: 'Accesible to all travelers.', image: '/GibraltarBanner2.png', link: '' }]
 ];
 
