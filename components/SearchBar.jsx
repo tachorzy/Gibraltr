@@ -6,9 +6,9 @@ import { Combobox } from '@headlessui/react'
 
 function setButtonActivity(selectPassportHook, selectDestinationHook){
     if(selectPassportHook === '' || selectDestinationHook === '')
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-4 text-center text-stone-600"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] 2xl:pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm 2xl:text-lg leading-tight px-4 text-center text-stone-600"}> Do you need a visa?</button>);
     else
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm leading-tight px-4 text-center text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] 2xl:pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm 2xl:text-lg leading-tight px-4 text-center text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
 }
 
 const SearchBar = () => {
@@ -66,14 +66,14 @@ const SearchBar = () => {
                         <Combobox value={selectPassport} onChange={(passport) => setSelectedPassport(passport)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setPassportQuery(event.target.value)} placeholder={INITIAL_PASSPORT_STATE} className={"float-right h-14 2xl:h-16 w-9/12 2xl:w-[79%] p-2 py-4 text-stone-600 dark:text-stone-200 text-[1.025rem] 2xl:text-lg border-transparent rounded-r-xl font-medium"}/>
                             <div className="inline-block w-full">
-                                <Combobox.Options className={"z-40 absolute mt-2 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
+                                <Combobox.Options className={"z-40 absolute mt-1 ml-14 2xl:ml-16 pb-0.5 max-h-80 2xl:max-h-96 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
                                     {filteredPassports.length === 0 && selectPassport !== INITIAL_PASSPORT_STATE ? (
-                                        <div className={"py-3 pl-4"}>
+                                        <div className={"py-3 pl-4 2xl:py-3.5 2xl:pl-8 2xl:text-lg"}>
                                             {"No passport found."}
                                         </div>
                                     ) : (
                                         filteredPassports.map((code) => (
-                                            <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={"cursor-pointer hover:bg-stone-200 py-3 pl-4"}>
+                                            <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={"cursor-pointer hover:bg-stone-200 py-3 pl-4 2xl:py-3.5 2xl:pl-8 2xl:text-lg"}>
                                                 {code}
                                             </Combobox.Option>
                                             ))
@@ -91,14 +91,14 @@ const SearchBar = () => {
                         <Combobox value={selectDestination} onChange={(destination) => setSelectedDestination(destination)}>
                             <Combobox.Input ref={inputRef} onChange={(event) => setDestinationQuery(event.target.value)} placeholder={INITIAL_DESTINATION_STATE} className={"float-right h-14 2xl:h-16 w-9/12 2xl:w-[79%] p-2 py-4 text-stone-600 dark:text-stone-200 text-[1.025rem] 2xl:text-lg border-transparent rounded-r-xl font-medium"} />
                                 <div className="inline-block w-full">
-                                    <Combobox.Options className={"z-40 absolute mt-2 ml-14 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
+                                    <Combobox.Options className={"z-40 absolute mt-1 ml-14 2xl:ml-16 pb-0.5 max-h-80 shadow-2xl bg-stone-100 overflow-y-auto rounded-xl text-sm text-stone-600 justify-start list-none w-3/4 scrollbar"}>
                                         {filteredDestinations.length === 0 && selectDestination !== INITIAL_DESTINATION_STATE ? (
-                                            <div className={"py-3 pl-4"}>
+                                            <div className={"py-3 pl-4 2xl:py-3.5 2xl:pl-8 2xl:text-lg"}>
                                                 {"No destination found."}
                                             </div>
                                         ) : (
                                             filteredDestinations.map((code) => (
-                                            <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={"cursor-pointer hover:bg-stone-200 py-3 pl-4"}>
+                                            <Combobox.Option key={isoCodesList[code.toLowerCase()]} value={code} className={"cursor-pointer hover:bg-stone-200 py-3 pl-4 2xl:py-3.5 2xl:pl-8 2xl:text-lg"}>
                                                 {code}
                                             </Combobox.Option>
                                             ))
