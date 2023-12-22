@@ -28,13 +28,14 @@ const HomePageInfo = () => {
         <div className={supremeRegular.className}>
             <h2 className={"text-stone-700 text-xl md:text-3xl 2xl:text-4xl font-bold col-span-2 md:ml-0 mr-2.5 mb-1.5 align-middle"}>{"It's always best to know, before you go."}</h2>
             <p className={"text-stone-700 text-lg md:text-xl 2xl:text-[1.75rem] 2xl:leading-9 md:mr-96 mr-5 w-[95%] md:w-[35rem] lg:w-[46rem] 2xl:w-[90rem]"}>{"That's why we're here to guide you through visas for wherever you're headed."}<br/>{"Stay informed of your options of a tourist visa for your destination and how to get them!"}</p>
-            <div className={"flex md:flex-row flex-col md:mt-7 mt-14 mb-24 gap-x-[1.6rem] md:gap-y-0 gap-y-10"}>
+            <div className={"flex md:flex-row flex-col md:mt-7 mt-14 mb-24 gap-x-[1.4rem] 2xl:gap-x-[4.5%] md:gap-y-0 gap-y-10"}>
                     {Array.from(generalInfoCards.entries()).map(([title, infoCardDetails], index) => (
-                        <div key={index} className={"z-0 relative overflow-hidden md:w-60 md:h-36 bg-stone-200 w-11/12 sm:h-24 flex md:flex-col flex-row text-stone-700 border-[3px] border-inherit border-solid rounded-xl p-4 pt-5 max-lg:p-5 max-lg:py-6 border-stone-300"}>
-                            <Image src={infoCardDetails.image} width={105} height={105} className="absolute ml-48 md:ml-[8.25rem] mt-7 z-0" alt={`InfoCard Icon ${index}`}></Image>
-                            <div className={"flex flex-col md:ml-0 ml-2 md:text-xs sm:text-base mb-2 z-10"}>
-                                <p className={"text-base font-bold col-span-2 md:ml-0 ml-2 align-middle"}>{title}</p>
-                                <p className={"flex flex-col w-[80%] md:ml-0 ml-2 md:text-xs text-base"}>{infoCardDetails.info}</p>
+                        <div key={index} className={"z-0 relative overflow-hidden md:w-60 2xl:w-80 md:h-36 2xl:h-52 bg-stone-200 w-11/12 sm:h-24 flex md:flex-col flex-row text-stone-700 border-[3px] 2xl:border-[5px] border-inherit border-solid rounded-xl p-4 pt-5 max-lg:p-5 max-lg:py-6 border-stone-300"}>
+                            <Image src={infoCardDetails.image} width={105} height={105} className="absolute ml-48 md:ml-[8.25rem] mt-7 z-0 block 2xl:hidden" alt={`InfoCard Icon ${index}`}></Image>
+                            <Image src={infoCardDetails.image} width={155} height={155} className="absolute ml-44 mt-12 z-0 hidden 2xl:block" alt={`InfoCard Icon ${index}`}></Image>
+                            <div className={"flex flex-col md:ml-0 ml-2 md:text-xs sm:text-base 2xl:text-xl mb-2 z-10"}>
+                                <p className={"text-base 2xl:text-xl font-bold col-span-2 md:ml-0 ml-2 align-middle"}>{title}</p>
+                                <p className={"flex flex-col w-[80%] 2xl:w-[90%] md:ml-0 ml-2 md:text-xs text-base 2xl:text-lg"}>{infoCardDetails.info}</p>
                             </div>
                         </div>
                     ))}
