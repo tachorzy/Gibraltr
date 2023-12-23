@@ -19,7 +19,7 @@ const generalInfoCards = new Map([
     ['Enter stress free', { info: 'Arrive to immigration rest assured that you\'ve met your visa requirements.', image: '/customs-officer.svg' }]
 ])
 
-const visaInfoCards = [['Visa Required', 'You must apply for a visa prior to entry. This likely means you\'ll have to file documents, pay a fee, and visiting an embassy.'], ['Visa-On-Arrival', 'Before going through customs, you\'ll have to fill out a form and possibly pay an entry-fee at the airport.'], ['E-Visa', 'Electronic visas are filled out online on an official government website or through a travel agency.']]
+const visaInfoCards = [['Visa Required', 'You must apply for a visa prior to entry. This likely means you\'ll have to file documents, pay a fee, and visiting an embassy.'], ['Visa-On-Arrival', 'Before going through customs, you\'ll have to fill out a form and possibly pay an entry-fee at the airport.'], ['e-Visa', 'Electronic visas are filled out online on an official government website or through a travel agency.']]
 
 
 const HomePageInfo = () => {
