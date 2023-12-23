@@ -2,11 +2,6 @@ import localFont from '@next/font/local'
 import Link from 'next/link'
 import { TypeAnimation } from 'react-type-animation'
 
-const supremeMedium = localFont({
-    src: '../../fonts/Supreme-Medium.otf',
-    weight: '200'
-  })
-
 const AboutUsCredits = () => {
 
     return(
