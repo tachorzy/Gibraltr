@@ -3,11 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import localFont from '@next/font/local'
 import HamburgerMenu from './HamburgerMenu.jsx'
+import { albula } from '../utils/localNextFonts.js' 
 
-const albula = localFont({
-    src: '../fonts/serpentype-albula-pro-bold.otf',
-    weight: '500'
-})
 
 const navItems = new Map([
     ['Find Visas', { link: '/'}],

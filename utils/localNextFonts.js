@@ -1,26 +1,27 @@
 import localFont from 'next/font/local'
 
-const supremeLight = localFont({
+
+export const albula = localFont({
+    src: '../fonts/serpentype-albula-pro-bold.otf',
+    weight: '500'
+})
+
+export const supremeLight = localFont({
     src: '../fonts/Supreme-Light.otf',
     weight: '200'
 })
 
-const supremeRegular = localFont({
+export const supremeRegular = localFont({
     src: '../fonts/Supreme-Regular.otf',
     weight: '200'
 })
 
-const supremeMedium = localFont({
+export const supremeMedium = localFont({
     src: '../fonts/Supreme-Medium.otf',
     weight: '200'
 })
 
-const supremeBold = localFont({
+export const supremeBold = localFont({
     src: '../fonts/Supreme-Bold.otf',
-    weight: '200'
-})
-
-const supremeBlack = localFont({
-    src: '../fonts/Supreme-Black.otf',
     weight: '200'
 })
