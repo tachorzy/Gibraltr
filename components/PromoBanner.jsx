@@ -39,9 +39,9 @@ const PromoBanner = () => {
     <div className={'relative w-full overflow-hidden'}>
       <h2 className={supremeMedium.className + ' absolute w-full px-7 my-14 md:my-24 2xl:my-28 2xl:px-12 z-40 font-extrabold drop-shadow-2xl text-2xl md:text-5xl 2xl:text-7xl text-neutral-100'}>{promo?.title}</h2>
       {/* need to figure out a way to make the small text readable on mobile, especially with the background images */}
-      <p className={supremeRegular.className + ' absolute w-[85%] md:w-[32%] 2xl:w-[40%] mr-72 px-7 2xl:px-12 mt-28 md:mt-48 2xl:mt-64 pt-2.5 2xl:pt-4 z-40 font-extrabold md:font-normal drop-shadow-sm md:drop-shadow-2xl text-sm md:text-base 2xl:text-2xl text-neutral-100'}>{promo?.info}</p>
+      <p className={supremeRegular.className + ' absolute w-[85%] md:w-[35%] 2xl:w-[40%] mr-72 px-7 2xl:px-12 mt-28 md:mt-48 2xl:mt-64 pt-2.5 2xl:pt-4 z-40 font-extrabold md:font-normal drop-shadow-sm md:drop-shadow-2xl text-sm md:text-base 2xl:text-2xl text-neutral-100'}>{promo?.info}</p>
 
-      <Link href={promo?.link} className={supremeMedium.className + ' group absolute z-40 px-7 2xl:px-12 mt-44 md:mt-64 2xl:mt-80 pt-4 md:pt-2 2xl:pt-8 justify-self-end text-neutral-100 font-semibold md:text-lg 2xl:text-2xl pt-2 flex-none'} target={promo?.link.startsWith('/') ? '' : '_blank' }>
+      <Link href={promo?.link} className={supremeMedium.className + ' group absolute z-40 px-7 2xl:px-12 mt-44 md:mt-64 2xl:mt-80 pt-4 md:pt-4 2xl:pt-10 justify-self-end text-neutral-100 font-semibold md:text-lg 2xl:text-2xl pt-2 flex-none'} target={promo?.link.startsWith('/') ? '' : '_blank' }>
         Read more
         <span className='pl-1 group-hover:pl-1.5 duration-500'>›</span>
       </Link>
