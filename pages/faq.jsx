@@ -7,11 +7,7 @@ import GeneralFAQ from '../components/faq/GeneralFAQ.jsx'
 import VisaFAQ from '../components/faq/VisaFAQ.jsx'
 import DevFAQ from '../components/faq/DevFAQ.jsx'
 import "animate.css"
-
-const supremeMedium = localFont({
-  src: '../fonts/Supreme-Medium.otf',
-  weight: '200'
-})
+import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFonts.js'
 
 export default function Home() {
   return (

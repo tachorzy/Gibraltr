@@ -5,16 +5,7 @@ import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import ErrorStyles from '../styles/ErrorStyle.module.css'
-
-const roboto = Roboto({ 
-  subsets: ['latin'], 
-  weight: '400' 
-})
-
-const supremeMedium = localFont({
-  src: '../fonts/Supreme-Medium.otf',
-  weight: '200'
-})
+import { supremeMedium } from '../utils/localNextFonts.js'
 
 export default function ServerError() {
   return (

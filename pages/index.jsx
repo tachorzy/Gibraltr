@@ -3,13 +3,7 @@ import NavBar from '../components/NavBar.jsx'
 import SearchBar from '../components/SearchBar.jsx'
 import HomePageInfo from '../components/HomePageInfo.jsx'
 import Footer from '../components/Footer'
-import { Roboto, Rubik } from '@next/font/google'
-import localFont from '@next/font/local'
-
-const supremeMedium = localFont({
-  src: '../fonts/Supreme-Medium.otf',
-  weight: '200'
-})
+import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFonts.js'
 
 export default function Home() {
   return (

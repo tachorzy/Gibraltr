@@ -6,21 +6,7 @@ import localFont from '@next/font/local'
 import styles from '../styles/Home.module.css'
 import ErrorStyles from '../styles/ErrorStyle.module.css'
 import "animate.css"
-
-const roboto = Roboto({ 
-  subsets: ['latin'], 
-  weight: '400' 
-})
-
-const supremeMedium = localFont({
-  src: '../fonts/Supreme-Medium.otf',
-  weight: '200'
-})
-
-const rubik = Rubik({
-  subsets: ['latin'],
-  weight: '400'
-})
+import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFonts.js'
 
 export default function Home() {
   return (

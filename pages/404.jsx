@@ -3,8 +3,6 @@ import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import { Combo, Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
-import styles from '../styles/Home.module.css'
-import ErrorStyles from '../styles/ErrorStyle.module.css'
 import "animate.css"
 
 

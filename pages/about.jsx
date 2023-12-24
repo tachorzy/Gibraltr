@@ -4,11 +4,8 @@ import Footer from '../components/Footer.jsx'
 import InfoCardTray from '../components/about/InfoCardTray.jsx'
 import AboutUsCredits from '../components/about/AboutUsCredits.jsx'
 import localFont from '@next/font/local'
+import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFonts.js'
 
-const supremeMedium = localFont({
-  src: '../fonts/Supreme-Medium.otf',
-  weight: '200'
-})
 
 export default function AboutUs() {
   return (
