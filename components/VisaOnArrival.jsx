@@ -1,11 +1,4 @@
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-import localFont from '@next/font/local'
-
-const supremeMedium = localFont({
-    src: '../fonts/Supreme-Medium.otf',
-    weight: '200'
-})
+import { supremeMedium } from '../utils/localNextFonts.js'
 
 const VisaOnArrival = () => {
 

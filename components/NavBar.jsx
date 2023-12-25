@@ -1,7 +1,5 @@
-import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
-import localFont from '@next/font/local'
 import HamburgerMenu from './HamburgerMenu.jsx'
 import { albula } from '../utils/localNextFonts.js' 
 

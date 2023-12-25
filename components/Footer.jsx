@@ -1,16 +1,5 @@
 import Link from 'next/link'
-import { Rubik } from '@next/font/google'
-import localFont from '@next/font/local'
-
-const albula = localFont({
-    src: '../fonts/serpentype-albula-pro-bold.otf',
-    weight: '500'
-})
-
-const supremeRegular = localFont({
-    src: '../fonts/Supreme-Regular.otf',
-    weight: '200'
-})
+import { albula, supremeRegular } from '../utils/localNextFonts'
 
 const Footer = () => {
 

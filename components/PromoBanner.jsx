@@ -1,17 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import localFont from '@next/font/local';
-
-const supremeMedium = localFont({
-  src: '../fonts/Supreme-Medium.otf',
-  weight: '200',
-});
-
-const supremeRegular = localFont({
-  src: '../fonts/Supreme-Regular.otf',
-  weight: '200',
-});
+import { supremeRegular, supremeMedium } from '../utils/localNextFonts.js';
 
 //potentially swap out these <p> tahs for text tags or something else   
 const promotions = [

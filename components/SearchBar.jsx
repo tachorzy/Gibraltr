@@ -3,6 +3,7 @@ import { useState, useRef } from 'react'
 import { filteredCountries, isoCodesList } from '../utils/countrydata.js'
 import { useRouter } from 'next/router'
 import { Combobox } from '@headlessui/react'
+import { supremeRegular, supremeMedium } from '../utils/localNextFonts.js'
 
 function setButtonActivity(selectPassportHook, selectDestinationHook){
     if(selectPassportHook === '' || selectDestinationHook === '')

@@ -1,17 +1,6 @@
 import Image from 'next/image'
 import PromoBanner from './PromoBanner'
-import localFont from '@next/font/local'
-require('tailwind-scrollbar')
-
-const supremeMedium = localFont({
-    src: '../fonts/Supreme-Medium.otf',
-    weight: '200'
-})
-
-const supremeRegular = localFont({
-    src: '../fonts/Supreme-Regular.otf',
-    weight: '200'
-})
+import { supremeRegular, supremeMedium } from '../utils/localNextFonts.js'
 
 const generalInfoCards = new Map([
     ['Search for tourist visas', { info: 'Know whether or not your passport grants visa-free entry for your destination.', image: '/magnify.svg' }],
