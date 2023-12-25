@@ -5,17 +5,14 @@ import Footer from '../../components/Footer.jsx'
 import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
+import { albula } from '../../utils/localNextFonts.js'
+//REFACTOR THE FONTS for consistency across platform!!!
 import { Roboto, Rubik } from '@next/font/google'
 import localFont from '@next/font/local'
 
 const rubik = Rubik({
   subsets: ['latin'],
   weight: '400'
-})
-
-const albula = localFont({
-    src: '../../fonts/serpentype-albula-pro-bold.otf',
-    weight: '500'
 })
 
 export async function getServerSideProps({ query }){
