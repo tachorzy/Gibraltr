@@ -1,9 +1,4 @@
-import localFont from '@next/font/local'
-
-const supremeMedium = localFont({
-    src: '../fonts/Supreme-Medium.otf',
-    weight: '200'
-  })
+import { supremeMedium } from '../utils/localNextFonts.js'
 
 const ElectronicVisa = () => {
 
