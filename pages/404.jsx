@@ -7,6 +7,8 @@ import { supremeMedium } from '../utils/localNextFonts.js'
 export default function PageNotFound() {
   return (
     <>  
+      <PageHead title={"Page Not Found"} description={"It's Best to Know Before You Go!"}/>
+
       <Head>
         <title>Page Not Found</title>
         <meta name="description" content="It's Best to Know Before You Go!" />

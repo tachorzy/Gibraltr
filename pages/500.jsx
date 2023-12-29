@@ -10,13 +10,8 @@ import { supremeMedium } from '../utils/localNextFonts.js'
 export default function ServerError() {
   return (
     <>  
-      <Head>
-        <title>Server Error</title>
-        <meta name="description" content="It's Best to Know Before You Go!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Gibraltar-solid.svg" />
-      </Head>
-
+      <PageHead title={"Server Error"} description={"It's Best to Know Before You Go!"}/>
+      
       <main>
           <div className={styles.navBar}>
               <NavBar></NavBar>

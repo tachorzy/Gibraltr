@@ -10,12 +10,7 @@ import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFo
 export default function AboutUs() {
   return (
     <>  
-      <Head>
-        <title>About Gibraltr</title>
-        <meta name="description" content="It's Best to Know Before You Go!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Gibraltar-solid.svg" />
-      </Head>
+      <PageHead title={"About Gibraltr"} description={"It's Best to Know Before You Go!"}/>
 
       <main>
           <div className={"sticky"}>

@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import PageHead from '../components/PageHead.jsx'
 import NavBar from '../components/NavBar.jsx'
 import SearchBar from '../components/SearchBar.jsx'
 import HomePageInfo from '../components/HomePageInfo.jsx'
@@ -8,12 +8,7 @@ import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFo
 export default function Home() {
   return (
     <>  
-      <Head>
-        <title>{"Unlock Your Passport's Potential"}</title>
-        <meta name="description" content="It's Best to Know Before You Go!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Gibraltar-solid.svg" />
-      </Head>
+      <PageHead title={"Unlock Your Passport's Potential"} description={"It's Best to Know Before You Go!"}/>
 
       <main>
           <div className={""}>

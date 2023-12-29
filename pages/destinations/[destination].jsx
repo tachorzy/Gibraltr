@@ -37,12 +37,7 @@ export async function getServerSideProps({ query }){
 export default function Destination({ requirement, passport, destination }){
     return(
         <div>
-            <Head>
-                <title>Gibraltar - Discover Visas</title>
-                <meta name="description" content="It's Best to Know Before You Go!" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/Gibraltar-solid.svg" />
-            </Head>
+            <PageHead title={"Gibraltr - Discover Visas"} description={"It's Best to Know Before You Go!"}/>
 
             <div className={"sticky"}>
                 <NavBar lightingMode="light"></NavBar>
