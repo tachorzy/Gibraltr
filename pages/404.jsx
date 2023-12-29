@@ -1,4 +1,4 @@
-import PageHead from '../../components/PageHead.jsx'
+import PageHead from '../components/PageHead.jsx'
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import "animate.css"
@@ -8,7 +8,7 @@ export default function PageNotFound() {
   return (
     <>  
       <PageHead title={"Page Not Found"} description={"It's Best to Know Before You Go!"}/>
-      
+
       <main>
           <div className={"sticky"}>
               <NavBar></NavBar>
