@@ -2,13 +2,13 @@ import Image from 'next/image'
 import NavBar from '../../components/NavBar.jsx'
 import Footer from '../../components/Footer.jsx'
 import PageHead from '../../components/PageHead.jsx'
+import CountUp from "react-countup";
 import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
 import { albula } from '../../utils/localNextFonts.js'
 //REFACTOR THE FONTS for consistency across platform!!!
 import { Roboto, Rubik } from '@next/font/google'
-import localFont from '@next/font/local'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -53,6 +53,16 @@ export default function Destination({ requirement, passport, destination }){
                         <div className={"max-md:w-[96%] w-11/12 max-md:pl-3.5 md:mx-4"}>
                             {displayVisaMessage(passport, destination, requirement)}
                         </div>
+                        {requirement != "visa required" || requirement != "visa on arrival" || requirement != "e-visa" ?
+                            <div className="flex flex-row  max-md:pl-3.5 md:mx-4">
+                                <Image src={'/calendar.svg'} width={25} height={25} className={"mb-5 mr-2 md:block hidden"}></Image>
+                                <h3 className="text-stone-700 md:text-2xl mt-4 mb-8">
+                                    <CountUp duration={1} end={requirement}/>
+                                    {" days visa free"}
+                                </h3>
+                            </div>
+                            : <></>
+                        }
                     </div>
 
                     <div className={rubik.className + " grid md:grid-cols-2 md:grid-rows-4 mr-10 md:mt-24 mb-24 gap-x-56"}>
