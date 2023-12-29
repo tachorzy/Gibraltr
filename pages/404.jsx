@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import PageHead from '../../components/PageHead.jsx'
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import "animate.css"
@@ -8,14 +8,7 @@ export default function PageNotFound() {
   return (
     <>  
       <PageHead title={"Page Not Found"} description={"It's Best to Know Before You Go!"}/>
-
-      <Head>
-        <title>Page Not Found</title>
-        <meta name="description" content="It's Best to Know Before You Go!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Gibraltar-solid.svg" />
-      </Head>
-
+      
       <main>
           <div className={"sticky"}>
               <NavBar></NavBar>

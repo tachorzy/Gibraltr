@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../../components/NavBar.jsx'
 import Footer from '../../components/Footer.jsx'
+import PageHead from '../../components/PageHead.jsx'
 import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'

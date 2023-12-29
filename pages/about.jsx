@@ -1,9 +1,8 @@
-import Head from 'next/head'
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import InfoCardTray from '../components/about/InfoCardTray.jsx'
 import AboutUsCredits from '../components/about/AboutUsCredits.jsx'
-import localFont from '@next/font/local'
+import PageHead from '../../components/PageHead.jsx'
 import { supremeRegular, supremeMedium, supremeBold } from '../utils/localNextFonts.js'
 
 
