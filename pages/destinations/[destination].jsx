@@ -39,9 +39,7 @@ export default function Destination({ requirement, passport, destination }){
         <div>
             <PageHead title={"Gibraltr - Discover Visas"} description={"It's Best to Know Before You Go!"}/>
 
-            <div className={"sticky"}>
-                <NavBar lightingMode="light"></NavBar>
-            </div>
+            <NavBar lightingMode="light"></NavBar>
 
             <div className={"bg-stone-100 bg-no-repeat bg-contain bg-opacity-90 bg-right min-h-screen flex flex-col justify-between content-center md:pl-24 pl-6"}>
                 <div className={albula.className + " flex flex-col md:flex-row md:mt-24 mt-12"}>

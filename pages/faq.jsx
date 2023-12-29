@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
-import PageHead from '../../components/PageHead.jsx'
+import PageHead from '../components/PageHead.jsx'
 import GeneralFAQ from '../components/faq/GeneralFAQ.jsx'
 import VisaFAQ from '../components/faq/VisaFAQ.jsx'
 import DevFAQ from '../components/faq/DevFAQ.jsx'
