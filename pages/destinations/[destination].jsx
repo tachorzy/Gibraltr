@@ -50,7 +50,7 @@ export default function Destination({ requirement, passport, destination }){
 
                             <h1 className={"mt-20 text-4xl md:text-6xl md:mr-52"}>{destination}</h1>
                         </div>
-                        <div className={"max-md:w-[96%] w-11/12 max-md:pl-3.5 md:mx-4"}>
+                        <div className={"max-md:w-[96%] w-11/12 max-md:pl-3.5 md:mx-4 my-2"}>
                             {displayVisaMessage(passport, destination, requirement)}
                         </div>
                         <EntryDetails requirement={requirement}></EntryDetails>
