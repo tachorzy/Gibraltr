@@ -7,13 +7,7 @@ import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenI
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
 import { albula } from '../../utils/localNextFonts.js'
-//REFACTOR THE FONTS for consistency across platform!!!
-import { Roboto, Rubik } from '@next/font/google'
-
-const rubik = Rubik({
-  subsets: ['latin'],
-  weight: '400'
-})
+import { supremeRegular } from '../../utils/localNextFonts.js'
 
 export async function getServerSideProps({ query }){
     const { passport, destination } = query;
@@ -56,7 +50,7 @@ export default function Destination({ requirement, passport, destination }){
                         <EntryDetails requirement={requirement}></EntryDetails>
                     </div>
 
-                    <div className={rubik.className + " grid md:grid-cols-2 md:grid-rows-4 mr-10 md:mt-24 mb-24 gap-x-56"}>
+                    <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 mr-10 md:mt-24 mb-24 gap-x-56"}>
                         <span className={"flex flex-col gap-y-6 row-span-3 mt-8 md:mt-16"}>
                             {displayVisaInfo(requirement)}
                             {displaySchengenInfo(destination)}
