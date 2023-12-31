@@ -6,6 +6,7 @@ import EntryDetails from '../../components/destinations/EntryDetails.jsx'
 import SearchBar from '../../components/SearchBar.jsx'
 import VisaInfoCard from '../../components/destinations/VisaInfoCard.jsx'
 import TravelBan from '../../components/TravelBan.jsx'
+import Schengen from '../../components/Schengen.jsx'
 import { displayVisaMessage, displayTravelBan, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
@@ -58,7 +59,7 @@ export default function Destination({ requirement, passport, destination }){
                             {requirement == "no admission" ? <TravelBan></TravelBan> :
                                 <VisaInfoCard requirement={requirement}></VisaInfoCard>
                             }
-                            {displaySchengenInfo(destination)}
+                            {<Schengen destination={destination}></Schengen>}
                             {/* {displayTravelBan(passport, destination, requirement)} */}
                             {displayKETA(destination, requirement)}
                             {displayIraqiKurdistan(destination, requirement)} 

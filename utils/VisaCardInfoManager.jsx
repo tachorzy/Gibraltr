@@ -33,31 +33,12 @@ export function displayVisaMessage(passport, destination, requirement) {
     }
 }
 
-//This can be entirely extracted to each individual component, just send a prop and conditionally render the entire components
-// For the three basic info cards, those can be combined into one generic info card component and have info read from a map.
-// The key values of this map can be corresponded with the props sent to the component.
-
-// export function displayVisaInfo(requirement){
-//     switch (requirement) {
-//         case "e-visa":
-//             return(<ElectronicVisa/>)
-//         case "visa required":
-//             return(<Visa/>)
-//         case "visa on arrival":
-//             return(<VisaOnArrival/>)
-//         case "no admission":
-//             return(<TravelBan></TravelBan>)
-//         default:
-//             return(<VisaFree/>)
-//     }    
-// }
-
 // these can just go to the components passed as props and the entire component can be rendered conditionally
-export function displaySchengenInfo(destination){
-    let destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
-    if (schengenCountries.includes(destinationISO))
-        return (<Schengen></Schengen>)
-}
+// export function displaySchengenInfo(destination){
+//     let destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+//     if (schengenCountries.includes(destinationISO))
+//         return (<Schengen></Schengen>)
+// }
 
 export function displayKETA(destination, requirement){
     if (destination === "South Korea" && requirement === "e-visa")
