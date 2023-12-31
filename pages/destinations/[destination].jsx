@@ -3,10 +3,11 @@ import NavBar from '../../components/NavBar.jsx'
 import Footer from '../../components/Footer.jsx'
 import PageHead from '../../components/PageHead.jsx'
 import EntryDetails from '../../components/destinations/EntryDetails.jsx'
+import SearchBar from '../../components/SearchBar.jsx'
 import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
-import { albula } from '../../utils/localNextFonts.js'
+import { albula, supremeBold, supremeMedium } from '../../utils/localNextFonts.js'
 import { supremeRegular } from '../../utils/localNextFonts.js'
 
 export async function getServerSideProps({ query }){
@@ -61,8 +62,19 @@ export default function Destination({ requirement, passport, destination }){
                         </span>
                     </div>
                 </div>
+
+                <div className={supremeMedium.className + " relative md:ml-9 mb-48"}>
+                    <h2 className={supremeBold.className + " z-50 relative text-stone-700 text-4xl mb-6"}>Caught the travel bug?<br/>Feel free to search for more!</h2>
+                    <div className="z-50 relative">
+                        <SearchBar></SearchBar>
+                    </div>
+                    <Image src="/arrow-twirl.svg" width={475} height={475} className="absolute z-0 mt-1 mb-64 top-0 ml-[57%] opacity-40"></Image>
+                </div>
             </div>
-            <Footer/>
+            <span className="z-40 relative">
+                <Footer/>
+
+            </span>
         </div>
     );
 
