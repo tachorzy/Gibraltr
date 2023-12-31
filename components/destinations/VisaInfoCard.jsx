@@ -8,6 +8,7 @@ const VisaInfoCard = ({requirement}) => {
         ['visa on arrival', { title: 'Visa-on-arrival', description: "Before going through customs, you'll have to fill out a form and possibly pay an entry-fee at the airport."}],
         ['', { title: 'Visa Free', description: "You are able to enter visa free. However, make note of how long you can stay in the country. As well, as additional entry requirements."}],
     ])
+    
     let title = "Visa Free";
     let description = "You are able to enter visa free. However, make note of how long you can stay in the country. As well, as additional entry requirements.";
     
