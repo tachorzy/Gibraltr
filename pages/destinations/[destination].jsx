@@ -50,7 +50,7 @@ export default function Destination({ requirement, passport, destination }){
                         <EntryDetails requirement={requirement}></EntryDetails>
                     </div>
 
-                    <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 mr-10 md:mt-24 mb-24 gap-x-56"}>
+                    <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 gap-x-20 mr-3.5 md:mt-24 mb-24 gap-x-56"}>
                         <span className={"flex flex-col gap-y-6 row-span-3 mt-8 md:mt-16"}>
                             {displayVisaInfo(requirement)}
                             {displaySchengenInfo(destination)}

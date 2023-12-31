@@ -6,7 +6,7 @@ import { supremeMedium, supremeBold } from '../../utils/localNextFonts.js'
 const EntryDetails = ({requirement}) => {
 
     return(
-        <div className={supremeBold.className + " flex flex-col border-t-[2.5px] ml-3.5 mt-2 pt-2 mb-64 border-stone-400 w-[60%]"}>
+        <div className={supremeBold.className + " flex flex-col border-t-[2.5px] ml-3.5 mt-2 pt-2 mb-64 border-stone-400 w-10/12"}>
             {requirement != "visa required" && requirement != "visa on arrival" && requirement != "e-visa" && requirement != "visa free" ?
                 <div className="flex flex-row max-md:pl-3.5 pt-4">
                     <Image src={'/calendar.svg'} width={29} height={29} className={"select-none mr-2 md:block hidden"}></Image>
