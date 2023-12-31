@@ -30,7 +30,7 @@ const EntryDetails = ({requirement}) => {
                 <div className="flex flex-row max-md:pl-3.5 pt-2">
                     <Image src={'/passport-control.svg'} width={30} height={30} className={"select-none mt-1.5 mr-2 md:block hidden"}></Image>
                     <h1 className="text-stone-700 md:text-2xl">{"Have space in your passport"}</h1>
-                    <InfoPopUp></InfoPopUp>
+                    <InfoPopUp information={"Some visas are glued and may be as large as an entire passport page! Nations with such visas will often require one or two blank visa pages."}></InfoPopUp>
                 </div>
                 : <></>
             }
