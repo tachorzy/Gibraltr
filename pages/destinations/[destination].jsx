@@ -51,7 +51,7 @@ export default function Destination({ requirement, passport, destination }){
                         <EntryDetails requirement={requirement}></EntryDetails>
                     </div>
 
-                    <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 gap-x-20 mr-3.5 md:mt-24 mb-24 gap-x-56"}>
+                    <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 gap-x-20 mr-3.5 md:mt-24 mb-20 md:mb-24 gap-x-56"}>
                         <span className={"flex flex-col gap-y-6 row-span-3 mt-8 md:mt-16"}>
                             {displayVisaInfo(requirement)}
                             {displaySchengenInfo(destination)}
@@ -63,12 +63,12 @@ export default function Destination({ requirement, passport, destination }){
                     </div>
                 </div>
 
-                <div className={supremeMedium.className + " relative md:ml-9 mb-48"}>
-                    <h2 className={supremeBold.className + " z-50 relative text-stone-700 text-4xl mb-6"}>Caught the travel bug?<br/>Feel free to search for more!</h2>
+                <div className={supremeMedium.className + " relative md:ml-9 mb-52 md:mb-48"}>
+                    <h2 className={supremeBold.className + " z-50 relative text-stone-700 text-3xl md:text-4xl mb-6"}>Caught the travel bug?<br/>Feel free to search for more!</h2>
                     <div className="z-50 relative">
                         <SearchBar></SearchBar>
                     </div>
-                    <Image src="/arrow-twirl.svg" width={475} height={475} className="absolute z-0 mt-1 mb-64 top-0 ml-[57%] opacity-40"></Image>
+                    <Image src="/arrow-twirl.svg" width={475} height={475} className="absolute z-0 mt-[22rem] md:mt-1 mb-64 top-0 md:ml-[57%] opacity-40"></Image>
                 </div>
             </div>
             <span className="z-40 relative">
