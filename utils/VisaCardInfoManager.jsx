@@ -10,12 +10,16 @@ import IraqiKurdistanRegion from '../components/IraqiKurdistanRegion.jsx'
 import ApplyButton from '../components/ApplyButton.jsx'
 import { isoCodesList, schengenCountries } from '/utils/countrydata.js'
 import { evisaWebsitesMap } from '/utils/evisawebsites.js'
+import { passportDemonyms } from '/utils/demonymdata.js'
 
 export function displayVisaMessage(passport, destination, requirement) {
+
+    const passportISO = isoCodesList[passport.toLowerCase()].toLowerCase()
+
     if (requirement !== "visa required" && requirement !== "e-visa") {
        return( 
             <h3 className={"max-md:w-full w-3/4 text-stone-700 mt-3 md:mt-8 text-sm md:text-3xl justify-between leading-10"}>
-                You don't need a visa for {destination} if you have a(n) <b>{passport}
+                You don't need a visa for {destination} if you have a(n) <b>{passportDemonyms.get(passportISO)}
             </b> passport</h3>
        )
     }
