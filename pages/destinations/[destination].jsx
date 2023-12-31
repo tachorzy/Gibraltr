@@ -73,7 +73,6 @@ export default function Destination({ requirement, passport, destination }){
             </div>
             <span className="z-40 relative">
                 <Footer/>
-
             </span>
         </div>
     );

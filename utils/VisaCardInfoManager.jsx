@@ -27,7 +27,7 @@ export function displayVisaMessage(passport, destination, requirement) {
     else if (requirement === "visa required" || requirement === "e-visa") {
         return (
             <h3 className={"max-md:w-full md:w-3/4 text-stone-700 mt-3 md:mt-8 text-sm md:text-3xl justify-between leading-10"}>
-                You need a visa for {destination} if you have a(n) <b>{passport}
+                You need a visa for {destination} if you have {(/^[aeiou]$/i).test(passportDemonym[0]) ? "an" : "a"} <b>{passportDemonym}
             </b> passport</h3>
         )
     }

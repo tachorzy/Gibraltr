@@ -189,7 +189,6 @@ export const passportDemonyms = new Map([
     ['tn', 'Tunisian'],
     ['tr', 'Turkish'],
     ['tm', 'Turkmen'],
-    ['tc', 'Turks and Caicos Islander'],
     ['tv', 'Tuvaluan'],
     ['ug', 'Ugandan'],
     ['ua', 'Ukrainian'],
@@ -202,8 +201,6 @@ export const passportDemonyms = new Map([
     ['va', 'Vatican'],
     ['ve', 'Venezuelan'],
     ['vn', 'Vietnamese'],
-    ['wf', 'Wallis and Futuna Islander'],
-    ['eh', 'Western Saharan'],
     ['ye', 'Yemeni'],
     ['zm', 'Zambian'],
     ['zw', 'Zimbabwean']
