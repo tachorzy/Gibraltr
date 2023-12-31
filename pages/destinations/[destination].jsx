@@ -4,7 +4,9 @@ import Footer from '../../components/Footer.jsx'
 import PageHead from '../../components/PageHead.jsx'
 import EntryDetails from '../../components/destinations/EntryDetails.jsx'
 import SearchBar from '../../components/SearchBar.jsx'
-import { displayVisaMessage, displayTravelBan, displayVisaInfo, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
+import VisaInfoCard from '../../components/destinations/VisaInfoCard.jsx'
+import TravelBan from '../../components/TravelBan.jsx'
+import { displayVisaMessage, displayTravelBan, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
 import { albula, supremeBold, supremeMedium } from '../../utils/localNextFonts.js'
@@ -53,7 +55,9 @@ export default function Destination({ requirement, passport, destination }){
 
                     <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 gap-x-20 mr-3.5 md:mt-24 mb-20 md:mb-24 gap-x-56"}>
                         <span className={"flex flex-col gap-y-6 row-span-3 mt-8 md:mt-16"}>
-                            {displayVisaInfo(requirement)}
+                            {requirement == "no admission" ? <TravelBan></TravelBan> :
+                                <VisaInfoCard requirement={requirement}></VisaInfoCard>
+                            }
                             {displaySchengenInfo(destination)}
                             {/* {displayTravelBan(passport, destination, requirement)} */}
                             {displayKETA(destination, requirement)}
