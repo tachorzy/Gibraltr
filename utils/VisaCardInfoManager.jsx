@@ -40,15 +40,15 @@ export function displayVisaMessage(passport, destination, requirement) {
 //         return (<Schengen></Schengen>)
 // }
 
-export function displayKETA(destination, requirement){
-    if (destination === "South Korea" && requirement === "e-visa")
-        return(<KETA></KETA>)
-}
+// export function displayKETA(destination, requirement){
+//     if (destination === "South Korea" && requirement === "e-visa")
+//         return(<KETA></KETA>)
+// }
 
-export function displayIraqiKurdistan(destination, requirement){
-    if (destination === "Iraq" && requirement === "visa on arrival")
-        return(<IraqiKurdistanRegion></IraqiKurdistanRegion>)
-}
+// export function displayIraqiKurdistan(destination, requirement){
+//     if (destination === "Iraq" && requirement === "visa on arrival")
+//         return(<IraqiKurdistanRegion></IraqiKurdistanRegion>)
+// }
 
 // This can become its own component and is rendered conditionally based on the destination and e-Visa requirement
 export function displayEVisaButton(destination, requirement){ 
