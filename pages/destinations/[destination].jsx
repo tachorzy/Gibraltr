@@ -9,6 +9,7 @@ import TravelBan from '../../components/TravelBan.jsx'
 import Schengen from '../../components/Schengen.jsx'
 import KETA from '../../components/KETA.jsx'
 import IraqiKurdistanRegion from '../../components/IraqiKurdistanRegion.jsx'
+import ElectronicVisaApplyButton from '../../components/ElectronicVisaApplyButton.jsx'
 import { displayVisaMessage, displayTravelBan, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../utils/VisaCardInfoManager.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
@@ -58,13 +59,12 @@ export default function Destination({ requirement, passport, destination }){
 
                     <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 gap-x-20 mr-3.5 md:mt-24 mb-20 md:mb-24 gap-x-56"}>
                         <span className={"flex flex-col gap-y-6 row-span-3 mt-8 md:mt-16"}>
-                            {requirement == "no admission" ? <TravelBan></TravelBan> :
-                                <VisaInfoCard requirement={requirement}></VisaInfoCard>
+                            {requirement == "no admission" ? <TravelBan/> : <VisaInfoCard requirement={requirement}/>
                             }
-                            <Schengen destination={destination}></Schengen>
+                            <Schengen destination={destination}/>
                             <KETA destination={destination} requirement={requirement}></KETA>
-                            {<IraqiKurdistanRegion destination={destination} requirement={requirement}></IraqiKurdistanRegion>}
-                            {displayEVisaButton(destination, requirement)}
+                            <IraqiKurdistanRegion destination={destination} requirement={requirement}/>
+                            <ElectronicVisaApplyButton destination={destination} requirement={requirement}/>
                         </span>
                     </div>
                 </div>
