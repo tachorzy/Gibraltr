@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import CountUp from "react-countup";
-import { supremeBold } from '../../utils/localNextFonts.js'
+import InfoPopUp from '../InfoPopUp.jsx';
+import { supremeMedium, supremeBold } from '../../utils/localNextFonts.js'
 
 const EntryDetails = ({requirement}) => {
 
     return(
-        <div className={supremeBold.className + " flex flex-col border-t-[2.5px] ml-3.5 mt-2 mb-64 border-stone-400 w-[60%]"}>
+        <div className={supremeBold.className + " flex flex-col border-t-[2.5px] ml-3.5 mt-2 pt-2 mb-64 border-stone-400 w-[60%]"}>
             {requirement != "visa required" && requirement != "visa on arrival" && requirement != "e-visa" && requirement != "visa free" ?
                 <div className="flex flex-row max-md:pl-3.5 pt-4">
                     <Image src={'/calendar.svg'} width={29} height={29} className={"select-none mr-2 md:block hidden"}></Image>
@@ -26,10 +27,10 @@ const EntryDetails = ({requirement}) => {
             </div>
        
             {requirement == "visa on arrival" ?
-                <div className="flex flex-row max-md:pl-3.5 pt-4">
+                <div className="flex flex-row max-md:pl-3.5 pt-2">
                     <Image src={'/passport-control.svg'} width={30} height={30} className={"select-none mt-1.5 mr-2 md:block hidden"}></Image>
                     <h1 className="text-stone-700 md:text-2xl">{"Have space in your passport"}</h1>
-                    <Image src={'/question-icon.svg'} width={16} height={16} className={"select-none mx-1.5"}></Image>
+                    <InfoPopUp></InfoPopUp>
                 </div>
                 : <></>
             }
