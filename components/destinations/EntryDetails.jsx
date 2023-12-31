@@ -16,13 +16,24 @@ const EntryDetails = ({requirement}) => {
                 </div>
                 : <></>
             }
+
             <div className="flex flex-row max-md:pl-3.5">
-                <Image src={'/passport.svg'} width={28} height={28} className={"select-none mt-.5 mb-[4.5rem] mr-2 md:block hidden"}></Image>
+                <Image src={'/passport.svg'} width={28} height={28} className={"select-none mt-.5 mb-10 mr-2 md:block hidden"}></Image>
                 <ul className="list-outside">
                     <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport."}</h1>
-                    <li className="text-stone-700 md:text-lg w-3/4 mb-8 ml-5 list-disc">{"Some destinations may require up to 6 months of validity."}</li>
+                    <li className="text-stone-700 md:text-lg w-3/4 ml-5 list-disc">{"Some destinations may require up to 6 months of validity."}</li>
                 </ul>
             </div>
+       
+            {requirement == "visa on arrival" ?
+                <div className="flex flex-row max-md:pl-3.5 pt-4">
+                    <Image src={'/passport-control.svg'} width={30} height={30} className={"select-none mt-1.5 mr-2 md:block hidden"}></Image>
+                    <h1 className="text-stone-700 md:text-2xl">{"Have space in your passport"}</h1>
+                    <Image src={'/question-icon.svg'} width={16} height={16} className={"select-none mx-1.5"}></Image>
+                </div>
+                : <></>
+            }
+       
         </div>  
     );
 }
