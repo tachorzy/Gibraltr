@@ -1,5 +1,6 @@
 import localFont from '@next/font/local'
 import InfoCard from './InfoCard'
+import CountUp from "react-countup";
 
 const supremeMedium = localFont({
     src: '../../fonts/Supreme-Medium.otf',
@@ -7,9 +8,8 @@ const supremeMedium = localFont({
 })
 
 const aboutUsInfoCards = new Map([
-    ['197+\ncountries', { info: 'Representing every destination.' }],
-    ['197+\npassports', { info: 'Available for every nationality.' }],
-    ['Over 3000\nembassies', { info: 'Accesible to all travelers.' }],
+    [<span><CountUp duration={2} end={197}></CountUp>{'+\ncountries'}</span>, { info: 'Representing every destination.' }],
+    [<span><CountUp duration={2} end={197}></CountUp>{'+\npassports'}</span>, { info: 'Available for every nationality.' }],
     ['Endless\nresults', { info: 'Remaining reliable and up to date.' }]
 ])
 
