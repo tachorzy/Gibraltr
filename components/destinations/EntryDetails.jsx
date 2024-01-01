@@ -7,7 +7,7 @@ import { isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 const EntryDetails = ({passport, destination, requirement}) => {
 
     const destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
-    const passportISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+    const passportISO = isoCodesList[passport.toLowerCase()].toLowerCase()
     const isSchengenNationalInSchengenZone = schengenCountries.includes(passportISO) && schengenCountries.includes(destinationISO) 
 
     return(
