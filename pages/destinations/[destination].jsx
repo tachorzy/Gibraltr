@@ -9,6 +9,7 @@ import VisaInfoCard from '../../components/destinations/VisaInfoCard.jsx'
 import TravelBan from '../../components/TravelBan.jsx'
 import Schengen from '../../components/Schengen.jsx'
 import KETA from '../../components/KETA.jsx'
+import GCC from '../../components/GCC.jsx'
 import IraqiKurdistanRegion from '../../components/IraqiKurdistanRegion.jsx'
 import ElectronicVisaApplyButton from '../../components/ElectronicVisaApplyButton.jsx'
 import { displayVisaMessage, displayTravelBan, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../components/destinations/VisaRequirementMessage.jsx'
@@ -65,6 +66,7 @@ export default function Destination({ requirement, passport, destination }){
                             <KETA destination={destination} requirement={requirement}></KETA>
                             <IraqiKurdistanRegion destination={destination} requirement={requirement}/>
                             <ElectronicVisaApplyButton destination={destination} requirement={requirement}/>
+                            <GCC passport={passport} destination={destination}></GCC>
                         </span>
                     </div>
                 </div>
