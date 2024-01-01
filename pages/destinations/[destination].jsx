@@ -12,7 +12,6 @@ import KETA from '../../components/destinations/infocards/KETA.jsx'
 import GCC from '../../components/destinations/infocards/GCC.jsx'
 import IraqiKurdistanRegion from '../../components/destinations/infocards/IraqiKurdistanRegion.jsx'
 import ElectronicVisaApplyButton from '../../components/ElectronicVisaApplyButton.jsx'
-import { displayVisaMessage, displayTravelBan, displaySchengenInfo, displayKETA, displayIraqiKurdistan, displayEVisaButton } from '../../components/destinations/VisaRequirementMessage.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 import { getVisaRequirements } from '../../utils/visadata.js'
 import { albula, supremeBold, supremeMedium } from '../../utils/localNextFonts.js'
@@ -48,12 +47,13 @@ export default function Destination({ requirement, passport, destination }){
                 <div className={albula.className + " flex flex-col md:flex-row md:mt-24 mt-12"}>
                     <div className={"flex flex-col w-11/12 md:ml-7"}>
                         <div className={"text-stone-700 mt-24 flex flex-row gap-x-0.5"}>
-                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={"mx-4 mt-6 align-bottom hidden md:block"}></Image>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={170} height={170} className={"mx-4 mt-6 align-bottom hidden 2xl:block"}></Image>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={"mx-4 mt-6 align-bottom hidden md-max-2xl:block"}></Image>
                             <Image src={`/destinationIcons/${destination}.svg`} width={90} height={90} className={"mx-4 mt-6 align-bottom block md:hidden "}></Image>
 
-                            <h1 className={"mt-20 text-4xl md:text-6xl md:mr-52"}>{destination}</h1>
+                            <h1 className={"mt-20 2xl:mt-32 text-4xl md:text-6xl 2xl:text-7xl md:mr-52"}>{destination}</h1>
                         </div>
-                        <div className={"max-md:w-[96%] w-11/12 max-md:pl-3.5 md:mx-4 my-2"}>
+                        <div className={"max-md:w-[96%] w-11/12 2xl:w-[90%] max-md:pl-3.5 md:mx-4 my-2"}>
                             <VisaRequirementMessage passport={passport} requirement={requirement} destination={destination}></VisaRequirementMessage>
                         </div>
                         <EntryDetails passport={passport} destination={destination} requirement={requirement}></EntryDetails>
