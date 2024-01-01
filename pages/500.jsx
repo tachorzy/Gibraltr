@@ -1,7 +1,6 @@
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
 import PageHead from '../components/PageHead.jsx'
-import styles from '../styles/Home.module.css'
 import { supremeMedium } from '../utils/localNextFonts.js'
 
 export default function ServerError() {
@@ -10,7 +9,7 @@ export default function ServerError() {
       <PageHead title={"Server Error"} description={"It's Best to Know Before You Go!"}/>
 
       <main>
-          <div className={styles.navBar}>
+          <div className={"sticky"}>
               <NavBar></NavBar>
           </div>
             <div className={supremeMedium.className + " bg-[url('/error.svg')] flex flex-row w-screen bg-stone-800 bg-no-repeat bg-left-top bg-opacity-90 h-screen "}>
