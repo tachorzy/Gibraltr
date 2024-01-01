@@ -48,7 +48,7 @@ export default function Destination({ requirement, passport, destination }){
                     <div className={"flex flex-col w-11/12 md:ml-7"}>
                         <div className={"text-stone-700 mt-24 flex flex-row gap-x-0.5"}>
                             <Image src={`/destinationIcons/${destination}.svg`} width={170} height={170} className={"mx-4 mt-6 align-bottom hidden 2xl:block"}></Image>
-                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={"mx-4 mt-6 align-bottom hidden md-max-2xl:block"}></Image>
+                            <Image src={`/destinationIcons/${destination}.svg`} width={130} height={130} className={"mx-4 mt-6 align-bottom hidden md:max-2xl:block"}></Image>
                             <Image src={`/destinationIcons/${destination}.svg`} width={90} height={90} className={"mx-4 mt-6 align-bottom block md:hidden "}></Image>
 
                             <h1 className={"mt-20 2xl:mt-32 text-4xl md:text-6xl 2xl:text-7xl md:mr-52"}>{destination}</h1>
