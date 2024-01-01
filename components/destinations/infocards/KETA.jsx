@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import InfoPopUp from './InfoPopUp.jsx';
-import { supremeMedium } from '../utils/localNextFonts.js'
+import InfoPopUp from '../../InfoPopUp.jsx';
+import { supremeMedium } from '../../../utils/localNextFonts.js'
 
 const KETA = ({destination, requirement}) => {
     if (destination === "South Korea" && requirement === "e-visa")

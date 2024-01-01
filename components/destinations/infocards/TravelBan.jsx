@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { supremeMedium } from '../utils/localNextFonts.js'
+import { supremeMedium } from '../../../utils/localNextFonts.js'
 
 const TravelBan = () => {
 

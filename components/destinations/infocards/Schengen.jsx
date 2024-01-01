@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { supremeMedium } from '../utils/localNextFonts.js'
-import { isoCodesList, schengenCountries } from '../utils/countrydata.js'
+import { supremeMedium } from '../../../utils/localNextFonts.js'
+import { isoCodesList, schengenCountries } from '../../../utils/countrydata.js'
 
 const Schengen = ({passport, destination}) => {
     const destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()

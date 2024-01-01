@@ -1,4 +1,4 @@
-import { supremeMedium } from '../../utils/localNextFonts.js'
+import { supremeMedium } from '../../../utils/localNextFonts.js'
 
 const VisaInfoCard = ({requirement}) => {
 
