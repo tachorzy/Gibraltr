@@ -25,3 +25,8 @@ export const supremeBold = localFont({
     src: '../fonts/Supreme-Bold.otf',
     weight: '200'
 })
+
+export const supremeExtraBold = localFont({
+    src: '../fonts/Supreme-Extrabold.otf',
+    weight: '200'
+})
