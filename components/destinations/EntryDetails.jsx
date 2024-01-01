@@ -36,7 +36,8 @@ const EntryDetails = ({passport, destination, requirement}) => {
                         <span className="pt-2">
                             <InfoPopUp information={"As a citizen of a Schengen member state, you may have the option to use a national ID, if it's recognized by other Schengen states!"}></InfoPopUp>
                         </span>
-                    </div>}
+                    </div>
+                    }
                     <li className="text-stone-700 md:text-lg w-3/4 ml-5 list-disc">{"Some destinations may require up to 6 months of validity."}</li>
                 </ul>
             </div>
