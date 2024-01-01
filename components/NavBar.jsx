@@ -13,7 +13,7 @@ const navItems = new Map([
 const NavBar = ({lightingMode}) => {
       
     return(
-        <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 flex flex-row z-50"}>
+        <div className={albula.className + " absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 2xl:space-x-[26rem] flex flex-row z-50"}>
             <div className={"flex flex-row relative "}>
                 <Link href="/" className={"mix-blend-difference z-50"}>
                     <Image src={lightingMode == "light" ? "/gibraltar-stone-800.svg" : "/gibraltar-stone-300.svg"} width={75} height={75} className={"select-none ml-10 absolute cursor-pointer block md:hidden "} alt="Gibraltr logo"></Image>

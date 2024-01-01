@@ -76,7 +76,7 @@ export default function Destination({ requirement, passport, destination }){
                     <div className="z-50 relative">
                         <SearchBar></SearchBar>
                     </div>
-                    <Image src="/arrow-twirl.svg" width={475} height={475} className="absolute z-0 mt-[22rem] md:mt-1 mb-64 top-0 md:ml-[57%] opacity-40"></Image>
+                    <Image src="/arrow-twirl.svg" width={475} height={475} className="absolute z-0 mt-[22rem] md:mt-1 mb-64 2xl:mt-10 top-0 md:ml-[57%] 2xl:ml-[61%] opacity-40"></Image>
                 </div>
             </div>
             <span className="z-40 relative">
