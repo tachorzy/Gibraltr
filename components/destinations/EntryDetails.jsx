@@ -8,7 +8,7 @@ const EntryDetails = ({passport, destination, requirement}) => {
 
     const destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
     const passportISO = isoCodesList[destination.toLowerCase()].toLowerCase()
-    const isSchengen = schengenCountries.includes(passportISO) && !schengenCountries.includes(requirement) 
+    const isSchengenNationalInSchengenZone = schengenCountries.includes(passportISO) && schengenCountries.includes(destinationISO) 
 
     return(
         <div className={supremeBold.className + " flex flex-col border-t-[2.5px] ml-3.5 mt-2 pt-2 md:mb-64 border-stone-400 w-10/12"}>
@@ -29,7 +29,7 @@ const EntryDetails = ({passport, destination, requirement}) => {
                 <Image src={'/passport.svg'} width={28} height={28} className={"select-none mt-.5 mb-2 md:mb-10 mr-2 md:block hidden"}></Image>
                 <Image src={'/passport.svg'} width={20} height={20} className={"select-none mt-.5 mb-14 mr-2 block md:hidden"}></Image>
                 <ul className="list-outside">
-                    {!isSchengen ? <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport."}</h1> 
+                    {!isSchengenNationalInSchengenZone ? <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport."}</h1> 
                     : 
                     <div className="flex flex-row">
                         <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport or National ID"}</h1>
