@@ -55,13 +55,13 @@ export default function Destination({ requirement, passport, destination }){
                         <div className={"max-md:w-[96%] w-11/12 max-md:pl-3.5 md:mx-4 my-2"}>
                             <VisaRequirementMessage passport={passport} requirement={requirement} destination={destination}></VisaRequirementMessage>
                         </div>
-                        <EntryDetails requirement={requirement}></EntryDetails>
+                        <EntryDetails passport={passport} destination={destination} requirement={requirement}></EntryDetails>
                     </div>
 
                     <div className={supremeRegular.className + " grid md:grid-cols-2 md:grid-rows-4 gap-x-20 mr-3.5 md:mt-24 mb-20 md:mb-24 gap-x-56"}>
                         <span className={"flex flex-col gap-y-6 row-span-3 mt-8 md:mt-16"}>
                             {requirement == "no admission" ? <TravelBan/> : <VisaInfoCard requirement={requirement}/>}
-                            <Schengen destination={destination}/>
+                            <Schengen passport={passport} destination={destination}/>
                             <KETA destination={destination} requirement={requirement}></KETA>
                             <IraqiKurdistanRegion destination={destination} requirement={requirement}/>
                             <ElectronicVisaApplyButton destination={destination} requirement={requirement}/>

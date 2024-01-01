@@ -2,8 +2,10 @@ import Image from 'next/image'
 import { supremeMedium } from '../utils/localNextFonts.js'
 import { isoCodesList, schengenCountries } from '../utils/countrydata.js'
 
-const Schengen = ({destination}) => {
-    let destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+const Schengen = ({passport, destination}) => {
+    const destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+    const passportISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+
     if (schengenCountries.includes(destinationISO))
         return(
             <div className={supremeMedium.className + " w-72 md:w-96 h-40 text-stone-700 border-2 border-inherit border-solid rounded-xl p-4 pt-5 border-stone-300 bg-stone-200"}>
@@ -12,7 +14,11 @@ const Schengen = ({destination}) => {
                     <Image src='/EU.svg' width={35} height={35} className={"ml-16"}></Image>
                 </span>
 
-                <p className={"max-md:text-sm leading-relaxed"}> Freedom of movement applies across Schengen Zone. Stay up to 90 days in a 180-day period.</p>
+                {!schengenCountries.includes(passportISO) 
+                    ? <p className={"max-md:text-sm leading-relaxed"}>Freedom of movement applies across the Schengen Zone. Stay up to 90 days in a 180-day period.</p> 
+                    :
+                    <p className={"max-md:text-sm leading-relaxed"}>Freedom of movement applies across the Schengen Zone. As a EU or Schengen national, you have the right to travel in this zone.</p>
+                }
             </div>  
         );
 }

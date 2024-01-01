@@ -2,12 +2,17 @@ import Image from 'next/image'
 import CountUp from "react-countup";
 import InfoPopUp from '../InfoPopUp.jsx';
 import { supremeMedium, supremeBold } from '../../utils/localNextFonts.js'
+import { isoCodesList, schengenCountries } from '../../utils/countrydata.js'
 
-const EntryDetails = ({requirement}) => {
+const EntryDetails = ({passport, destination, requirement}) => {
+
+    const destinationISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+    const passportISO = isoCodesList[destination.toLowerCase()].toLowerCase()
+    const isSchengen = schengenCountries.includes(passportISO) && !schengenCountries.includes(requirement) 
 
     return(
         <div className={supremeBold.className + " flex flex-col border-t-[2.5px] ml-3.5 mt-2 pt-2 md:mb-64 border-stone-400 w-10/12"}>
-            {requirement != "visa required" && requirement != "visa on arrival" && requirement != "e-visa" && requirement != "visa free" ?
+            {requirement != "visa required" && requirement != "visa on arrival" && requirement != "e-visa" && requirement != "visa free" && requirement != "-1" ?
                 <div className="flex flex-row max-md:pl-3.5 pt-4">
                     <Image src={'/calendar.svg'} width={29} height={29} className={"select-none mr-2 md:block hidden"}></Image>
                     <Image src={'/calendar.svg'} width={21  } height={21} className={"select-none mr-2 block md:hidden"}></Image>
@@ -24,7 +29,14 @@ const EntryDetails = ({requirement}) => {
                 <Image src={'/passport.svg'} width={28} height={28} className={"select-none mt-.5 mb-2 md:mb-10 mr-2 md:block hidden"}></Image>
                 <Image src={'/passport.svg'} width={20} height={20} className={"select-none mt-.5 mb-14 mr-2 block md:hidden"}></Image>
                 <ul className="list-outside">
-                    <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport."}</h1>
+                    {!isSchengen ? <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport."}</h1> 
+                    : 
+                    <div className="flex flex-row">
+                        <h1 className="text-stone-700 md:text-2xl mt-2">{"Bring a valid passport or National ID"}</h1>
+                        <span className="pt-2">
+                            <InfoPopUp information={"As a citizen of a Schengen member state, you may have the option to use a national ID, if it's recognized by other Schengen states!"}></InfoPopUp>
+                        </span>
+                    </div>}
                     <li className="text-stone-700 md:text-lg w-3/4 ml-5 list-disc">{"Some destinations may require up to 6 months of validity."}</li>
                 </ul>
             </div>
