@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import FAQStyles from '../styles/FAQStyle.module.css'
 
 export const visaFAQContent = new Map();
 
@@ -21,4 +20,4 @@ export const devFAQContent = new Map();
 devFAQContent.set("Is Gibraltr open source?","Yes, Gibraltr is an open source platform that's built from a community of those interested in travel.")
 devFAQContent.set("What is open source?", "Open source means that anyone can contribute to Gibraltr. However, contributions must be approved by the Gibraltr developer team.")
 devFAQContent.set("What tech stack is Gibraltr developed in?","Gibraltr is developed using Next.js, JavaScript, and TailwindCSS.")
-devFAQContent.set("Where can I contribute?", <p>You can make contributions to Gibraltr on our GitHub repository <Link href="https://github.com/tachorzy/Gibraltr" className={FAQStyles.link}>here</Link>.</p>)
+devFAQContent.set("Where can I contribute?", <p>You can make contributions to Gibraltr on our GitHub repository <Link href="https://github.com/tachorzy/Gibraltr" className={"underline font-semibold"}>here</Link>.</p>)
