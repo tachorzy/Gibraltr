@@ -8,11 +8,12 @@ export async function getVisaRequirements(){
     
     const rows = text.split('\n');
     const visaRequirements = new Map();
-
+  
     rows.forEach(row => {
         const [passportISO, destinationISO, requirement] = row.split(',');
         const keyNationPair = JSON.stringify({passportISO, destinationISO});
         visaRequirements.set(keyNationPair, requirement);
     })
+
     return visaRequirements;
 }
