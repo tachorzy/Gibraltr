@@ -19,21 +19,34 @@ import { supremeRegular } from '../../utils/localNextFonts.js'
 
 export async function getServerSideProps({ query }){
     const { passport, destination } = query;
-    
-    if (!passport || !destination)
-        return { props: {} }
 
-    const passportKey = passport?.toLowerCase()
-    const destinationKey = destination?.toLowerCase()
-
-    const passportISO = isoCodesList[passportKey]
-    const destinationISO = isoCodesList[destinationKey]
-
-    const visaRequirements = await getVisaRequirements();
-    const key = JSON.stringify({ passportISO, destinationISO });
-
-    const requirement = visaRequirements.get(key);
-    return {props: {requirement, passport, destination}}
+    if (!passport || !destination) {
+      return { props: {} };
+    }
+  
+    const passportKey = passport?.toLowerCase();
+    const destinationKey = destination?.toLowerCase();
+  
+    const passportISO = isoCodesList[passportKey];
+    const destinationISO = isoCodesList[destinationKey];
+  
+    if (!passportISO || !destinationISO) {
+      return { props: { error: 'Invalid passport or destination code' } };
+    }
+  
+    try {
+      const response = await fetch('http://localhost:3000/api/visaparser');
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      const visaRequirements = await response.json();
+      const key = `${passportISO}-${destinationISO}`;
+  
+      const requirement = visaRequirements[key];
+      return { props: { requirement, passport, destination } };
+    } catch (error) {
+      return { props: { error: error.message } };
+    }
 }
 
 export default function Destination({ requirement, passport, destination }){

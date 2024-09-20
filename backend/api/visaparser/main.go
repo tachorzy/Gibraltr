@@ -16,63 +16,88 @@ const csvUrl = "https://raw.githubusercontent.com/ilyankou/passport-index-datase
 var visaRequirements = make(map[string]string)
 var mu sync.Mutex
 
-func getVisaRequirements() error { 
-	resp, err := http.Get(csvUrl)
+func fetchCSVData(url string) ([]byte, error) { 
+
+	resp, err := http.Get(url)
 	if err != nil {
-		return fmt.Errorf("Error fetching CSV: %v", err)
+		return nil, err
 	}
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		return fmt.Errorf("Error reading CSV: %v", err)
+		return nil, fmt.Errorf("failed to read response body: %v", err)
 	}
 
-	r := csv.NewReader(strings.NewReader(string(body)))
+	return body, nil
+}
+
+func parseCSVData(data []byte) error {
+	r := csv.NewReader(strings.NewReader(string(data)))
 	records, err := r.ReadAll()
 	if err != nil {
-		return fmt.Errorf("Error parsing CSV: %v", err)
+		return fmt.Errorf("failed to read csv data: %v", err)
 	}
 
-	mu.Lock()
-	defer mu.Unlock()
-	visaRequirements = make(map[string]string)
-	for _, record := range records {
-		if len(record) < 3 {
-			continue
-		}
-		passportISO := record[0]
-		destinationISO := record[1]
-		requirement := record[2]
-		keyNationPair := fmt.Sprintf("%s-%s", passportISO, destinationISO)
-		visaRequirements[keyNationPair] = requirement
+    for _, record := range records {
+        if len(record) < 3 {
+            continue
+        }
+        passportISO := record[0]
+        destinationISO := record[1]
+        requirement := record[2]
+        keyNationPair := fmt.Sprintf("%s-%s", passportISO, destinationISO)
+        visaRequirements[keyNationPair] = requirement
+    }
+
+	return nil
+}
+
+func fetchAndParseCSV() error {
+	data, err := fetchCSVData(csvUrl)
+	if err != nil {
+		return fmt.Errorf("failed to fetch csv data: %v", err)
+	}
+
+	err = parseCSVData(data)
+	if err != nil {
+		return fmt.Errorf("failed to parse csv data: %v", err)
 	}
 
 	return nil
 }
 
 func webhookHandler(w http.ResponseWriter, r *http.Request) {
-    event := r.Header.Get("X-GitHub-Event")
-    if event == "push" {
-        err := getVisaRequirements()
-        if err != nil {
-            log.Printf("Error updating visa requirements: %v", err)
-            http.Error(w, "Failed to update visa requirements", http.StatusInternalServerError)
-            return
-        }
-        log.Println("Visa requirements updated.")
+    if r.Method != http.MethodPost {
+        http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+        return
     }
+
+    if err := fetchAndParseCSV(); err != nil {
+        http.Error(w, fmt.Sprintf("Failed to fetch and parse CSV: %v", err), http.StatusInternalServerError)
+        return
+    }
+
     w.WriteHeader(http.StatusOK)
+    w.Write([]byte("CSV data successfully fetched and parsed"))
 }
 
 func visaRequirementsHandler(w http.ResponseWriter, r *http.Request) {
-	mu.Lock()
-	defer mu.Unlock()
-	w.Header().Set("Content-Type", "application/json")
-    json.NewEncoder(w).Encode(visaRequirements)
+    mu.Lock()
+    defer mu.Unlock()
+
+    w.Header().Set("Content-Type", "application/json")
+    if err := json.NewEncoder(w).Encode(visaRequirements); err != nil {
+        http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+        log.Printf("Error encoding response: %v", err)
+    }
 }
 
 func main() {
+    if err := fetchAndParseCSV(); err != nil {
+        log.Fatalf("Error loading visa requirements: %v", err)
+    }
+
     http.HandleFunc("/webhook", webhookHandler)
     http.HandleFunc("/visa-requirements", visaRequirementsHandler)
 
