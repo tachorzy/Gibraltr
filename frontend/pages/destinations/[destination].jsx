@@ -23,7 +23,7 @@ export async function getServerSideProps({ query }){
     if (!passport || !destination) {
       return { props: {} };
     }
-  
+    
     const passportKey = passport?.toLowerCase();
     const destinationKey = destination?.toLowerCase();
   
@@ -34,19 +34,17 @@ export async function getServerSideProps({ query }){
       return { props: { error: 'Invalid passport or destination code' } };
     }
   
-    try {
-      const response = await fetch('http://localhost:3000/api/visaparser');
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      const visaRequirements = await response.json();
-      const key = `${passportISO}-${destinationISO}`;
-  
-      const requirement = visaRequirements[key];
-      return { props: { requirement, passport, destination } };
-    } catch (error) {
-      return { props: { error: error.message } };
+    const response = await fetch('http://localhost:3000/visa-requirements');
+    if (!response.ok) {
+    throw new Error('Network response was not ok ' + response.statusText);
     }
+    const visaRequirements = await response.json();
+    const key = `${passportISO}-${destinationISO}`;
+
+    const requirement = visaRequirements[key];
+
+    return { props: { requirement, passport, destination } };
+
 }
 
 export default function Destination({ requirement, passport, destination }){
