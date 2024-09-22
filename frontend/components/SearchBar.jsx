@@ -6,9 +6,9 @@ import { Combobox } from '@headlessui/react'
 
 function setButtonActivity(selectPassportHook, selectDestinationHook){
     if(selectPassportHook === '' || selectDestinationHook === '')
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] 2xl:pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm 2xl:text-lg leading-tight px-4 text-center text-stone-600"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-not-allowed md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] 2xl:pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm 2xl:text-lg leading-tight px-4 text-center text-stone-600 border-stone-600 border-2"}>View requirements</button>);
     else
-        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] 2xl:pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm 2xl:text-lg leading-tight px-4 text-center text-stone-600 hover:bg-stone-400 hover:text-stone-700"}> Do you need a visa?</button>);
+        return(<button type="submit" className={"border-transparent cursor-pointer md:w-[15rem] lg:w-[75%] xl:w-[71.5%] h-14 2xl:h-16 w-60 mb-0.5 mt-1 md:ml-2 lg:ml-8 xl:ml-10 max-md:ml-6 pt-[1.15rem] 2xl:pt-4 float-right bg-stone-300 rounded-xl flex justify-center font-semibold text-sm 2xl:text-lg leading-tight px-4 text-center text-stone-600 hover:bg-emerald-50 hover:text-emerald-950 border-stone-600 border-2"}>View requirements</button>);
 }
 
 const SearchBar = () => {
