@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"encoding/csv"
@@ -107,16 +107,4 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	visaRequirementsHandler(w, r)
-}
-
-func main() {
-	if err := fetchAndParseCSV(); err != nil {
-		log.Fatalf("Error loading visa requirements: %v", err)
-	}
-
-	http.HandleFunc("/webhook", webhookHandler)
-	http.HandleFunc("/visa-requirements", visaRequirementsHandler)
-
-	log.Println("Server is running on port 8000")
-	log.Fatal(http.ListenAndServe(":8000", nil))
 }
