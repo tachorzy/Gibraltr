@@ -33,7 +33,7 @@ export async function getServerSideProps({ query }){
       return { props: { error: 'Invalid passport or destination code' } };
     }
 
-    const response = await fetch('/api/visaparser');
+    const response = await fetch('https://gibraltr-backend-tachorzys-projects.vercel.app/api/visaparser');
     if (!response.ok) {
     throw new Error('Network response was not ok ' + response.statusText);
     }

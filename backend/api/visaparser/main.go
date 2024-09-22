@@ -53,35 +53,6 @@ func parseCSVData(data []byte) error {
 	return nil
 }
 
-func fetchAndParseCSV() error {
-	data, err := fetchCSVData(csvUrl)
-	if err != nil {
-		return fmt.Errorf("failed to fetch csv data: %v", err)
-	}
-
-	err = parseCSVData(data)
-	if err != nil {
-		return fmt.Errorf("failed to parse csv data: %v", err)
-	}
-
-	return nil
-}
-
-func webhookHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
-		return
-	}
-
-	if err := fetchAndParseCSV(); err != nil {
-		http.Error(w, fmt.Sprintf("Failed to fetch and parse CSV: %v", err), http.StatusInternalServerError)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("CSV data successfully fetched and parsed"))
-}
-
 func visaRequirementsHandler(w http.ResponseWriter, r *http.Request) {
 	mu.Lock()
 	defer mu.Unlock()
