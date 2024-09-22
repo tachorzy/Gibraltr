@@ -34,6 +34,10 @@ export async function getServerSideProps({ query }){
       return { props: { error: 'Invalid passport or destination code' } };
     }
   
+    const portFilePath = path.resolve('port.txt');
+    const port = fs.readFileSync(portFilePath, 'utf8').trim();
+  
+
     const response = await fetch('http://localhost:3000/visa-requirements');
     if (!response.ok) {
     throw new Error('Network response was not ok ' + response.statusText);
