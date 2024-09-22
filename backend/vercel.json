@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/visaparser/main.go",
+        "src": "/api/visaparser/main.go",
         "use": "@vercel/go"
       }
     ],
