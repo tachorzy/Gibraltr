@@ -13,7 +13,6 @@ import GCC from '../../components/destinations/infocards/GCC.jsx'
 import IraqiKurdistanRegion from '../../components/destinations/infocards/IraqiKurdistanRegion.jsx'
 import ElectronicVisaApplyButton from '../../components/destinations/ElectronicVisaApplyButton.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
-import { getVisaRequirements } from '../../utils/visadata.js'
 import { albula, supremeBold, supremeMedium } from '../../utils/localNextFonts.js'
 import { supremeRegular } from '../../utils/localNextFonts.js'
 
