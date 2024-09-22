@@ -1,5 +1,15 @@
 {
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "/api/visaparser/main.go" }
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/visa-requirements/main.go",
+        "use": "@vercel/go"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/visa-requirements",
+        "dest": "/api/visa-requirements/main.go"
+      }
     ]
-  }
+}
