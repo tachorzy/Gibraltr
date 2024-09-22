@@ -1,3 +1,3 @@
-module template-go-vercel
+module gibraltr
 
 go 1.23.1
