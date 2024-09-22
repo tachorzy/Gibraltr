@@ -38,7 +38,7 @@ export async function getServerSideProps({ query }){
     const port = fs.readFileSync(portFilePath, 'utf8').trim();
   
 
-    const response = await fetch('http://localhost:3000/visa-requirements');
+    const response = await fetch('http://localhost:8000/visa-requirements');
     if (!response.ok) {
     throw new Error('Network response was not ok ' + response.statusText);
     }

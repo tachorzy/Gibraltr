@@ -101,6 +101,6 @@ func main() {
 	http.HandleFunc("/webhook", webhookHandler)
 	http.HandleFunc("/visa-requirements", visaRequirementsHandler)
 
-	log.Println("Server is running on port 3000")
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	log.Println("Server is running on port 8000")
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
