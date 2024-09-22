@@ -35,6 +35,7 @@ export async function getServerSideProps({ query }){
 
     const response = await fetch('https://gibraltr-backend-git-feat-csvparser-tachorzys-projects.vercel.app/api/visaparser');
     if (!response.ok) {
+        console.log(`response: ${response}`);
         throw new Error('Network response was not ok ' + response.statusText);
     }
     const visaRequirements = await response.json();
