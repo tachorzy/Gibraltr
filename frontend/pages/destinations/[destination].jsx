@@ -13,27 +13,38 @@ import GCC from '../../components/destinations/infocards/GCC.jsx'
 import IraqiKurdistanRegion from '../../components/destinations/infocards/IraqiKurdistanRegion.jsx'
 import ElectronicVisaApplyButton from '../../components/destinations/ElectronicVisaApplyButton.jsx'
 import { countries, isoCodesList, schengenCountries } from '../../utils/countrydata.js'
-import { getVisaRequirements } from '../../utils/visadata.js'
 import { albula, supremeBold, supremeMedium } from '../../utils/localNextFonts.js'
 import { supremeRegular } from '../../utils/localNextFonts.js'
 
 export async function getServerSideProps({ query }){
     const { passport, destination } = query;
+
+    if (!passport || !destination) {
+        return { props: {} };
+    }
     
-    if (!passport || !destination)
-        return { props: {} }
+    const passportKey = passport?.toLowerCase();
+    const destinationKey = destination?.toLowerCase();
+  
+    const passportISO = isoCodesList[passportKey];
+    const destinationISO = isoCodesList[destinationKey];
+  
+    if (!passportISO || !destinationISO) {
+        return { props: { error: 'Invalid passport or destination code' } };
+    }
 
-    const passportKey = passport?.toLowerCase()
-    const destinationKey = destination?.toLowerCase()
+    const response = await fetch('https://gibraltr-backend.vercel.app/api/visaparser');
+    if (!response.ok) {
+        console.log(`response: ${response}`);
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+    const visaRequirements = await response.json();
+    const key = `${passportISO}-${destinationISO}`;
 
-    const passportISO = isoCodesList[passportKey]
-    const destinationISO = isoCodesList[destinationKey]
+    const requirement = visaRequirements[key];
 
-    const visaRequirements = await getVisaRequirements();
-    const key = JSON.stringify({ passportISO, destinationISO });
+    return { props: { requirement, passport, destination } };
 
-    const requirement = visaRequirements.get(key);
-    return {props: {requirement, passport, destination}}
 }
 
 export default function Destination({ requirement, passport, destination }){

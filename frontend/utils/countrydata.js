@@ -111,7 +111,7 @@ export const filteredCountries = countries.sort().filter(country =>
 )
 
 //Schengen Zone information:
-export const schengenCountries = ["at", "be", "ch", "cz", "dk", "fi", "fr", "de", "gr", "hr", "is","ie", "it", "lu", "lt", "lv", "nl", "no", "pt", "es", "se", "ch"];
+export const schengenCountries = ["at", "be", "ch", "cz", "dk", "fi", "fr", "de", "gr", "hr", "is", "it", "lu", "lt", "lv", "nl", "no", "pt", "es", "se", "ch"];
 
 //GCC information:
 export const gccCountries = ["bh", "kw", "om", "qa", "sa", "ae"];
