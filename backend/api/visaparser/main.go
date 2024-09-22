@@ -65,16 +65,31 @@ func visaRequirementsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+
+	if r.Method == http.MethodOptions {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
 	if len(visaRequirements) == 0 {
+		log.Println("Visa requirements cache is empty, fetching data...")
 		data, err := fetchCSVData(csvUrl)
 		if err != nil {
-			log.Fatalf("Error fetching CSV data: %v", err)
+			http.Error(w, fmt.Sprintf("Error fetching CSV data: %v", err), http.StatusInternalServerError)
+			log.Printf("Error fetching CSV data: %v", err)
+			return
 		}
 
 		err = parseCSVData(data)
 		if err != nil {
-			log.Fatalf("Error parsing CSV data: %v", err)
+			http.Error(w, fmt.Sprintf("Error parsing CSV data: %v", err), http.StatusInternalServerError)
+			log.Printf("Error parsing CSV data: %v", err)
+			return
 		}
+		log.Println("Visa requirements data fetched and parsed successfully.")
 	}
 
 	visaRequirementsHandler(w, r)

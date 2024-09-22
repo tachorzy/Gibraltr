@@ -20,7 +20,7 @@ export async function getServerSideProps({ query }){
     const { passport, destination } = query;
 
     if (!passport || !destination) {
-      return { props: {} };
+        return { props: {} };
     }
     
     const passportKey = passport?.toLowerCase();
@@ -30,12 +30,12 @@ export async function getServerSideProps({ query }){
     const destinationISO = isoCodesList[destinationKey];
   
     if (!passportISO || !destinationISO) {
-      return { props: { error: 'Invalid passport or destination code' } };
+        return { props: { error: 'Invalid passport or destination code' } };
     }
 
-    const response = await fetch('https://gibraltr-backend-git-feat-csvparser-tachorzys-projects.vercel.app/api/visaparser');
+    const response = await fetch('https://gibraltr-backend-git-feat-csvparser-tachorzys-projects.vercel.app/');
     if (!response.ok) {
-    throw new Error('Network response was not ok ' + response.statusText);
+        throw new Error('Network response was not ok ' + response.statusText);
     }
     const visaRequirements = await response.json();
     const key = `${passportISO}-${destinationISO}`;
