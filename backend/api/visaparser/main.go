@@ -93,6 +93,22 @@ func visaRequirementsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func Handler(w http.ResponseWriter, r *http.Request) {
+	if len(visaRequirements) == 0 {
+		data, err := fetchCSVData(csvUrl)
+		if err != nil {
+			log.Fatalf("Error fetching CSV data: %v", err)
+		}
+
+		err = parseCSVData(data)
+		if err != nil {
+			log.Fatalf("Error parsing CSV data: %v", err)
+		}
+	}
+
+	visaRequirementsHandler(w, r)
+}
+
 func main() {
 	if err := fetchAndParseCSV(); err != nil {
 		log.Fatalf("Error loading visa requirements: %v", err)
