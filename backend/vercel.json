@@ -1,15 +1,8 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "/api/visaparser/main.go",
-        "use": "@vercel/go"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/visaparser",
-        "dest": "/api/visaparser/main.go"
-      }
+    "rewrites": [
+        {
+          "source": "/(.*)",
+          "destination": "/api/visaparser/main.go"
+        }
     ]
 }
