@@ -17,7 +17,6 @@ var visaRequirements = make(map[string]string)
 var mu sync.Mutex
 
 func fetchCSVData(url string) ([]byte, error) {
-
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -53,7 +52,7 @@ func parseCSVData(data []byte) error {
 	return nil
 }
 
-func visaRequirementsHandler(w http.ResponseWriter, r *http.Request) {
+func visaRequirementsHandler(w http.ResponseWriter) {
 	mu.Lock()
 	defer mu.Unlock()
 
@@ -92,5 +91,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		log.Println("Visa requirements data fetched and parsed successfully.")
 	}
 
-	visaRequirementsHandler(w, r)
+	visaRequirementsHandler(w)
 }
