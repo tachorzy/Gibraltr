@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/visa-requirements/main.go",
+        "src": "api/visaparser/main.go",
         "use": "@vercel/go"
       }
     ],
     "routes": [
       {
-        "src": "/api/visa-requirements",
-        "dest": "/api/visa-requirements/main.go"
+        "src": "/api/visaparser",
+        "dest": "/api/visaparser/main.go"
       }
     ]
 }
