@@ -9,8 +9,10 @@ Gibraltr is a website that allows you to check visa requirements for every natio
 <h3>Inside the Monorepo</h3>
 This monorepo includes the following:
 <h5>Apps</h5>
-`frontend`: a webapp with a <a href="https://nextjs.org/">Next.js</a> frontend.
-`backend`: a <a href="https://go.dev/doc/install">Go</a> api.
+<code>frontend</code>: a webapp with a <a href="https://nextjs.org/">Next.js</a> frontend.
+<code>backend</code>: a <a href="https://go.dev/doc/install">Go</a> api.
 <h5>Tooling Requirements</h5>
-<a href="https://nodejs.org/en/">Node.js</a> >= 18 (LTS Recommended)
-<a href="https://go.dev/doc/install">Go</a> >= 1.23.1 (Latest Recommended)
+<ul>
+    <li><a href="https://nodejs.org/en/">Node.js</a> >= 18 (LTS Recommended)</li>
+    <li><a href="https://go.dev/doc/install">Go</a> >= 1.23.1 (Latest Recommended)</li>
+</ul>
