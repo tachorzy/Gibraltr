@@ -29,15 +29,17 @@ This monorepo includes the following:
 <div class="markdown-heading" dir="auto">
     <h3 class="heading-element" dir="auto">Host Locally</h3>
 </div>
-Install frontend dependencies without cache:
+
+### Install frontend dependencies without cache:
 <code>npm ci</code>
-Start the client
+
+### Start the client
 <code>npm start</code>
 
 > [!NOTE]  
 > A new window will automatically open in your default browser on http://localhost:3000.
 
-Start the backend server
+### Start the backend server
 <code>
     cd backend/api/visaparser
     go run main.go
