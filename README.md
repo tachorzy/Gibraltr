@@ -2,11 +2,12 @@
     <h1 tabindex="-1" class="heading-element" dir="auto">Gibraltr — your guide to travel visas</h1>
 </div>
 <img src="https://i.imgur.com/3mymhvb.png" height="295" width="2000"></img>
+<h5>A solution for travelers made by a traveler.</h5>
 
 Gibraltr is a website that allows you to check visa requirements for every nationality no matter the destination. Access the latest accurate and reliable information for your next trip. It's always best to know before you go, and that's why Gibraltr is here to provide awareness to all international travelers.
 
 <div class="markdown-heading" dir="auto">
-    <h1 tabindex="-1" class="heading-element" dir="auto">Demo</h3>
+    <h1 tabindex="-1" class="heading-element" dir="auto">Straightforward, informative, reliable.</h3>
 </div>
 <img src="https://i.imgur.com/onWOpxk.gif" height="338" width="600"></img>
 
