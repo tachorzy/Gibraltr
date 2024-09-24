@@ -40,9 +40,7 @@ This monorepo includes the following:
 > A new window will automatically open in your default browser on http://localhost:3000.
 
 ### Start the backend server
-<code>cd backend/api/visaparser
-    go run main.go
-</code>
+```cd backend/api/visaparser\ngo run main.go```
 
 > [!NOTE]  
 > The server will run on your default browser on http://localhost:8000, but it will not automatically open.
